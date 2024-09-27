@@ -1,0 +1,31 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "13093",
+            "name": "Dooly County",
+            "state": "Georgia"
+        },
+        "country": "us",
+        "state": "ga",
+        "county": "Dooly"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "data": "https://services6.arcgis.com/VKHi8CC6pMIyYUIs/ArcGIS/rest/services/Address_Point_Master_File/FeatureServer/1",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "number": "AN",
+                    "street": "FullStreet",
+                    "unit": [
+                        "SecUnit",
+                        "SecRange"
+                    ]
+                }
+            }
+        ]
+    }
+}

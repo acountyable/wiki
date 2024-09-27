@@ -1,0 +1,71 @@
+{
+    "coverage": {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -117.0486,
+                46.3382
+            ]
+        },
+        "US Census": {
+            "geoid": "53003",
+            "name": "Asotin County",
+            "state": "Washington"
+        },
+        "country": "us",
+        "state": "wa",
+        "city": "Asotin"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "city",
+                "data": "https://services6.arcgis.com/VsJGTl1jmCYBc0EX/ArcGIS/rest/services/Parcels/FeatureServer/1",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "number": {
+                        "function": "prefixed_number",
+                        "field": "PA2"
+                    },
+                    "street": {
+                        "function": "postfixed_street",
+                        "field": "PA2",
+                        "may_contain_units": true
+                    },
+                    "unit": {
+                        "function": "postfixed_unit",
+                        "field": "PA2"
+                    },
+                    "city": {
+                        "function": "regexp",
+                        "field": "PA3",
+                        "pattern": "^(.+?)(?:\\s+(?:WA|\\d+))"
+                    },
+                    "region": {
+                        "function": "regexp",
+                        "field": "PA3",
+                        "pattern": "\\b(WA)\\b"
+                    },
+                    "postcode": {
+                        "function": "regexp",
+                        "field": "PA3",
+                        "pattern": "\\b(\\d+)$"
+                    }
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "city",
+                "data": "https://services6.arcgis.com/VsJGTl1jmCYBc0EX/ArcGIS/rest/services/Parcels/FeatureServer/1",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "PARCEL_ID"
+                }
+            }
+        ]
+    }
+}

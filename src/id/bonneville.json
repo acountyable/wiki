@@ -1,0 +1,45 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "16019",
+            "name": "Bonneville County",
+            "state": "Idaho"
+        },
+        "country": "us",
+        "state": "id",
+        "county": "Bonneville"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "data": "https://bonneville.esriemcs.com/arcgis/rest/services/BC_Address/FeatureServer/0",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "number": "addressnum",
+                    "street": [
+                        "streetpref",
+                        "streetname",
+                        "streetsuff"
+                    ],
+                    "city": "city",
+                    "postcode": "zip",
+                    "region": "state"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "data": "https://bonneville.esriemcs.com/arcgis/rest/services/ParcelViewer/MapServer/1",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "edit_data.editdata.Parcel_Final.textstring"
+                }
+            }
+        ]
+    }
+}

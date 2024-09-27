@@ -1,0 +1,58 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "53057",
+            "name": "Skagit County",
+            "state": "Washington"
+        },
+        "country": "us",
+        "state": "wa",
+        "county": "Skagit"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "data": "https://gis.skagitcountywa.gov/arcgis/rest/services/Assessor/PropertyMap/MapServer/3",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "id": "AddressID",
+                    "number": [
+                        "AddNum_Pre",
+                        "Add_Number",
+                        "AddNum_Suf"
+                    ],
+                    "street": [
+                        "St_PreMod",
+                        "St_PreDir",
+                        "St_PreTyp",
+                        "St_PreSep",
+                        "St_Name",
+                        "St_PosTyp",
+                        "St_PosDir",
+                        "St_PosMod"
+                    ],
+                    "unit": [
+                        "Unit_Type",
+                        "Unit"
+                    ],
+                    "city": "Post_Comm",
+                    "postcode": "Post_Code"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "data": "https://gis.skagitcountywa.gov/arcgis/rest/services/Assessor/PropertyMap/MapServer/5",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "PARCELID"
+                }
+            }
+        ]
+    }
+}

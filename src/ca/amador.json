@@ -1,0 +1,81 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "06005",
+            "name": "Amador County",
+            "state": "California"
+        },
+        "country": "us",
+        "state": "ca",
+        "county": "Amador"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "data": "https://services9.arcgis.com/Z65sx307Hunxj6eq/ArcGIS/rest/services/ParcelData_Public/FeatureServer/0",
+                "attribution": "Amador County",
+                "protocol": "ESRI",
+                "conform": {
+                    "id": "APN",
+                    "number": {
+                        "function": "prefixed_number",
+                        "field": "FormattedSitus1"
+                    },
+                    "street": {
+                        "function": "postfixed_street",
+                        "field": "FormattedSitus1",
+                        "may_contain_units": true
+                    },
+                    "unit": {
+                        "function": "postfixed_unit",
+                        "field": "FormattedSitus1"
+                    },
+                    "city": {
+                        "function": "regexp",
+                        "field": "FormattedSitus2",
+                        "pattern": "^(.+)(?: CA)(?: \\d{5})?$",
+                        "replace": "$1"
+                    },
+                    "region": {
+                        "function": "regexp",
+                        "field": "FormattedSitus2",
+                        "pattern": "^(?:.+ )(CA)(?: \\d{5})?$",
+                        "replace": "$1"
+                    },
+                    "postcode": {
+                        "function": "regexp",
+                        "field": "FormattedSitus2",
+                        "pattern": "^(?:.+ CA)(?: )?(\\d{5})?$",
+                        "replace": "$1"
+                    },
+                    "format": "geojson"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "data": "https://services9.arcgis.com/Z65sx307Hunxj6eq/ArcGIS/rest/services/ParcelData_Public/FeatureServer/0",
+                "attribution": "Amador County",
+                "protocol": "ESRI",
+                "conform": {
+                    "pid": "APN",
+                    "format": "geojson"
+                }
+            }
+        ],
+        "buildings": [
+            {
+                "name": "county",
+                "data": "https://services9.arcgis.com/Z65sx307Hunxj6eq/ArcGIS/rest/services/BuildingFootprints/FeatureServer/0",
+                "attribution": "Amador County",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson"
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,43 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "32019",
+            "name": "Lyon County",
+            "state": "Nevada"
+        },
+        "country": "us",
+        "state": "nv",
+        "county": "Lyon"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "data": "https://gis.lyon-county.org/server/rest/services/Landbase/Parcels/FeatureServer/0",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "number": "PLOCNUM",
+                    "street": [
+                        "PLOCDR",
+                        "PLOCNM"
+                    ],
+                    "unit": "PLOCUNIT",
+                    "city": "PTOWN"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "data": "https://gis.lyon-county.org/server/rest/services/Landbase/Parcels/FeatureServer/0",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "APN"
+                }
+            }
+        ]
+    }
+}

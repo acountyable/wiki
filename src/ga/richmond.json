@@ -1,0 +1,60 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "13245",
+            "name": "Richmond County",
+            "state": "ga"
+        },
+        "country": "us",
+        "state": "ga",
+        "county": "Richmond"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "data": "https://gismap.augustaga.gov/arcgis/rest/services/BasemapGenAGS/MapServer/159",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "number": "ADDRNUM",
+                    "unit": [
+                        "UNITTYPE",
+                        "UNITID"
+                    ],
+                    "street": [
+                        "ROADDIRPRE",
+                        "ROADNAME",
+                        "ROADTYPE",
+                        "ROADDIRSUFF"
+                    ],
+                    "city": "CITY",
+                    "region": "STATE",
+                    "postcode": "ZIP"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "data": "https://gismap.augustaga.gov/arcgis/rest/services/BasemapGISMap/MapServer/212",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "PIN"
+                }
+            }
+        ],
+        "buildings": [
+            {
+                "name": "county",
+                "data": "https://gismap.augustaga.gov/arcgis/rest/services/BasemapGenAGS/MapServer/161",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson"
+                }
+            }
+        ]
+    }
+}

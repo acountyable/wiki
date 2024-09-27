@@ -20,6 +20,7 @@ export default function (options?: Options) {
       "menu.js",
       "menu.page.ts",
       "styles.css",
+      "_data.yml",
     ];
 
     for (const file of files) {

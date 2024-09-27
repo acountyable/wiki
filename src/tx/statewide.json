@@ -1,0 +1,69 @@
+{
+    "coverage": {
+        "country": "us",
+        "state": "tx"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "state",
+                "data": "https://data.tnris.org/6d9c4a2e-b5bb-49b3-9ceb-0727f4711c5b/resources/stratmap24-addresspoints_48_ap.zip",
+                "website": "https://data.tnris.org/collection/?c=6d9c4a2e-b5bb-49b3-9ceb-0727f4711c5b",
+                "license": {
+                    "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+                    "text": "CC 0"
+                },
+                "attribution": "Texas Natural Resources Information System",
+                "protocol": "http",
+                "compression": "zip",
+                "year": "2024",
+                "conform": {
+                    "format": "gdb",
+                    "file": "stratmap24-addresspoints_48.gdb",
+                    "layer": "stratmap24_addresspoints_48",
+                    "id": "OBJECTID",
+                    "number": [
+                        "Add_Number",
+                        "AddNum_Suf"
+                    ],
+                    "street": [
+                        "St_PreMod",
+                        "St_PreDir",
+                        "St_PreTyp",
+                        "St_PreSep",
+                        "St_Name",
+                        "St_PosTyp",
+                        "St_PosDir",
+                        "St_PosMod"
+                    ],
+                    "unit": "Unit",
+                    "city": "Post_Comm",
+                    "district": "County",
+                    "region": "State",
+                    "postcode": "Post_Code"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "state",
+                "data": "https://data.tnris.org/55eb0be8-6d05-4536-bf75-45f1dd31dd94/resources/stratmap23-landparcels_48_lp.zip",
+                "website": "https://data.tnris.org/collection/?c=55eb0be8-6d05-4536-bf75-45f1dd31dd94",
+                "license": {
+                    "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+                    "text": "CC 0"
+                },
+                "attribution": "Texas Natural Resources Information System",
+                "protocol": "http",
+                "compression": "zip",
+                "year": "2023",
+                "conform": {
+                    "format": "gdb",
+                    "file": "stratmap23-landparcels_48.gdb",
+                    "pid": "GEO_ID"
+                }
+            }
+        ]
+    }
+}

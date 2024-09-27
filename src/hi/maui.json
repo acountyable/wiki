@@ -1,0 +1,63 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "15009",
+            "name": "Maui County",
+            "state": "Hawaii"
+        },
+        "country": "us",
+        "state": "hi",
+        "county": "maui"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "data": "https://services3.arcgis.com/fsrDo0QMPlK9CkZD/ArcGIS/rest/services/Site_Address_Point/FeatureServer/0",
+                "website": "https://mauicounty.maps.arcgis.com/home/item.html?id=262c0490d5e749d6873a183424b814e2",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "id": "SITEADDID",
+                    "number": [
+                        "PREADDRNUM",
+                        "HOUSENUMBER",
+                        "ADDRNUMSUF"
+                    ],
+                    "street": "FULLNAME",
+                    "unit": [
+                        "UNITTYPE",
+                        "UNITID"
+                    ],
+                    "city": "CITY",
+                    "postcode": "POSTALCODE"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "data": "https://services3.arcgis.com/fsrDo0QMPlK9CkZD/ArcGIS/rest/services/EnergovTaxParcel/FeatureServer/1",
+                "website": "https://mauicounty.maps.arcgis.com/home/item.html?id=e6a262cc5e4b46468f5b9046cf470871",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "TMK"
+                }
+            }
+        ],
+        "buildings": [
+            {
+                "name": "county",
+                "data": "https://services3.arcgis.com/fsrDo0QMPlK9CkZD/ArcGIS/rest/services/MauiCountyBuildingFootprints2020/FeatureServer/0",
+                "website": "https://mauicounty.maps.arcgis.com/home/item.html?id=b8d674bd04444453928cb84d287ee8a8",
+                "year": "2020",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson"
+                }
+            }
+        ]
+    }
+}

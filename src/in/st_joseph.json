@@ -1,0 +1,50 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "18141",
+            "name": "St. Joseph County",
+            "state": "Indiana"
+        },
+        "country": "us",
+        "state": "in",
+        "county": "St. Joseph"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "website": "https://sjcgis-stjocogis.hub.arcgis.com/datasets/d0b95019cb834cfc85862a87cb0e6610_0",
+                "data": "https://services.arcgis.com/OjftlhRHkAABcyiF/arcgis/rest/services/Address/FeatureServer/0",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "number": {
+                        "function": "prefixed_number",
+                        "field": "FullStreet"
+                    },
+                    "street": {
+                        "function": "postfixed_street",
+                        "field": "FullStreet"
+                    },
+                    "unit": {
+                        "function": "postfixed_unit",
+                        "field": "FullStreet"
+                    }
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "website": "https://sjcgis-stjocogis.hub.arcgis.com/datasets/9c904f790a884313a0cebfafc3a7bca1_0",
+                "data": "https://services.arcgis.com/OjftlhRHkAABcyiF/arcgis/rest/services/parcel_boundaries/FeatureServer/0",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "PARCELID"
+                }
+            }
+        ]
+    }
+}

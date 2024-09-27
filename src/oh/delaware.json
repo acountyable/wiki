@@ -1,0 +1,62 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "39041",
+            "name": "Delaware County",
+            "state": "Ohio"
+        },
+        "country": "us",
+        "state": "oh",
+        "county": "Delaware"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "data": "https://services2.arcgis.com/ziXVKVy3BiopMCCU/arcgis/rest/services/Address_Point/FeatureServer/0",
+                "protocol": "ESRI",
+                "conform": {
+                    "number": "ADDR_NUM",
+                    "street": [
+                        "PRE_DIR",
+                        "PRE_TYPE",
+                        "STR_NAME",
+                        "STR_TYPE",
+                        "SUF_DIR"
+                    ],
+                    "unit": [
+                        "UNIT_TYPE",
+                        "UNIT_NUM"
+                    ],
+                    "city": "CITY",
+                    "district": "COUNTY",
+                    "region": "STATE",
+                    "postcode": "ZIP",
+                    "format": "geojson"
+                }
+            }
+        ],
+        "buildings": [
+            {
+                "name": "county",
+                "protocol": "ESRI",
+                "data": "https://services2.arcgis.com/ziXVKVy3BiopMCCU/ArcGIS/rest/services/Building_Outline/FeatureServer/0",
+                "conform": {
+                    "format": "geojson"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "protocol": "ESRI",
+                "data": "https://services2.arcgis.com/ziXVKVy3BiopMCCU/ArcGIS/rest/services/Parcel/FeatureServer/0",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "PARCEL_NO"
+                }
+            }
+        ]
+    }
+}

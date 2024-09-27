@@ -1,0 +1,48 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "24001",
+            "name": "Allegany",
+            "state": "Maryland"
+        },
+        "country": "us",
+        "state": "md",
+        "county": "Allegany"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "website": "http://alleganygis.allconet.org/",
+                "data": "https://alleganygis.allconet.org/allcogis/rest/services/AddressPoints/MapServer/0",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "number": "addrnum",
+                    "street": "fullname",
+                    "unit": [
+                        "unittype",
+                        "unitid"
+                    ],
+                    "city": "msag",
+                    "district": "county",
+                    "region": "state",
+                    "postcode": "zip"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "website": "http://alleganygis.allconet.org/",
+                "data": "https://alleganygis.allconet.org/allcogis/rest/services/Parcels/MapServer/0",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "acctid"
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,39 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "41063",
+            "state": "Oregon",
+            "name": "Wallowa County"
+        },
+        "country": "us",
+        "state": "or",
+        "county": "Wallowa"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "data": "https://services.arcgis.com/cfmdyB05xBau1dNQ/ArcGIS/rest/services/Wallowa_County_ADDRESS/FeatureServer/0",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "number": "STRUCTNO",
+                    "street": [
+                        "PREDIR",
+                        "PRETYPE",
+                        "STREETNAME",
+                        "STREETTYPE",
+                        "SUFDIR"
+                    ],
+                    "unit": [
+                        "UNIT_NO",
+                        "UNIT_TYPE"
+                    ],
+                    "city": "COMMUNITY",
+                    "id": "APN"
+                }
+            }
+        ]
+    }
+}

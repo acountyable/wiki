@@ -1,0 +1,58 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "55089",
+            "name": "Ozaukee County",
+            "state": "Wisconsin"
+        },
+        "country": "us",
+        "state": "wi",
+        "county": "Ozaukee"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "data": "https://gis2.co.ozaukee.wi.us/arcgis/rest/services/Operational/OZAddress/MapServer/45",
+                "website": "https://ocgeohub-ozaukee.hub.arcgis.com/datasets/acfea33cc688454790b000ae8b290f6b_0/about",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "number": [
+                        "AddNum_Pre",
+                        "Add_Number",
+                        "AddNum_Suf"
+                    ],
+                    "street": "FullStNm",
+                    "postcode": "Post_Code",
+                    "city": "Post_Comm",
+                    "region": "State",
+                    "district": "County"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "data": "https://gis2.co.ozaukee.wi.us/arcgis/rest/services/OZCadastral/MapServer/25",
+                "website": "https://ocgeohub-ozaukee.hub.arcgis.com/datasets/f72e8a1160a1424a85164510f7e25085_0/about",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "par_num"
+                }
+            }
+        ],
+        "buildings": [
+            {
+                "name": "county",
+                "data": "https://gis2.co.ozaukee.wi.us/arcgis/rest/services/OZCadastral/MapServer/32",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson"
+                }
+            }
+        ]
+    }
+}

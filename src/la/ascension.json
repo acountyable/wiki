@@ -1,0 +1,47 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "22005",
+            "name": "Ascension Parish",
+            "state": "Louisiana"
+        },
+        "country": "us",
+        "state": "la",
+        "county": "Ascension"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "data": "https://geo.apgov.us/apgarc/rest/services/MyPermitNow/Addresses/MapServer/0",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "number": "ADDRNUM",
+                    "street": [
+                        "PREDIR",
+                        "PRETYPE",
+                        "ROADNAME",
+                        "ROADTYPE",
+                        "POSTDIR"
+                    ],
+                    "unit": "QUALIFIER",
+                    "city": "CITY",
+                    "postcode": "ZIP"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "data": "https://geo.apgov.us/apgarc/rest/services/Assessor/ParcelMap/FeatureServer/0",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "PN_Join"
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,53 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "13139",
+            "name": "Hall County",
+            "state": "Georgia"
+        },
+        "country": "us",
+        "state": "ga",
+        "county": "Hall"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "data": "https://webmap.hallcounty.org/server/rest/services/Accela_APO/MapServer/0",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "id": "ADDR_ID",
+                    "number": "ADDR_ST_NMBR",
+                    "street": "ST_FULL_NAME",
+                    "unit": "ADDR_UNIT",
+                    "city": "ADDR_CITYNAME",
+                    "region": "ADDR_STATE",
+                    "postcode": "ADDR_ZIP"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "data": "https://webmap.hallcounty.org/server/rest/services/Accela_APO/MapServer/3",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "PIN"
+                }
+            }
+        ],
+        "buildings": [
+            {
+                "name": "county",
+                "data": "https://webmap.hallcounty.org/server/rest/services/Accela_APO/MapServer/5",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson"
+                }
+            }
+        ]
+    }
+}

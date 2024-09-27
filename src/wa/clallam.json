@@ -1,0 +1,50 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "53009",
+            "name": "Clallam County",
+            "state": "Washington"
+        },
+        "country": "us",
+        "state": "wa",
+        "county": "Clallam"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "conform": {
+                    "format": "geojson",
+                    "number": "SITUS_ADDR",
+                    "street": [
+                        "SITUS_DIR",
+                        "SITUS_RD"
+                    ],
+                    "city": "SITUS_CITY"
+                },
+                "license": {
+                    "url": "https://clallam-county-portal-clallam.hub.arcgis.com/pages/county-disclaimer"
+                },
+                "protocol": "ESRI",
+                "data": "https://services8.arcgis.com/noCZ2SM2C0rVag8y/arcgis/rest/services/prc_land_p1/FeatureServer/0",
+                "website": "https://clallam-county-portal-clallam.hub.arcgis.com/datasets/clallam::parcels-public/about"
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "license": {
+                    "url": "https://clallam-county-portal-clallam.hub.arcgis.com/pages/county-disclaimer"
+                },
+                "protocol": "ESRI",
+                "data": "https://services8.arcgis.com/noCZ2SM2C0rVag8y/arcgis/rest/services/prc_land_p1/FeatureServer/0",
+                "website": "https://clallam-county-portal-clallam.hub.arcgis.com/datasets/clallam::parcels-public/about",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "PNUM"
+                }
+            }
+        ]
+    }
+}

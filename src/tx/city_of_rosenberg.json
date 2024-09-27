@@ -1,0 +1,56 @@
+{
+    "coverage": {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -95.813583,
+                29.539347
+            ]
+        },
+        "US Census": {
+            "geoid": "4863284",
+            "name": "City of Rosenberg",
+            "state": "Texas"
+        },
+        "country": "us",
+        "state": "tx",
+        "county": "Fort Bend",
+        "city": "Rosenberg"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "city",
+                "data": "https://maps.rosenbergtx.gov/server/rest/services/AGOL/AGOL_INDV_AddrPoints/MapServer/0",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "id": "Ad_ID",
+                    "number": [
+                        "AddrPrefix",
+                        "Addr",
+                        "AddrSuffix"
+                    ],
+                    "street": "StName",
+                    "unit": [
+                        "UnitType",
+                        "Unit"
+                    ],
+                    "postcode": "Zip"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "city",
+                "data": "https://maps.rosenbergtx.gov/server/rest/services/AGOL/AGOL_INDV_Parcels/MapServer/63",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "Par_ID"
+                }
+            }
+        ]
+    }
+}

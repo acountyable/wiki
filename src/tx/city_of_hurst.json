@@ -1,0 +1,51 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "4835576",
+            "name": "City of Hurst",
+            "state": "Texas"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -97.18,
+                32.835
+            ]
+        },
+        "country": "us",
+        "state": "tx",
+        "city": "Hurst"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "city",
+                "protocol": "ESRI",
+                "data": "https://mms.hursttx.gov/arcgis/rest/services/AddressPoints/MapServer/0",
+                "conform": {
+                    "format": "geojson",
+                    "number": "STREET_NUM",
+                    "street": [
+                        "PREFIX",
+                        "STREET_NAM",
+                        "STREET_TYP",
+                        "SUFFIX"
+                    ],
+                    "unit": "SUITE_NO",
+                    "postcode": "ZIP"
+                }
+            }
+        ],
+        "buildings": [
+            {
+                "name": "city",
+                "protocol": "ESRI",
+                "data": "https://mms.hursttx.gov/arcgis/rest/services/Buildings/MapServer/0",
+                "conform": {
+                    "format": "geojson"
+                }
+            }
+        ]
+    }
+}

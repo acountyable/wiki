@@ -1,0 +1,45 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "32001",
+            "name": "Churchill County",
+            "state": "Nevada"
+        },
+        "country": "us",
+        "state": "nv",
+        "county": "Churchill"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "data": "https://services2.arcgis.com/uPb1UC2HwTkBAlth/ArcGIS/rest/services/Address_gdb/FeatureServer/0",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "number": "ADDRNUM",
+                    "street": "FULLNAME",
+                    "unit": [
+                        "UNITTYPE",
+                        "UNITID"
+                    ],
+                    "city": "CITY",
+                    "region": "STATEABRV",
+                    "postcode": "ZIP"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "data": "https://services2.arcgis.com/uPb1UC2HwTkBAlth/ArcGIS/rest/services/v_gis_map_explorer_parcel/FeatureServer/0",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "parcel_number"
+                }
+            }
+        ]
+    }
+}

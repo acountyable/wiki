@@ -1,0 +1,52 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "06083",
+            "name": "Santa Barbara County",
+            "state": "California"
+        },
+        "country": "us",
+        "state": "ca",
+        "county": "Santa Barbara"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "attribution": "Santa Barbara County",
+                "data": "https://services8.arcgis.com/s7n9cRiugyMCsR0U/ArcGIS/rest/services/Parcel_layers_ArcGISonline_LUZO/FeatureServer/0",
+                "protocol": "ESRI",
+                "conform": {
+                    "id": "APN",
+                    "format": "geojson",
+                    "number": {
+                        "function": "prefixed_number",
+                        "field": "Situs1"
+                    },
+                    "street": {
+                        "function": "postfixed_street",
+                        "field": "Situs1",
+                        "may_contain_units": true
+                    },
+                    "unit": {
+                        "function": "postfixed_unit",
+                        "field": "Situs1"
+                    }
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "attribution": "Santa Barbara County",
+                "data": "https://services8.arcgis.com/s7n9cRiugyMCsR0U/ArcGIS/rest/services/Parcel_layers_ArcGISonline_LUZO/FeatureServer/0",
+                "protocol": "ESRI",
+                "conform": {
+                    "pid": "APN",
+                    "format": "geojson"
+                }
+            }
+        ]
+    }
+}

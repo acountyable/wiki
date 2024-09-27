@@ -1,0 +1,52 @@
+{
+    "coverage": {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -97.121,
+                32.569
+            ]
+        },
+        "US Census": {
+            "geoid": "4846452",
+            "name": "City of Mansfield",
+            "state": "Texas"
+        },
+        "country": "us",
+        "state": "tx",
+        "city": "Mansfield"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "city",
+                "data": "https://services8.arcgis.com/tUwpuhPn5EkXI11P/ArcGIS/rest/services/Streets_and_Address_Points_for_911/FeatureServer/0",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "number": "ADDR_NUM",
+                    "street": [
+                        "PREDIRECT",
+                        "STREET_NAM",
+                        "STREET_TYP",
+                        "POSTDIRECT"
+                    ],
+                    "unit": "ADDENDUM",
+                    "district": "COUNTY"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "city",
+                "data": "https://services8.arcgis.com/tUwpuhPn5EkXI11P/ArcGIS/rest/services/parcelsLSLI/FeatureServer/0",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "PIDN"
+                }
+            }
+        ]
+    }
+}

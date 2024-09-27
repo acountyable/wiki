@@ -1,0 +1,26 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "48467",
+            "name": "Van Zandt County",
+            "state": "Texas"
+        },
+        "country": "us",
+        "state": "tx",
+        "county": "Van Zandt"
+    },
+    "schema": 2,
+    "layers": {
+        "parcels": [
+            {
+                "name": "county",
+                "data": "https://services6.arcgis.com/j94FvPaik4etwHFk/ArcGIS/rest/services/VanZandtCADWebService/FeatureServer/0",
+                "protocol": "ESRI",
+                "conform": {
+                    "pid": "prop_id",
+                    "format": "geojson"
+                }
+            }
+        ]
+    }
+}

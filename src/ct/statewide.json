@@ -1,0 +1,55 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "09",
+            "state": "Connecticut"
+        },
+        "country": "us",
+        "state": "ct"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "state",
+                "conform": {
+                    "format": "gdb",
+                    "number": [
+                        "AddNum_Pre",
+                        "Add_Number",
+                        "AddNum_Suf"
+                    ],
+                    "street": [
+                        "St_PreMod",
+                        "St_PreDir",
+                        "St_PreTyp",
+                        "St_PreSep",
+                        "St_Name",
+                        "St_PosTyp",
+                        "St_PosDir",
+                        "St_PosMod"
+                    ],
+                    "unit": "Unit",
+                    "postcode": "Post_Code",
+                    "city": "MSAGComm",
+                    "district": "County",
+                    "region": "State"
+                },
+                "data": "https://data.ct.gov/api/views/m6xx-nb28/files/db1ae814-2127-4d16-b6eb-feb0857aeb6e?filename=CT911_CTData.gdb.zip",
+                "protocol": "http",
+                "compression": "zip"
+            }
+        ],
+        "parcels": [
+            {
+                "name": "state",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "Link"
+                },
+                "data": "https://services3.arcgis.com/3FL1kr7L4LvwA2Kb/arcgis/rest/services/Connecticut_State_Parcel_Layer_2023/FeatureServer/0",
+                "protocol": "ESRI"
+            }
+        ]
+    }
+}

@@ -1,0 +1,49 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "06045",
+            "name": "Mendocino County",
+            "state": "California"
+        },
+        "country": "us",
+        "state": "ca",
+        "county": "Mendocino"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "data": "https://gis.mendocinocounty.org/server/rest/services/Parcels_sde_pub/MapServer/6",
+                "attribution": "Mendocino County",
+                "website": "https://gis.mendocinocounty.org/",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "number": "SITUS_NO",
+                    "street": [
+                        "SITUS_DIR",
+                        "SITUS_ST",
+                        "ST_TYPE"
+                    ],
+                    "unit": "APT",
+                    "city": "SITUS_CTY",
+                    "postcode": "SITUS_ZIP"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "data": "https://gis.mendocinocounty.org/server/rest/services/Parcels_sde_pub/MapServer/6",
+                "attribution": "Mendocino County",
+                "website": "https://gis.mendocinocounty.org/",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "APN"
+                }
+            }
+        ]
+    }
+}

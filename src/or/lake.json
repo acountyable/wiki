@@ -1,0 +1,52 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "41037",
+            "state": "Oregon",
+            "name": "Lake County"
+        },
+        "country": "us",
+        "state": "or",
+        "county": "Lake"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "data": "https://services3.arcgis.com/e3KSI9Py4B7m3xu6/arcgis/rest/services/Lake01_TL_Addresspoints/FeatureServer/0",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "number": [
+                        "STRUCTNO",
+                        "STRUCTSU"
+                    ],
+                    "street": [
+                        "PREDIR",
+                        "STREETNAME",
+                        "STREETTYPE",
+                        "SUFDIR"
+                    ],
+                    "unit": [
+                        "UNITTYPE",
+                        "UNITNO"
+                    ],
+                    "city": "COMMUNITY",
+                    "district": "COUNTYTAG"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "data": "https://services3.arcgis.com/e3KSI9Py4B7m3xu6/arcgis/rest/services/Lake01_TL_Addresspoints/FeatureServer/1",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "MapTaxlot"
+                }
+            }
+        ]
+    }
+}

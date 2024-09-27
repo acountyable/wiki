@@ -1,0 +1,61 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "53055",
+            "name": "San Juan County",
+            "state": "Washington"
+        },
+        "country": "us",
+        "state": "wa",
+        "county": "San Juan"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "data": "https://gis.sanjuancountywa.gov/arcgis/rest/services/Polaris/Buildings/MapServer/0",
+                "website": "https://data2017-01-09t190539232z-sjcgis.opendata.arcgis.com/datasets/SJCGIS::addresses/about",
+                "protocol": "ESRI",
+                "conform": {
+                    "number": {
+                        "function": "regexp",
+                        "field": "FULLADDR",
+                        "pattern": "^([0-9]+)"
+                    },
+                    "street": {
+                        "function": "regexp",
+                        "field": "FULLADDR",
+                        "pattern": "^(?:[0-9]+ )(.*)",
+                        "replace": "$1"
+                    },
+                    "addrtype": "BLDGTYPE",
+                    "format": "geojson"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "data": "https://gis.sanjuancountywa.gov/arcgis/rest/services/OpenData/Parcels/MapServer/1",
+                "website": "https://data2017-01-09t190539232z-sjcgis.opendata.arcgis.com/datasets/SJCGIS::tax-parcels/about",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "PIN"
+                }
+            }
+        ],
+        "buildings": [
+            {
+                "name": "county",
+                "data": "https://gis.sanjuancountywa.gov/arcgis/rest/services/Polaris/Buildings/MapServer/3",
+                "website": "https://data2017-01-09t190539232z-sjcgis.opendata.arcgis.com/datasets/SJCGIS::building-footprints/about",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson"
+                }
+            }
+        ]
+    }
+}

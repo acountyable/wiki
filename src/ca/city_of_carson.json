@@ -1,0 +1,73 @@
+{
+    "coverage": {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -118.24,
+                33.83
+            ]
+        },
+        "US Census": {
+            "geoid": "0611530",
+            "name": "City of Carson",
+            "state": "California"
+        },
+        "country": "us",
+        "state": "ca",
+        "city": "Carson"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "city",
+                "data": "https://aethergis.carson.ca.us/server/rest/services/Address_Points/MapServer/0",
+                "website": "https://gis.carson.ca.us/",
+                "attribution": "City of Carson",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "number": [
+                        "SITENUMBER",
+                        "SITEFRAC"
+                    ],
+                    "street": [
+                        "SITEPREF",
+                        "STREETNAME",
+                        "STREETTYPE"
+                    ],
+                    "unit": "SITEUNIT",
+                    "city": "City",
+                    "district": "County",
+                    "region": "State",
+                    "postcode": "SITEZIP"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "city",
+                "data": "https://aethergis.carson.ca.us/server/rest/services/City_Of_Carson_Basemap_V6_Limited/MapServer/11",
+                "website": "https://gis.carson.ca.us/",
+                "attribution": "City of Carson",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "APN"
+                }
+            }
+        ],
+        "buildings": [
+            {
+                "name": "city",
+                "data": "https://aethergis.carson.ca.us/server/rest/services/City_Of_Carson_Basemap_V6_Limited/MapServer/16",
+                "website": "https://gis.carson.ca.us/",
+                "attribution": "City of Carson",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson"
+                }
+            }
+        ]
+    }
+}

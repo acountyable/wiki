@@ -1,0 +1,56 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "24025",
+            "name": "Harford County",
+            "state": "Maryland"
+        },
+        "country": "us",
+        "state": "md",
+        "county": "Harford"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "data": "https://geodata.md.gov/appdata/rest/services/Addressing/MD_Addressing/MapServer/13",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "id": "ADDID",
+                    "number": "ADDNUMCPLT",
+                    "street": "NAMECPLT",
+                    "unit": "SUBBADDCPLT",
+                    "city": "CITY",
+                    "district": "COUNTY",
+                    "region": "STATE",
+                    "postcode": "ZIPCODE"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "data": "https://services.arcgis.com/q8r0H9SbF6PzNpYE/arcgis/rest/services/Cadastral/FeatureServer/0",
+                "website": "https://harford-county-gis-hub-harfordgis.hub.arcgis.com/datasets/HarfordGIS::cadastral/about",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "FEATURE"
+                }
+            }
+        ],
+        "buildings": [
+            {
+                "name": "county",
+                "data": "https://services.arcgis.com/q8r0H9SbF6PzNpYE/arcgis/rest/services/Buildings/FeatureServer/0",
+                "website": "https://harford-county-gis-hub-harfordgis.hub.arcgis.com/datasets/fc38ab456a964181a0295d974ca53934_0/about",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson"
+                }
+            }
+        ]
+    }
+}

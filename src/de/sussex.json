@@ -1,0 +1,58 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "10005",
+            "name": "Sussex County",
+            "state": "Delaware"
+        },
+        "country": "us",
+        "state": "de",
+        "county": "Sussex"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "data": "https://map.sussexcountyde.gov/trdserver/rest/services/Geographic_Information_Office/Addresses/FeatureServer/0",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "number": "HouseNumber",
+                    "unit": "Unit",
+                    "street": [
+                        "PD",
+                        "PT",
+                        "SN",
+                        "ST",
+                        "SD"
+                    ],
+                    "city": "ZipCommunity",
+                    "region": "StateCode",
+                    "postcode": "Zip"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "data": "https://map.sussexcountyde.gov/trdserver/rest/services/Geographic_Information_Office/Parcels_PIN_With_Assessment_Unit/FeatureServer/0",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "Name"
+                }
+            }
+        ],
+        "buildings": [
+            {
+                "name": "county",
+                "data": "https://map.sussexcountyde.gov/trdserver/rest/services/Geographic_Information_Office/Building_Footprints/MapServer/0",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson"
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,51 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "33",
+            "state": "New Hampshire"
+        },
+        "country": "us",
+        "state": "nh"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "state",
+                "data": "https://nhgeodata.unh.edu/nhgeodata/rest/services/CAD/ParcelMosiac/MapServer/0",
+                "website": "https://new-hampshire-geodata-portal-1-nhgranit.hub.arcgis.com/datasets/NHGRANIT::parcel-points/about",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "accuracy": 2,
+                    "number": {
+                        "function": "prefixed_number",
+                        "field": "StreetAddress"
+                    },
+                    "street": {
+                        "function": "postfixed_street",
+                        "field": "StreetAddress",
+                        "may_contain_units": true
+                    },
+                    "unit": {
+                        "function": "postfixed_unit",
+                        "field": "StreetAddress"
+                    },
+                    "city": "Town"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "state",
+                "data": "https://nhgeodata.unh.edu/nhgeodata/rest/services/CAD/ParcelMosiac/MapServer/1",
+                "website": "https://new-hampshire-geodata-portal-1-nhgranit.hub.arcgis.com/datasets/NHGRANIT::parcels-1/about",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "ParcelOID"
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,57 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "51087",
+            "name": "Henrico County",
+            "state": "Virginia"
+        },
+        "country": "us",
+        "state": "va",
+        "county": "Henrico"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "data": "https://portal.henrico.us/mapping/rest/services/Layers/Master_Address_Points/MapServer/0",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "number": "HOUSE_NUMBER",
+                    "street": [
+                        "PRE_DIR",
+                        "ST_NAME",
+                        "ST_TYPE",
+                        "SUF_DIR"
+                    ],
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "region": "STATE",
+                    "postcode": "ZIPCODE"
+                }
+            }
+        ],
+        "buildings": [
+            {
+                "name": "county",
+                "data": "https://portal.henrico.us/mapping/rest/services/Layers/Buildings_2017/MapServer/0",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "data": "https://portal.henrico.us/mapping/rest/services/Layers/Tax_Parcels/MapServer/0",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "GPIN"
+                }
+            }
+        ]
+    }
+}

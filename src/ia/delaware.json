@@ -1,0 +1,75 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "19055",
+            "name": "Delaware County",
+            "state": "Iowa"
+        },
+        "country": "us",
+        "state": "ia",
+        "county": "Delaware"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "data": "https://github.com/user-attachments/files/16608804/NG911_Delaware_20230117.zip",
+                "license": {
+                    "text": "Public Domain",
+                    "attribution": false,
+                    "share-alike": false
+                },
+                "year": "2023",
+                "protocol": "http",
+                "compression": "zip",
+                "conform": {
+                    "number": [
+                        "AddNum_Pre",
+                        "Add_Number",
+                        "AddNum_Suf"
+                    ],
+                    "street": "FullStreet",
+                    "unit": "Unit",
+                    "city": "Post_Comm",
+                    "district": "County",
+                    "region": "State",
+                    "postcode": "Post_Code",
+                    "format": "gdb",
+                    "layer": "Site_Structure"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "data": "https://wfs.schneidercorp.com/arcgis/rest/services/DelawareCountyIA_WFS/MapServer/2",
+                "license": {
+                    "text": "Public Domain",
+                    "attribution": false,
+                    "share-alike": false
+                },
+                "protocol": "ESRI",
+                "conform": {
+                    "pid": "PIN",
+                    "format": "geojson"
+                }
+            }
+        ],
+        "buildings": [
+            {
+                "name": "county",
+                "data": "https://wfs.schneidercorp.com/arcgis/rest/services/DelawareCountyIA_WFS/MapServer/3",
+                "license": {
+                    "text": "Public Domain",
+                    "attribution": false,
+                    "share-alike": false
+                },
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson"
+                }
+            }
+        ]
+    }
+}

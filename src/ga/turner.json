@@ -1,0 +1,48 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "13287",
+            "name": "Turner County",
+            "state": "Georgia"
+        },
+        "country": "us",
+        "state": "ga",
+        "county": "Turner"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "data": "https://www.sgrcmaps.com/alma/rest/services/Turner/TurnerParcels/MapServer/0",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "id": "SITEADDID",
+                    "lat": "LAT",
+                    "lon": "LNG",
+                    "number": "HOUSE_NO",
+                    "street": [
+                        "STDIRECT",
+                        "STREET_NAM",
+                        "STTYPE",
+                        "EXTENSION"
+                    ],
+                    "unit": "UNIT",
+                    "postcode": "ZIP"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "data": "https://www.sgrcmaps.com/alma/rest/services/Turner/TurnerParcels/MapServer/0",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "OBJECTID"
+                }
+            }
+        ]
+    }
+}

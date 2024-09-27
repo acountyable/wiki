@@ -1,0 +1,43 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "51177",
+            "name": "Spotsylvania County",
+            "state": "Virginia"
+        },
+        "country": "us",
+        "state": "va",
+        "county": "Spotsylvania"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "data": "https://gis.spotsylvania.va.us/arcgis/rest/services/EagleView/Site_Address_Points/MapServer/0",
+                "protocol": "ESRI",
+                "website": "http://gis.spotsylvania.va.us/Spotsylvania/",
+                "conform": {
+                    "format": "geojson",
+                    "number": [
+                        "PREADDRNUM",
+                        "ADDRNUM",
+                        "ADDRNUMSUF"
+                    ],
+                    "street": [
+                        "STPREDIR",
+                        "STNAME",
+                        "STPOSTDIR",
+                        "STTYPE"
+                    ],
+                    "unit": [
+                        "UNITTYPE",
+                        "UNITID"
+                    ],
+                    "city": "CITY",
+                    "postcode": "ZIP"
+                }
+            }
+        ]
+    }
+}

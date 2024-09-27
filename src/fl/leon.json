@@ -1,0 +1,67 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "12073",
+            "name": "Leon County",
+            "state": "Florida"
+        },
+        "country": "us",
+        "state": "fl",
+        "county": "Leon"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "data": "https://intervector.leoncountyfl.gov/intervector/rest/services/MapServices/TLC_OverlaySiteAddressPoints_D_WM/MapServer/0",
+                "website": "https://geodata-tlcgis.opendata.arcgis.com/datasets/tlcgis::site-address-points-tallahassee-leon-county/about",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "id": "ADDRID",
+                    "number": [
+                        "HOUSENUM",
+                        "ST_ADDRHLF"
+                    ],
+                    "street": [
+                        "PREFIX",
+                        "NAME",
+                        "TYPE",
+                        "SUFFIX"
+                    ],
+                    "unit": [
+                        "UNITTYPE",
+                        "UNITID"
+                    ],
+                    "city": "POSTAL_TOWN",
+                    "region": "STATE",
+                    "postcode": "ZIPCD"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "data": "https://intervector.leoncountyfl.gov/intervector/rest/services/MapServices/TLC_OverlayParcel_D_WM/MapServer/0",
+                "website": "https://geodata-tlcgis.opendata.arcgis.com/datasets/tlcgis::parcels-5/about",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "TAXID"
+                }
+            }
+        ],
+        "buildings": [
+            {
+                "name": "county",
+                "data": "https://intervector.leoncountyfl.gov/intervector/rest/services/MapServices/TLC_OverlayBuildings_D_WM/MapServer/0",
+                "website": "https://geodata-tlcgis.opendata.arcgis.com/datasets/tlcgis::building-footprints/about",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson"
+                }
+            }
+        ]
+    }
+}

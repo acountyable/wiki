@@ -1,0 +1,68 @@
+{
+    "coverage": {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -117.986,
+                33.835
+            ]
+        },
+        "US Census": {
+            "geoid": "0602000",
+            "name": "City of Anaheim",
+            "state": "California"
+        },
+        "country": "us",
+        "state": "ca",
+        "city": "Anaheim"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "city",
+                "data": "https://gis.anaheim.net/map/rest/services/OpenData/MapServer/1",
+                "website": "https://data-anaheim.opendata.arcgis.com/datasets/anaheim::address-points/about",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "id": "ADDR_ID",
+                    "number": [
+                        "ADDR_ST_NMBR",
+                        "ADDR_ST_FRAC"
+                    ],
+                    "street": [
+                        "ADDR_ST_PFX",
+                        "ADDR_ST_NAME",
+                        "ADDR_ST_NAME_SFX",
+                        "ADDR_ST_SFX"
+                    ],
+                    "unit": "ADDR_ST_UNIT",
+                    "city": "POSTALCITY",
+                    "postcode": "ZIPCODE"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "city",
+                "data": "https://gis.anaheim.net/map/rest/services/ParcelInfo/MapServer/0",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "APN"
+                }
+            }
+        ],
+        "buildings": [
+            {
+                "name": "city",
+                "data": "https://gis.anaheim.net/map/rest/services/OpenData2/FeatureServer/47",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson"
+                }
+            }
+        ]
+    }
+}

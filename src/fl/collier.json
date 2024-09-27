@@ -1,0 +1,73 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "12021",
+            "name": "Collier County",
+            "state": "Florida"
+        },
+        "country": "us",
+        "state": "fl",
+        "county": "Collier"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "attribution": "Collier County",
+                "data": "https://services1.arcgis.com/0iTcFO8FQRNaWoIk/arcgis/rest/services/Address_Points/FeatureServer/0",
+                "website": "https://hub-collierbcc.opendata.arcgis.com/datasets/CollierBCC::address-points/about",
+                "license": {
+                    "text": "Public Domain",
+                    "attribution": false,
+                    "share-alike": false
+                },
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "id": "SITEADDID",
+                    "unit": [
+                        "UNITTYPE",
+                        "UNITID"
+                    ],
+                    "number": [
+                        "PREADDRNUM",
+                        "ADDRNUM",
+                        "ADDRNUMSUF"
+                    ],
+                    "street": "FULLNAME",
+                    "city": "MSAG"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "attribution": "Collier County",
+                "data": "https://ags2.colliercountyfl.gov/gis/rest/services/Agency/Parcels/MapServer/0",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "PARCELID"
+                }
+            }
+        ],
+        "buildings": [
+            {
+                "name": "county",
+                "attribution": "Collier County",
+                "data": "https://services1.arcgis.com/0iTcFO8FQRNaWoIk/arcgis/rest/services/Buildings_Collier_County_2021/FeatureServer/0",
+                "website": "https://hub-collierbcc.opendata.arcgis.com/datasets/CollierBCC::buildings-collier-county-2021/about",
+                "license": {
+                    "text": "Public Domain",
+                    "attribution": false,
+                    "share-alike": false
+                },
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson"
+                }
+            }
+        ]
+    }
+}

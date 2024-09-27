@@ -1,0 +1,42 @@
+{
+    "coverage": {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -105.57,
+                44.27
+            ]
+        },
+        "US Census": {
+            "geoid": "5631855",
+            "name": "City of Gillette",
+            "state": "Wyoming"
+        },
+        "country": "us",
+        "state": "wy",
+        "county": "Campbell",
+        "city": "Gillette"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "city",
+                "data": "https://ccgiscoop.maps.arcgis.com/sharing/rest/content/items/1cf92dc19f4c4c498aae95a2e6d64c53/data",
+                "protocol": "http",
+                "compression": "zip",
+                "conform": {
+                    "format": "shapefile",
+                    "number": "MUNISF6",
+                    "street": [
+                        "MUNISF210",
+                        "MUNISF8",
+                        "MUNISF212"
+                    ],
+                    "city": "CITY",
+                    "region": "ST"
+                }
+            }
+        ]
+    }
+}

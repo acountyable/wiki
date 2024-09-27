@@ -1,0 +1,69 @@
+{
+    "coverage": {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -117.566174,
+                34.12459
+            ]
+        },
+        "US Census": {
+            "geoid": "0659451",
+            "name": "City of Rancho Cucamonga",
+            "state": "California"
+        },
+        "country": "us",
+        "state": "ca",
+        "county": "San Bernardino",
+        "city": "Rancho Cucamonga"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "city",
+                "data": "https://services1.arcgis.com/bF44QtfoYZDGo7TK/ArcGIS/rest/services/Addresses/FeatureServer/0",
+                "website": "https://rcdata-regis.opendata.arcgis.com/datasets/REGIS::addresses-1/about",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "number": [
+                        "StreetNumber",
+                        "StreetNumberFractional"
+                    ],
+                    "street": [
+                        "StreetName",
+                        "StreetSuffix"
+                    ],
+                    "unit": "Unit",
+                    "city": "City",
+                    "region": "State",
+                    "postcode": "Zipcode"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "city",
+                "data": "https://services1.arcgis.com/bF44QtfoYZDGo7TK/ArcGIS/rest/services/Parcels_Public_View/FeatureServer/0",
+                "website": "https://rcdata-regis.opendata.arcgis.com/datasets/REGIS::parcels-public-1/about",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "APN_TEXT"
+                }
+            }
+        ],
+        "buildings": [
+            {
+                "name": "city",
+                "data": "https://services1.arcgis.com/bF44QtfoYZDGo7TK/ArcGIS/rest/services/BuildingFootprintsPublic1/FeatureServer/0",
+                "website": "https://rcdata-regis.opendata.arcgis.com/datasets/REGIS::building-footprints-public-1/about",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson"
+                }
+            }
+        ]
+    }
+}

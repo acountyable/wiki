@@ -1,0 +1,42 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "22055",
+            "name": "Lafayette Parish",
+            "state": "Louisiana"
+        },
+        "country": "us",
+        "state": "la",
+        "county": "Lafayette"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "protocol": "ESRI",
+                "data": "https://maps.lafayettela.gov/arcgis/rest/services/BaseLayers/LCG_Address_Points/MapServer/0",
+                "note": "Lafayette consolidated government represents city of Lafayette and other unincorporated ares of Lafayette Parish",
+                "conform": {
+                    "format": "geojson",
+                    "number": "ADDR_NUM",
+                    "street": "FULL_STR_NAME",
+                    "unit": "UNIT",
+                    "city": "CITY",
+                    "postcode": "ZIP"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "protocol": "ESRI",
+                "data": "https://maps.lafayettela.gov/arcgis/rest/services/BaseLayers/LCG_Parcels_withCAMA_Data/FeatureServer/0?f=json",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "ASSMT_NUM"
+                }
+            }
+        ]
+    }
+}

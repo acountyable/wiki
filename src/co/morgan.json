@@ -1,0 +1,46 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "08087",
+            "name": "Morgan County",
+            "state": "Colorado"
+        },
+        "country": "us",
+        "state": "co",
+        "county": "Morgan"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "data": "https://services6.arcgis.com/iSzqv8eal4TO2oVb/ArcGIS/rest/services/ParcelAddress/FeatureServer/0",
+                "website": "https://morgancountyco.maps.arcgis.com/apps/Solutions/s2.html?appid=98b97c7f37e2453f85938d547d2b7f11",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "number": "StreetNumber",
+                    "street": [
+                        "StreetDirection",
+                        "StreetName",
+                        "StreetType"
+                    ],
+                    "city": "City",
+                    "postcode": "Postal"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "data": "https://services6.arcgis.com/iSzqv8eal4TO2oVb/ArcGIS/rest/services/Parcels/FeatureServer/0",
+                "website": "https://morgancountyco.maps.arcgis.com/apps/Solutions/s2.html?appid=98b97c7f37e2453f85938d547d2b7f11",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "FID"
+                }
+            }
+        ]
+    }
+}

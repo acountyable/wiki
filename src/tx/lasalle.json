@@ -1,0 +1,26 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "48283",
+            "name": "La Salle County",
+            "state": "Texas"
+        },
+        "country": "us",
+        "state": "tx",
+        "county": "La Salle"
+    },
+    "schema": 2,
+    "layers": {
+        "parcels": [
+            {
+                "name": "county",
+                "data": "https://services6.arcgis.com/j94FvPaik4etwHFk/ArcGIS/rest/services/LaSalleCADMatixService/FeatureServer/0",
+                "protocol": "ESRI",
+                "conform": {
+                    "pid": "prop_id",
+                    "format": "geojson"
+                }
+            }
+        ]
+    }
+}

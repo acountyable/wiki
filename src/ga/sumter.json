@@ -1,0 +1,63 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "13261",
+            "name": "Sumter County",
+            "state": "Georgia"
+        },
+        "country": "us",
+        "state": "ga",
+        "county": "Sumter"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "attribution": "Sumter County",
+                "data": "https://web4.kcsgis.com/kcsgis/rest/services/Americus_SumterCo_GA/Public/MapServer/0",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "id": "SITEADDID",
+                    "number": [
+                        "PREADDRNUM",
+                        "ADDRNUM",
+                        "ADDRNUMSUF"
+                    ],
+                    "unit": [
+                        "UNITTYPE",
+                        "UNITID"
+                    ],
+                    "street": "FULLNAME",
+                    "city": "MSAG",
+                    "district": "COUNTY",
+                    "postcode": "ZIP"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "attribution": "Sumter County",
+                "data": "https://web4.kcsgis.com/kcsgis/rest/services/Americus_SumterCo_GA/Public/MapServer/10",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "PARCELID"
+                }
+            }
+        ],
+        "buildings": [
+            {
+                "name": "county",
+                "attribution": "Sumter County",
+                "data": "https://web4.kcsgis.com/kcsgis/rest/services/Americus_SumterCo_GA/Public/MapServer/11",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson"
+                }
+            }
+        ]
+    }
+}

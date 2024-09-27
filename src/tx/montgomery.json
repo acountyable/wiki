@@ -1,0 +1,43 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "48339",
+            "name": "Montgomery County",
+            "state": "Texas"
+        },
+        "country": "us",
+        "state": "tx",
+        "county": "Montgomery"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "data": "https://services1.arcgis.com/PRoAPGnMSUqvTrzq/ArcGIS/rest/services/MCECD_Address_Points_view/FeatureServer/1",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "number": "STR_NUM",
+                    "street": "STREET",
+                    "unit": "Unit",
+                    "city": "MSAG_COMM",
+                    "district": "COUNTY",
+                    "region": "ST",
+                    "postcode": "ZIPCODE"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "data": "https://services1.arcgis.com/PRoAPGnMSUqvTrzq/ArcGIS/rest/services/Tax_Parcel_Public_View/FeatureServer/0",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "PIN"
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,69 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "41003",
+            "name": "Benton County",
+            "state": "Oregon"
+        },
+        "country": "us",
+        "state": "or",
+        "county": "Benton"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "data": "https://gis.co.benton.or.us/gisdata/Address/AddressSHPs.zip",
+                "website": "https://www.co.benton.or.us/maps/page/maps-gis-available-gis-data-sets",
+                "protocol": "http",
+                "compression": "zip",
+                "conform": {
+                    "format": "shapefile",
+                    "file": "AddressSHPs\\houses.shp",
+                    "number": "ST_NUMBR",
+                    "street": [
+                        "ST_PFX",
+                        "ST_NAME",
+                        "ST_TYPE",
+                        "ST_SFX"
+                    ],
+                    "unit": [
+                        "UNIT",
+                        "UNITNUM"
+                    ],
+                    "city": "CITY",
+                    "region": "ST",
+                    "postcode": "ZIP",
+                    "accuracy": 2
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "data": "https://gis.co.benton.or.us/gisdata/Assessment/TaxlotOwners.zip",
+                "website": "https://www.co.benton.or.us/maps/page/maps-gis-available-gis-data-sets",
+                "protocol": "http",
+                "compression": "zip",
+                "conform": {
+                    "pid": "MapTaxlot",
+                    "format": "shapefile"
+                }
+            }
+        ],
+        "buildings": [
+            {
+                "name": "county",
+                "data": "https://gis.co.benton.or.us/gisdata/Address/AddressSHPs.zip",
+                "website": "https://www.co.benton.or.us/maps/page/maps-gis-available-gis-data-sets",
+                "protocol": "http",
+                "compression": "zip",
+                "conform": {
+                    "format": "shapefile",
+                    "file": "AddressSHPs\\buildings.shp"
+                }
+            }
+        ]
+    }
+}

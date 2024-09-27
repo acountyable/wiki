@@ -1,0 +1,47 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "42125",
+            "name": "Washington County",
+            "state": "Pennsylvania"
+        },
+        "country": "us",
+        "state": "pa",
+        "county": "Washington"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "website": "https://experience.arcgis.com/experience/2b219f08890b4e19b36968a56c6470dc/",
+                "data": "https://services2.arcgis.com/LgK9DpUhNjdU0HLy/ArcGIS/rest/services/Site_Structure_Address_Points/FeatureServer/1",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "number": [
+                        "AddNum_Pre",
+                        "Add_Number",
+                        "AddNum_Suf"
+                    ],
+                    "street": [
+                        "St_PreMod",
+                        "St_PreDir",
+                        "St_PreTyp",
+                        "St_PreSep",
+                        "StreetName",
+                        "St_PosTyp",
+                        "St_PosDir",
+                        "St_PosMod"
+                    ],
+                    "unit": "Unit",
+                    "city": "Inc_Muni",
+                    "district": "County",
+                    "region": "State",
+                    "postcode": "Post_Code",
+                    "accuracy": 1
+                }
+            }
+        ]
+    }
+}

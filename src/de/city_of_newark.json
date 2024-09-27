@@ -1,0 +1,43 @@
+{
+    "coverage": {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -75.757308,
+                39.677576
+            ]
+        },
+        "US Census": {
+            "geoid": "1050670",
+            "name": "City of Newark",
+            "state": "Delaware"
+        },
+        "country": "us",
+        "state": "de",
+        "county": "New Castle",
+        "city": "Newark"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "city",
+                "data": "https://services.arcgis.com/nQgBxn6WXyRCKVUz/ArcGIS/rest/services/AGO_NewarkParcels_Labeled_MS/FeatureServer/1",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "number": "STNO",
+                    "street": [
+                        "PREDIR",
+                        "STNAME",
+                        "SUFFIX",
+                        "POSTDIR"
+                    ],
+                    "city": "PROPCITY",
+                    "region": "PROPSTATE",
+                    "postcode": "PROPZIP"
+                }
+            }
+        ]
+    }
+}

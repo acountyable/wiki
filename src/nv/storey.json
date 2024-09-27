@@ -1,0 +1,47 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "32029",
+            "name": "Storey County",
+            "state": "Nevada"
+        },
+        "country": "us",
+        "state": "nv",
+        "county": "Storey"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "data": "https://services6.arcgis.com/uqDdpZNvJheIun5o/ArcGIS/rest/services/Address_Points/FeatureServer/0",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "number": "STR_NUMB",
+                    "street": [
+                        "STR_PREFIX",
+                        "STR_NAME",
+                        "STR_TYPE",
+                        "STR_SUFFIX"
+                    ],
+                    "unit": "STR_UNIT",
+                    "city": "CITY",
+                    "region": "STATE",
+                    "postcode": "ZIP"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "data": "https://services6.arcgis.com/uqDdpZNvJheIun5o/ArcGIS/rest/services/StoreyCo_Pictometry/FeatureServer/2",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "APN_TOTAL"
+                }
+            }
+        ]
+    }
+}

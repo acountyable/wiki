@@ -1,0 +1,61 @@
+{
+    "coverage": {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -122.525,
+                47.243
+            ]
+        },
+        "US Census": {
+            "geoid": "5370000",
+            "name": "City of Tacoma",
+            "state": "Washington"
+        },
+        "country": "us",
+        "state": "wa",
+        "county": "Pierce",
+        "city": "Tacoma"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "city",
+                "data": "https://staffmaps.cityoftacoma.org/server/rest/services/Referenced/Current_Addresses/FeatureServer/0",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "id": "AddressID",
+                    "number": "AddressNumber",
+                    "street": [
+                        "Prefix",
+                        "StreetName",
+                        "StreetType",
+                        "Suffix"
+                    ],
+                    "unit": [
+                        "UnitType",
+                        "Unit"
+                    ],
+                    "city": "City",
+                    "district": "County",
+                    "region": "State",
+                    "postcode": "Zipcode"
+                }
+            }
+        ],
+        "buildings": [
+            {
+                "name": "city",
+                "data": "https://www.arcgis.com/sharing/rest/content/items/8a780de8fe194222898c83259899a97c/data",
+                "website": "https://geohub.cityoftacoma.org/datasets/building-footprints-tacoma/about",
+                "protocol": "http",
+                "compression": "zip",
+                "conform": {
+                    "format": "gdb"
+                }
+            }
+        ]
+    }
+}

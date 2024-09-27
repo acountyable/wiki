@@ -1,0 +1,51 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "5107784",
+            "name": "Town of Blacksburg",
+            "state": "Virginia"
+        },
+        "country": "us",
+        "state": "va",
+        "town": "Blacksburg"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "town",
+                "data": "https://s3.amazonaws.com/Blacksburg_Va/GIS_Updates/8_15_2022/Addresses.zip",
+                "protocol": "http",
+                "compression": "zip",
+                "website": "https://sites.google.com/vt.edu/townofblacksburggisdata/home#h.p_VGh2hnVV1Ubi",
+                "conform": {
+                    "format": "shapefile",
+                    "number": "STNUM",
+                    "unit": [
+                        "unit_desig",
+                        "unit"
+                    ],
+                    "street": [
+                        "STREET_PRE",
+                        "STREET_NAM",
+                        "STREET_TYP",
+                        "STREET_POS"
+                    ],
+                    "city": "COMMUNITY"
+                }
+            }
+        ],
+        "buildings": [
+            {
+                "name": "town",
+                "data": "https://s3.amazonaws.com/Blacksburg_Va/GIS_Updates/8_15_2022/Buildings.zip",
+                "protocol": "http",
+                "compression": "zip",
+                "website": "https://sites.google.com/vt.edu/townofblacksburggisdata/home#h.p_TZeAz5621Xz2",
+                "conform": {
+                    "format": "shapefile"
+                }
+            }
+        ]
+    }
+}

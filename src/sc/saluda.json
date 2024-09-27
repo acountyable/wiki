@@ -1,0 +1,45 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "45081",
+            "name": "Saluda County",
+            "state": "South Carolina"
+        },
+        "country": "us",
+        "state": "sc",
+        "county": "Saluda"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "data": "https://saludacountysc.net/arcgis/rest/services/TheAddresser/Address_Working_Pro/FeatureServer/0",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "number": "FullHouse",
+                    "street": "FullStreetName",
+                    "unit": [
+                        "UnitType",
+                        "Apt"
+                    ],
+                    "city": "Postal_Town",
+                    "region": "Postal_State",
+                    "postcode": "Postal_Code"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "data": "https://saludacountysc.net/arcgis/rest/services/ParcelViewers/PublicWebsite_Pro/MapServer/4",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "SDE.DBO.Parcels.TaxMapNumber"
+                }
+            }
+        ]
+    }
+}

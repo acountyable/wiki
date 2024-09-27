@@ -1,0 +1,57 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "16081",
+            "name": "Teton County",
+            "state": "Idaho"
+        },
+        "country": "us",
+        "state": "id",
+        "county": "Teton"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "data": "https://gisserver18.co.teton.id.us/arcgis/rest/services/ADDRESS/MapServer/0",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "id": "ADDRESSID",
+                    "number": "HOUSENUMBER",
+                    "street": {
+                        "function": "regexp",
+                        "field": "LABELNAME",
+                        "pattern": "^(?:[0-9]+ )(.+?)(?:\\s+(?:UNIT\\s+|Unit\\s+|#).+)?$"
+                    },
+                    "unit": "SUB_UNIT",
+                    "city": "COMMUNITY",
+                    "region": "STATE",
+                    "postcode": "ZIPCODE"
+                }
+            }
+        ],
+        "buildings": [
+            {
+                "name": "county",
+                "data": "https://gisserver18.co.teton.id.us/arcgis/rest/services/BUILDING_FOOTPRINTS/MapServer/0",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "data": "https://gisserver18.co.teton.id.us/arcgis/rest/services/PARCELS/MapServer/0",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "PIN"
+                }
+            }
+        ]
+    }
+}

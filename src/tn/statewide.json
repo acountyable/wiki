@@ -1,0 +1,46 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "47",
+            "state": "Tennessee"
+        },
+        "country": "us",
+        "state": "tn"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "state",
+                "data": "https://tnmap.tn.gov/NG911/TN_NG911.zip",
+                "protocol": "http",
+                "compression": "zip",
+                "website": "http://tnmap.tn.gov/",
+                "conform": {
+                    "format": "gdb",
+                    "layer": "Addresses",
+                    "number": [
+                        "addnum_pre",
+                        "add_number",
+                        "addnum_suf"
+                    ],
+                    "street": [
+                        "stn_premod",
+                        "stn_predir",
+                        "stn_pretyp",
+                        "stn_presep",
+                        "streetname",
+                        "stn_postyp",
+                        "stn_posdir",
+                        "stn_posmod"
+                    ],
+                    "unit": "unit",
+                    "city": "post_comm",
+                    "district": "county",
+                    "region": "state",
+                    "postcode": "zip_code"
+                }
+            }
+        ]
+    }
+}

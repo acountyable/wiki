@@ -1,0 +1,35 @@
+{
+    "coverage": {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -76.29,
+                36.85
+            ]
+        },
+        "US Census": {
+            "geoid": "51710",
+            "name": "City of Norfolk",
+            "state": "Virginia"
+        },
+        "country": "us",
+        "state": "va",
+        "city": "Norfolk"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "city",
+                "data": "https://gisshare.norfolk.gov/pubserver/rest/services/InteractiveMapper/Addresses_HouseNumbers/MapServer/0",
+                "website": "https://norfolkgisdata-orf.opendata.arcgis.com/datasets/a0c3f3c14cab4b83bc3509d71aab0de5_0/explore",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "number": "HSE_NUM",
+                    "street": "STREET"
+                }
+            }
+        ]
+    }
+}

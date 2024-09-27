@@ -1,0 +1,38 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "46047",
+            "name": "Fall River County",
+            "state": "South Dakota"
+        },
+        "country": "us",
+        "state": "sd",
+        "county": "Fall River"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "data": "https://services7.arcgis.com/yz1kSnCgtG9EeKZN/ArcGIS/rest/services/ParcelID_FRC_proj_view/FeatureServer/0",
+                "protocol": "ESRI",
+                "conform": {
+                    "number": "House_Numb",
+                    "street": "Address",
+                    "format": "geojson"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "data": "https://services7.arcgis.com/yz1kSnCgtG9EeKZN/ArcGIS/rest/services/ParcelID_FRC_proj_view/FeatureServer/0",
+                "protocol": "ESRI",
+                "conform": {
+                    "pid": "ParcelID",
+                    "format": "geojson"
+                }
+            }
+        ]
+    }
+}

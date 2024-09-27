@@ -1,0 +1,54 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "22093",
+            "name": "St. James Parish",
+            "state": "Louisiana"
+        },
+        "country": "us",
+        "state": "la",
+        "county": "St. James Parish"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "data": "https://gisviewer.stjamesla.com/arcgis/rest/services/TaxViewer/MapServer/0",
+                "website": "https://www.stjamesla.com/153/GIS-Maps-Data",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "id": "ADDPTID",
+                    "number": "ADDRESS",
+                    "street": "ST_LABEL",
+                    "city": "COMMUNITY",
+                    "postcode": "ZIPCODE"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "data": "https://gisviewer.stjamesla.com/arcgis/rest/services/TaxViewer/MapServer/4",
+                "website": "https://www.stjamesla.com/153/GIS-Maps-Data",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "PIN"
+                }
+            }
+        ],
+        "buildings": [
+            {
+                "name": "county",
+                "data": "https://gisviewer.stjamesla.com/arcgis/rest/services/TaxViewer/MapServer/2",
+                "website": "https://www.stjamesla.com/153/GIS-Maps-Data",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson"
+                }
+            }
+        ]
+    }
+}

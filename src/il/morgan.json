@@ -1,0 +1,58 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "17137",
+            "name": "Morgan County",
+            "state": "Illinois"
+        },
+        "country": "us",
+        "state": "il",
+        "county": "Morgan"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "data": "https://services3.arcgis.com/95PFahBF8eyGEfuc/arcgis/rest/services/MorganAddresses/FeatureServer/0",
+                "website": "https://portal-morganmaps.opendata.arcgis.com/datasets/Morganmaps::morgan-address-points/about",
+                "protocol": "ESRI",
+                "conform": {
+                    "number": "HNUM",
+                    "street": [
+                        "PRE_DIR",
+                        "STREET",
+                        "TYPE"
+                    ],
+                    "city": "CITY",
+                    "region": "STATE",
+                    "postcode": "ZIP",
+                    "format": "geojson"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "data": "https://services3.arcgis.com/95PFahBF8eyGEfuc/arcgis/rest/services/TaxParcels/FeatureServer/0",
+                "website": "https://portal-morganmaps.opendata.arcgis.com/datasets/Morganmaps::tax-parcels/about",
+                "protocol": "ESRI",
+                "conform": {
+                    "pid": "pin",
+                    "format": "geojson"
+                }
+            }
+        ],
+        "buildings": [
+            {
+                "name": "county",
+                "data": "https://services3.arcgis.com/95PFahBF8eyGEfuc/arcgis/rest/services/BuildingFootprints/FeatureServer/0",
+                "website": "https://portal-morganmaps.opendata.arcgis.com/datasets/Morganmaps::buildingfootprints/about",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson"
+                }
+            }
+        ]
+    }
+}

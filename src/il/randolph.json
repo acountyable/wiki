@@ -1,0 +1,54 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "17157",
+            "name": "Randolph County",
+            "state": "Illinois"
+        },
+        "country": "us",
+        "state": "il",
+        "county": "Randolph"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "data": "https://services5.arcgis.com/pweYHqdOby1TE9DD/ArcGIS/rest/services/AddressPoints/FeatureServer/0",
+                "protocol": "ESRI",
+                "conform": {
+                    "number": [
+                        "AddNum_Pre",
+                        "Add_Number",
+                        "AddNum_Suf"
+                    ],
+                    "street": [
+                        "St_PreMod",
+                        "St_PreDir",
+                        "St_PreTyp",
+                        "St_PreSep",
+                        "St_Name",
+                        "St_PosTyp",
+                        "St_PosDir",
+                        "St_PosMod"
+                    ],
+                    "city": "Post_Comm",
+                    "region": "State",
+                    "postcode": "Post_Code",
+                    "format": "geojson"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "data": "https://services5.arcgis.com/pweYHqdOby1TE9DD/ArcGIS/rest/services/PublishedFabric/FeatureServer/0",
+                "protocol": "ESRI",
+                "conform": {
+                    "pid": "ParcelNumb",
+                    "format": "geojson"
+                }
+            }
+        ]
+    }
+}

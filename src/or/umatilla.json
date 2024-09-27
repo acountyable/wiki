@@ -1,0 +1,46 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "41059",
+            "name": "Umatilla County",
+            "state": "Oregon"
+        },
+        "country": "us",
+        "state": "or",
+        "county": "Umatilla"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "data": "https://services3.arcgis.com/tNPgIZWOB0Efvm0g/ArcGIS/rest/services/Tax_Lots/FeatureServer/0",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "number": "SITUS_HOUS",
+                    "street": [
+                        "SITUS_STRE",
+                        "SITUS_ST_1",
+                        "SITUS_DIRE"
+                    ],
+                    "unit": "SITUS_UNIT",
+                    "city": "SITUS_CITY",
+                    "region": "SITUS_STAT",
+                    "postcode": "SITUS_ZIP"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "data": "https://services3.arcgis.com/tNPgIZWOB0Efvm0g/ArcGIS/rest/services/Tax_Lots/FeatureServer/0",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "TLID"
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,46 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "22061",
+            "name": "Lincoln Parish",
+            "state": "Louisiana"
+        },
+        "country": "us",
+        "state": "la",
+        "county": "Lincoln"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "protocol": "ESRI",
+                "data": "https://gis21svweb.lincolnparish.org/arcgis/rest/services/LA_Lincoln_Assessor/MapServer/0",
+                "conform": {
+                    "format": "geojson",
+                    "number": "HOUSE_NUM",
+                    "street": {
+                        "function": "regexp",
+                        "field": "FUL_NAME",
+                        "pattern": "^(.+?)(?: Pvt)?$"
+                    },
+                    "unit": "UNIT",
+                    "city": "Community",
+                    "region": "State",
+                    "postcode": "Zip"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "protocol": "ESRI",
+                "data": "https://gis21svweb.lincolnparish.org/arcgis/rest/services/LA_Lincoln_Assessor/MapServer/5",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "ParcelId"
+                }
+            }
+        ]
+    }
+}

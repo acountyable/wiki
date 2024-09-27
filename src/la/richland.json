@@ -1,0 +1,33 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "22083",
+            "name": "Richland Parish",
+            "state": "Louisiana"
+        },
+        "country": "us",
+        "state": "la",
+        "county": "Richland"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "data": "https://services8.arcgis.com/VFkaHw5otiAMcwqf/ArcGIS/rest/services/AddressPointsPublic/FeatureServer/0",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "number": "ADDNUM",
+                    "street": [
+                        "STREETNAME",
+                        "ST_SUFFIX"
+                    ],
+                    "unit": "APT",
+                    "city": "CITY",
+                    "postcode": "ZIP"
+                }
+            }
+        ]
+    }
+}

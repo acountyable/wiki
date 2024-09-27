@@ -1,0 +1,48 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "41057",
+            "name": "Tillamook County",
+            "state": "Oregon"
+        },
+        "country": "us",
+        "state": "or",
+        "county": "Tillamook"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "data": "https://services3.arcgis.com/JnnlTIrcZLzs7d68/ArcGIS/rest/services/Address_Points/FeatureServer/0",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "number": "HouseNumbe",
+                    "street": [
+                        "PreDirecti",
+                        "PreType",
+                        "StreetName",
+                        "PostType",
+                        "PostTypeSu",
+                        "PostDirect"
+                    ],
+                    "unit": "UNIT",
+                    "city": "PostalCity",
+                    "postcode": "Zip"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "data": "https://services3.arcgis.com/JnnlTIrcZLzs7d68/ArcGIS/rest/services/Taxlots/FeatureServer/0",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "MapTaxlot"
+                }
+            }
+        ]
+    }
+}

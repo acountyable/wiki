@@ -1,0 +1,62 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "06085",
+            "name": "Santa Clara County",
+            "state": "California"
+        },
+        "country": "us",
+        "state": "ca",
+        "county": "Santa Clara"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "conform": {
+                    "format": "geojson",
+                    "number": "HOUSENUMTEXT",
+                    "unit": "UNITNUMBER",
+                    "street": [
+                        "STREETPREFIX",
+                        "STREETNAME",
+                        "STREETTYPE",
+                        "STREETSUFFIX"
+                    ],
+                    "city": "CITY",
+                    "postcode": "ZIPCODE"
+                },
+                "attribution": "Santa Clara County",
+                "data": "https://mapservices.sccgov.org/arcgis/rest/services/opendata/SCCGISHUB/MapServer/8",
+                "website": "https://data.sccgov.org/Government/AddressPoint/k4vk-5ggi",
+                "protocol": "ESRI"
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "APN"
+                },
+                "attribution": "Santa Clara County",
+                "data": "https://mapservices.sccgov.org/arcgis/rest/services/opendata/SCCGISHUB/MapServer/112",
+                "website": "https://data.sccgov.org/Government/Parcels/2bmn-3ayc",
+                "protocol": "ESRI"
+            }
+        ],
+        "buildings": [
+            {
+                "name": "county",
+                "conform": {
+                    "format": "geojson"
+                },
+                "attribution": "Santa Clara County",
+                "data": "https://mapservices.sccgov.org/arcgis/rest/services/opendata/SCCGISHUB/MapServer/121",
+                "website": "https://data.sccgov.org/dataset/Buildings-Footprints-2D/8729-jdun",
+                "protocol": "ESRI"
+            }
+        ]
+    }
+}

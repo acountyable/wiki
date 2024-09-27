@@ -1,0 +1,59 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "53051",
+            "name": "Pend Oreille County",
+            "state": "Washington"
+        },
+        "country": "us",
+        "state": "wa",
+        "county": "Pend Oreille"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "data": "https://services1.arcgis.com/o3wuEYcU5N00WpI1/arcgis/rest/services/Address_Points___Open_Data/FeatureServer/1",
+                "website": "https://pend-oreille-county-open-data-pendoreilleco.hub.arcgis.com/datasets/PendOreilleCo::address-points-open-data/about",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "number": "add_number",
+                    "street": [
+                        "st_predir",
+                        "st_name",
+                        "st_type"
+                    ],
+                    "unit": "unit",
+                    "city": "post_comm",
+                    "region": "state",
+                    "postcode": "post_code"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "data": "https://services1.arcgis.com/o3wuEYcU5N00WpI1/arcgis/rest/services/Parcels_OpenData/FeatureServer/0",
+                "website": "https://pend-oreille-county-open-data-pendoreilleco.hub.arcgis.com/datasets/PendOreilleCo::parcels-opendata/about",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "geo_id"
+                }
+            }
+        ],
+        "buildings": [
+            {
+                "name": "county",
+                "data": "https://services1.arcgis.com/o3wuEYcU5N00WpI1/arcgis/rest/services/Building_Footprints_OpenData/FeatureServer/0",
+                "website": "https://pend-oreille-county-open-data-pendoreilleco.hub.arcgis.com/datasets/PendOreilleCo::building-footprints-open-data/about",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson"
+                }
+            }
+        ]
+    }
+}

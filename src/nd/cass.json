@@ -1,0 +1,47 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "38017",
+            "name": "Cass County",
+            "state": "North Dakota"
+        },
+        "country": "us",
+        "state": "nd",
+        "county": "Cass"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "data": "https://gisweb.casscountynd.gov/arcgis/rest/services/OpenData/OpenData/MapServer/7",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "number": {
+                        "function": "prefixed_number",
+                        "field": "PropertyAddress"
+                    },
+                    "street": {
+                        "function": "postfixed_street",
+                        "field": "PropertyAddress"
+                    },
+                    "city": "LandCity",
+                    "region": "LandSt",
+                    "postcode": "LandZip"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "data": "https://gisweb.casscountynd.gov/arcgis/rest/services/OpenData/OpenData/MapServer/7",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "GISPIN"
+                }
+            }
+        ]
+    }
+}

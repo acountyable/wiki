@@ -1,0 +1,53 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "10001",
+            "name": "Kent County",
+            "state": "Delaware"
+        },
+        "country": "us",
+        "state": "de",
+        "county": "Kent"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "conform": {
+                    "format": "geojson",
+                    "number": "Address",
+                    "street": "Roadname",
+                    "unit": "Apartment",
+                    "postcode": "Zipcode",
+                    "city": "City"
+                },
+                "data": "https://gis.kentcountyde.gov/server/rest/services/EmergencyManagement/Addresses/FeatureServer/0",
+                "website": "https://gis-kentcountyde.hub.arcgis.com/datasets/2e07af1c427d4787b0d30548069a1230_0/about",
+                "protocol": "ESRI"
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "PARCELID"
+                },
+                "data": "https://gis.kentcountyde.gov/server/rest/services/Parcels/Parcels/FeatureServer/0",
+                "website": "https://gis-kentcountyde.hub.arcgis.com/datasets/1d752a80c789414ab9ea4533d1b783dc_0/about",
+                "protocol": "ESRI"
+            }
+        ],
+        "buildings": [
+            {
+                "name": "county",
+                "conform": {
+                    "format": "geojson"
+                },
+                "data": "https://gis.kentcountyde.gov/server/rest/services/LandUse/PlanningData/FeatureServer/3",
+                "protocol": "ESRI"
+            }
+        ]
+    }
+}

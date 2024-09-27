@@ -1,0 +1,74 @@
+{
+    "coverage": {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -76.69,
+                39.284
+            ]
+        },
+        "US Census": {
+            "geoid": "24510",
+            "name": "City of Baltimore",
+            "state": "Maryland"
+        },
+        "country": "us",
+        "state": "md",
+        "city": "baltimore"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "city",
+                "data": "https://egis.baltimorecity.gov/egis/rest/services/Address_Points/AddressPoint_Native/FeatureServer/0",
+                "website": "https://data.baltimorecity.gov/datasets/baltimore::address-point-native-2/about",
+                "attribution": "City of Baltimore",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "number": [
+                        "addr_numbe",
+                        "addr_frac"
+                    ],
+                    "street": [
+                        "st_dir",
+                        "st_name",
+                        "st_type",
+                        "dirsuf"
+                    ],
+                    "unit": "unit",
+                    "postcode": "zip_code",
+                    "city": "inc_muni",
+                    "district": "county",
+                    "region": "state"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "city",
+                "data": "https://egis.baltimorecity.gov/egis/rest/services/Parcel_Information/Parcel/FeatureServer/0",
+                "website": "https://data.baltimorecity.gov/datasets/baltimore::parcel/about",
+                "attribution": "City of Baltimore",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "TAG"
+                }
+            }
+        ],
+        "buildings": [
+            {
+                "name": "city",
+                "data": "https://services1.arcgis.com/UWYHeuuJISiGmgXx/arcgis/rest/services/buildings/FeatureServer/0",
+                "website": "https://data.baltimorecity.gov/datasets/baltimore::buildings-footprint/about",
+                "attribution": "City of Baltimore",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson"
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,55 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "22109",
+            "name": "Terrebonne Parish",
+            "state": "Louisiana"
+        },
+        "country": "us",
+        "state": "la",
+        "county": "Terrebonne"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "data": "https://gis.tpcg.org/server/rest/services/SAS/saswebmap2/MapServer/26",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "number": "MUN_NO",
+                    "street": [
+                        "DIR",
+                        "STREET",
+                        "DESIGNATIO"
+                    ],
+                    "unit": "APT_LOT",
+                    "city": "COMM",
+                    "postcode": "ZIP_CODE"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "data": "https://gis.tpcg.org/server/rest/services/SAS/saswebmap2/MapServer/0",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "ANACCT"
+                }
+            }
+        ],
+        "buildings": [
+            {
+                "name": "county",
+                "data": "https://gis.tpcg.org/server/rest/services/SAS/saswebmap2/MapServer/28",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson"
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,45 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "13067",
+            "name": "Cobb County",
+            "state": "Georgia"
+        },
+        "country": "us",
+        "state": "ga",
+        "county": "Cobb"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "protocol": "ESRI",
+                "data": "https://gis.cobbcounty.org/gisserver/rest/services/accela/ACCGIS_COBB/MapServer/27",
+                "conform": {
+                    "format": "geojson",
+                    "number": [
+                        "AddressNumber",
+                        "AddressNumberSuffix"
+                    ],
+                    "street": "CompleteStreetName",
+                    "unit": "Subaddress",
+                    "city": "City",
+                    "region": "State",
+                    "postcode": "ZipCode"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "protocol": "ESRI",
+                "data": "https://gis.cobbcounty.org/gisserver/rest/services/accela/ACCGIS_COBB/MapServer/28",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "PIN"
+                }
+            }
+        ]
+    }
+}

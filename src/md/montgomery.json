@@ -1,0 +1,59 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "24031",
+            "name": "Montgomery County",
+            "state": "Maryland"
+        },
+        "country": "us",
+        "state": "md",
+        "county": "Montgomery"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "data": "https://gis.montgomerycountymd.gov/ArcGIS/rest/services/energov/energov/MapServer/0",
+                "website": "https://gisportal.montgomerycountymd.gov/portal/home/index.html",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "number": "ADDRNUM",
+                    "unit": "BLDG_NUM",
+                    "street": [
+                        "PRE_DIR",
+                        "STREET_NAME",
+                        "STREET_TYPE",
+                        "SUF_DIR"
+                    ],
+                    "city": "POSTAL_CITY",
+                    "postcode": "ZIPCODE"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "data": "https://gis.montgomerycountymd.gov/ArcGIS/rest/services/energov/energov/MapServer/7",
+                "website": "https://gisportal.montgomerycountymd.gov/portal/home/index.html",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "ACCT"
+                }
+            }
+        ],
+        "buildings": [
+            {
+                "name": "county",
+                "data": "https://gis.montgomerycountymd.gov/ArcGIS/rest/services/energov/energov/MapServer/11",
+                "website": "https://gisportal.montgomerycountymd.gov/portal/home/index.html",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson"
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,55 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "19189",
+            "name": "Winnebago County",
+            "state": "Iowa"
+        },
+        "country": "us",
+        "state": "ia",
+        "county": "Winnebago"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "data": "https://wfs.schneidercorp.com/arcgis/rest/services/WinnebagoCountyIA_WFS/MapServer/17",
+                "license": {
+                    "text": "Public Domain",
+                    "attribution": false,
+                    "share-alike": false
+                },
+                "protocol": "ESRI",
+                "conform": {
+                    "number": "HOUSE_NUMBER",
+                    "street": "Location",
+                    "unit": {
+                        "function": "postfixed_unit",
+                        "field": "ADDRESS"
+                    },
+                    "city": "SitusCityName",
+                    "region": "SitusStateName",
+                    "postcode": "SitusPostalCode",
+                    "format": "geojson"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "data": "https://wfs.schneidercorp.com/arcgis/rest/services/WinnebagoCountyIA_WFS/MapServer/12",
+                "license": {
+                    "text": "Public Domain",
+                    "attribution": false,
+                    "share-alike": false
+                },
+                "protocol": "ESRI",
+                "conform": {
+                    "pid": "Parcelid",
+                    "format": "geojson"
+                }
+            }
+        ]
+    }
+}

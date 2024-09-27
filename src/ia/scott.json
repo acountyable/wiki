@@ -1,0 +1,69 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "19163",
+            "name": "Scott County",
+            "state": "Iowa"
+        },
+        "country": "us",
+        "state": "ia",
+        "county": "Scott"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "license": "https://github.com/user-attachments/files/16608029/1ScottCounty_GIS_Disclaimer.pdf",
+                "data": "https://github.com/user-attachments/files/16608268/SHP_Address.zip",
+                "protocol": "http",
+                "compression": "zip",
+                "conform": {
+                    "id": "SIN",
+                    "number": [
+                        "SAN",
+                        "SANSUF"
+                    ],
+                    "street": [
+                        "PRT",
+                        "PRD",
+                        "STN",
+                        "STS",
+                        "POD",
+                        "POM"
+                    ],
+                    "unit": "UNIT",
+                    "city": "COMM",
+                    "region": "STATE",
+                    "postcode": "ZIP",
+                    "format": "shapefile"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "license": "https://github.com/user-attachments/files/16608029/1ScottCounty_GIS_Disclaimer.pdf",
+                "data": "https://github.com/user-attachments/files/16608265/SHP_Parcel.zip",
+                "protocol": "http",
+                "compression": "zip",
+                "conform": {
+                    "pid": "PIN",
+                    "format": "shapefile"
+                }
+            }
+        ],
+        "buildings": [
+            {
+                "name": "county",
+                "license": "https://github.com/user-attachments/files/16608029/1ScottCounty_GIS_Disclaimer.pdf",
+                "data": "https://github.com/user-attachments/files/16608266/SHP_Planimetrics.zip",
+                "protocol": "http",
+                "compression": "zip",
+                "conform": {
+                    "format": "shapefile"
+                }
+            }
+        ]
+    }
+}

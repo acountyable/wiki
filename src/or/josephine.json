@@ -1,0 +1,70 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "41033",
+            "name": "Josephine County",
+            "state": "Oregon"
+        },
+        "country": "us",
+        "state": "or",
+        "county": "Josephine"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "protocol": "http",
+                "compression": "zip",
+                "data": "https://alt.co.josephine.or.us/filedrop/gis/JoCo_SiteAddress.zip",
+                "website": "https://www.josephinecounty.gov/departments/geographic_information_systems_(gis)/gis_data_download.php",
+                "conform": {
+                    "format": "shapefile",
+                    "number": [
+                        "add_number",
+                        "addnum_suf"
+                    ],
+                    "street": [
+                        "st_premod",
+                        "st_predir",
+                        "st_pretyp",
+                        "st_presep",
+                        "st_name",
+                        "st_postyp",
+                        "st_posdir",
+                        "st_posmod"
+                    ],
+                    "city": "post_comm",
+                    "region": "state",
+                    "postcode": "post_code",
+                    "district": "county"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "protocol": "http",
+                "compression": "zip",
+                "data": "https://alt.co.josephine.or.us/filedrop/gis/JoCo_Taxlots.zip",
+                "website": "https://www.josephinecounty.gov/departments/geographic_information_systems_(gis)/gis_data_download.php",
+                "conform": {
+                    "format": "shapefile",
+                    "pid": "MapNum"
+                }
+            }
+        ],
+        "buildings": [
+            {
+                "name": "county",
+                "protocol": "http",
+                "compression": "zip",
+                "data": "https://alt.co.josephine.or.us/filedrop/gis/JoCo_Buildings.zip",
+                "website": "https://www.josephinecounty.gov/departments/geographic_information_systems_(gis)/gis_data_download.php",
+                "conform": {
+                    "format": "shapefile"
+                }
+            }
+        ]
+    }
+}

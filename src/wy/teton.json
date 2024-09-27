@@ -1,0 +1,62 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "56039",
+            "name": "Teton County",
+            "state": "Wyoming"
+        },
+        "country": "us",
+        "state": "wy",
+        "county": "Teton"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "website": "https://gis.tetoncountywy.gov/portal/apps/sites/#/teton-county-gis-hub/datasets/687993dd9d494ed9b89203255b948117/about?layer=0",
+                "license": {
+                    "url": "https://www.tetoncountywy.gov/958/Geographic-Information-System",
+                    "text": "Indemnification",
+                    "attribution": false,
+                    "share-alike": false
+                },
+                "data": "https://gis.tetoncountywy.gov/server/rest/services/Public_Services/Addressing/FeatureServer/0",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "number": "street_num",
+                    "street": [
+                        "st_dir",
+                        "st_name",
+                        "st_type"
+                    ],
+                    "unit": "st_unit",
+                    "city": "msag_city",
+                    "region": "state",
+                    "postcode": "msag_zip",
+                    "id": "pidn",
+                    "accuracy": 2
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "website": "https://gis.tetoncountywy.gov/portal/apps/sites/#/teton-county-gis-hub/datasets/687993dd9d494ed9b89203255b948117/about?layer=1",
+                "license": {
+                    "url": "https://www.tetoncountywy.gov/958/Geographic-Information-System",
+                    "text": "Indemnification",
+                    "attribution": false,
+                    "share-alike": false
+                },
+                "data": "https://gis.tetoncountywy.gov/server/rest/services/Public_Services/Parcels/FeatureServer/0",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "pidn"
+                }
+            }
+        ]
+    }
+}

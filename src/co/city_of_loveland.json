@@ -1,0 +1,45 @@
+{
+    "coverage": {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -105.131,
+                40.407
+            ]
+        },
+        "US Census": {
+            "geoid": "0846465",
+            "name": "City of Loveland",
+            "state": "Colorado"
+        },
+        "country": "us",
+        "state": "co",
+        "city": "Loveland"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "city",
+                "attribution": "City of Loveland",
+                "data": "https://mapserv.cityofloveland.org/arcgis/rest/services/layers/Addresses_Public/MapServer/0",
+                "protocol": "ESRI",
+                "website": "https://loveland-gis-thelogicsystem.hub.arcgis.com/datasets/799bd22058a24c35a43450914e8352ff_0/explore",
+                "conform": {
+                    "format": "geojson",
+                    "id": "LOCID",
+                    "number": "ADDRNUM",
+                    "street": [
+                        "STPRE",
+                        "STNAME",
+                        "STTYPE",
+                        "STSUF"
+                    ],
+                    "unit": "APT",
+                    "city": "CITY",
+                    "postcode": "ZIPCODE"
+                }
+            }
+        ]
+    }
+}

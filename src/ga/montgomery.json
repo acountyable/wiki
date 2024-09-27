@@ -1,0 +1,47 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "13209",
+            "name": "Montgomery County",
+            "state": "Georgia"
+        },
+        "country": "us",
+        "state": "ga",
+        "county": "Montgomery"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "data": "https://services5.arcgis.com/HHvUPZ2XuLOAJxjR/arcgis/rest/services/MontgomeryToombsBoundary/FeatureServer/15",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "number": [
+                        "house_no",
+                        "extension"
+                    ],
+                    "street": [
+                        "stdirect",
+                        "street_nam",
+                        "sttype"
+                    ],
+                    "unit": "unit",
+                    "postcode": "zip"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "data": "https://services5.arcgis.com/HHvUPZ2XuLOAJxjR/ArcGIS/rest/services/MontgomeryToombsBoundary/FeatureServer/15",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "Parcel_No"
+                }
+            }
+        ]
+    }
+}

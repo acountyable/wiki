@@ -1,0 +1,50 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "17197",
+            "name": "Will County",
+            "state": "Illinois"
+        },
+        "country": "us",
+        "state": "il",
+        "county": "Will"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "data": "https://gis.willcountyillinois.com/hosting/rest/services/Basemap/Address_Points_V/MapServer/0",
+                "website": "https://willcounty.gov/County-Offices/Administration/GIS-Division/Data",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "number": "HOUSENUMBE",
+                    "street": [
+                        "PREFIXDIRE",
+                        "PREFIXTYPE",
+                        "STREETNAME",
+                        "SUFFIXTYPE",
+                        "SUFFIXDIRE"
+                    ],
+                    "city": "CITY",
+                    "postcode": "ZIP_CODE",
+                    "district": "COUNTY",
+                    "region": "STATE"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "data": "https://gis.willcountyillinois.com/hosting/rest/services/Basemap/Parcels_LY_V/MapServer/0",
+                "website": "https://willcounty.gov/County-Offices/Administration/GIS-Division/Data",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "PIN"
+                }
+            }
+        ]
+    }
+}

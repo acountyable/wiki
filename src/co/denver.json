@@ -1,0 +1,83 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "08031",
+            "name": "Denver County",
+            "state": "Colorado"
+        },
+        "country": "us",
+        "state": "co",
+        "county": "Denver"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "conform": {
+                    "format": "geojson",
+                    "number": [
+                        "ADDRESS_NUMBER",
+                        "ADDRESS_NUMBER_SUFFIX"
+                    ],
+                    "street": [
+                        "PREMODIDER",
+                        "PREDIRECTIONAL",
+                        "STREET_NAME",
+                        "POSTTYPE",
+                        "POSTDIRECTIONAL"
+                    ],
+                    "unit": [
+                        "COMPOSITE_UNIT_TYPE",
+                        "CONMPOSIT_UNIT_IDENTIFER"
+                    ]
+                },
+                "website": "https://opendata-geospatialdenver.hub.arcgis.com/datasets/geospatialDenver::addresses/about",
+                "license": {
+                    "url": "http://creativecommons.org/licenses/by/3.0/",
+                    "text": "CC BY 3.0",
+                    "attribution": true,
+                    "attribution name": "City of Denver Open Data Catalog"
+                },
+                "data": "https://services1.arcgis.com/zdB7qR0BtYrg0Xpl/arcgis/rest/services/ODC_CITY_LOC_ADDRESSPUBLIC_P/FeatureServer/31",
+                "protocol": "ESRI"
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "website": "https://opendata-geospatialdenver.hub.arcgis.com/datasets/geospatialDenver::parcels/about",
+                "license": {
+                    "url": "http://creativecommons.org/licenses/by/3.0/",
+                    "text": "CC BY 3.0",
+                    "attribution": true,
+                    "attribution name": "City of Denver Open Data Catalog"
+                },
+                "data": "https://services1.arcgis.com/zdB7qR0BtYrg0Xpl/arcgis/rest/services/ODC_PROP_PARCELS_A/FeatureServer/245",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "SCHEDNUM"
+                }
+            }
+        ],
+        "buildings": [
+            {
+                "name": "county",
+                "website": "https://opendata-geospatialdenver.hub.arcgis.com/datasets/geospatialDenver::building-outlines-2022/about",
+                "license": {
+                    "url": "http://creativecommons.org/licenses/by/3.0/",
+                    "text": "CC BY 3.0",
+                    "attribution": true,
+                    "attribution name": "City of Denver Open Data Catalog"
+                },
+                "year": "2022",
+                "data": "https://services1.arcgis.com/zdB7qR0BtYrg0Xpl/arcgis/rest/services/ODC_PROP_BUILDINGOUTLINES_A/FeatureServer/111",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson"
+                }
+            }
+        ]
+    }
+}

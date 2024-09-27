@@ -1,0 +1,40 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "51161",
+            "name": "Roanoke County",
+            "state": "Virginia"
+        },
+        "country": "us",
+        "state": "va",
+        "county": "Roanoke"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "data": "https://arcgis.roanokecountyva.gov/arcgisweb/rest/services/AGOL_OpenData/OpenData_Community/FeatureServer/1",
+                "protocol": "ESRI",
+                "website": "https://data.roanokecountyva.gov",
+                "conform": {
+                    "format": "geojson",
+                    "number": "Address_Number",
+                    "street": [
+                        "Common_Name",
+                        "Prefix_Directional",
+                        "Street_Name",
+                        "Street_Suffix",
+                        "Post_Directional"
+                    ],
+                    "unit":[
+                        "Unit_Number",
+                        "Unit_Type"
+                    ],
+                    "city": "Zip_City",
+                    "postcode": "Zip_Code"
+                }
+            }
+        ]
+    }
+}

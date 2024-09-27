@@ -1,0 +1,59 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "24015",
+            "name": "Cecil County",
+            "state": "Maryland"
+        },
+        "country": "us",
+        "state": "md",
+        "county": "Cecil"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "data": "https://cecilmaps.org/arcgis/rest/services/ConsolidatedWebService/MapServer/1",
+                "website": "https://www.ccgov.org/government/land-use-development-services/gis/available-gis-data",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "number": "STRT_ADD",
+                    "street": [
+                        "STRT_PFX",
+                        "STRT_NAME",
+                        "TYP",
+                        "STRT_SUF"
+                    ],
+                    "unit": "UNIT",
+                    "city": "COMMUNITY",
+                    "region": "State"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "data": "https://cecilmaps.org/arcgis/rest/services/ConsolidatedWebService/MapServer/60",
+                "website": "https://www.ccgov.org/government/land-use-development-services/gis/available-gis-data",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "ACCTID"
+                }
+            }
+        ],
+        "buildings": [
+            {
+                "name": "county",
+                "data": "https://cecilmaps.org/arcgis/rest/services/ConsolidatedWebService/MapServer/5",
+                "website": "https://www.ccgov.org/government/land-use-development-services/gis/available-gis-data",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson"
+                }
+            }
+        ]
+    }
+}

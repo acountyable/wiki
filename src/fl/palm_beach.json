@@ -1,0 +1,64 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "12099",
+            "name": "Palm Beach County",
+            "state": "Florida"
+        },
+        "country": "us",
+        "state": "fl",
+        "county": "Palm Beach"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "attribution": "Palm Beach County",
+                "data": "https://services1.arcgis.com/ZWOoUZbtaYePLlPw/arcgis/rest/services/Situs_Addresses/FeatureServer/0",
+                "website": "https://opendata2-pbcgov.opendata.arcgis.com/datasets/situs-addresses/about",
+                "license": {
+                    "text": "Public Domain",
+                    "attribution": false,
+                    "share-alike": false
+                },
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "id": "SITUS_SEQ",
+                    "number": [
+                        "STREET_NO",
+                        "STREET_NO_FRACTION"
+                    ],
+                    "street": [
+                        "STREET_PRE_DIR",
+                        "STREET_NAME",
+                        "STREET_SUFFIX",
+                        "STREET_POST_DIR"
+                    ],
+                    "unit": "APARTMENT",
+                    "city": "ZIP_CITY",
+                    "postcode": "ZIP_CODE"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "attribution": "Palm Beach County",
+                "data": "https://services1.arcgis.com/ZWOoUZbtaYePLlPw/arcgis/rest/services/Parcels/FeatureServer/0",
+                "website": "https://opendata2-pbcgov.opendata.arcgis.com/datasets/PBCGOV::parcels/about",
+                "license": {
+                    "text": "Public Domain",
+                    "attribution": false,
+                    "share-alike": false
+                },
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "PARID"
+                }
+            }
+        ]
+    }
+}

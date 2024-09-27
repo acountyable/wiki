@@ -1,0 +1,44 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "45013",
+            "name": "Beaufort County",
+            "state": "South Carolina"
+        },
+        "country": "us",
+        "state": "sc",
+        "county": "Beaufort"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "protocol": "ESRI",
+                "data": "https://gis.beaufortcountysc.gov/server/rest/services/Addresses/MapServer/0",
+                "conform": {
+                    "format": "geojson",
+                    "number": "STREETNUM",
+                    "street": [
+                        "PREDIRECT",
+                        "STREETNAME",
+                        "TYPE",
+                        "POSTDIRECT"
+                    ],
+                    "unit": "UNITNUM"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "protocol": "ESRI",
+                "data": "https://gis.beaufortcountysc.gov/server/rest/services/Parcels/MapServer/0",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "sde.SDE.Parcels.PIN_"
+                }
+            }
+        ]
+    }
+}

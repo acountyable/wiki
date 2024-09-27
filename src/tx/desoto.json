@@ -1,0 +1,64 @@
+{
+    "coverage": {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -96.9,
+                32.606
+            ]
+        },
+        "US Census": {
+            "geoid": "4820092",
+            "name": "City of DeSoto",
+            "state": "Texas"
+        },
+        "country": "us",
+        "state": "tx",
+        "city": "DeSoto"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "city",
+                "data": "https://services8.arcgis.com/QHqdbIhWBJLlMbGN/ArcGIS/rest/services/AddressPoint_DeSoto_view/FeatureServer/0",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "id": "SITEADDID",
+                    "number": [
+                        "AddNum_Pre",
+                        "Add_Number",
+                        "AddNum_Suf"
+                    ],
+                    "street": [
+                        "St_PreMod",
+                        "St_PreDir",
+                        "St_PreTyp",
+                        "St_PreSep",
+                        "St_Name",
+                        "St_PosTyp",
+                        "St_PosDir",
+                        "St_PosMod"
+                    ],
+                    "unit": "Unit",
+                    "city": "Post_Comm",
+                    "district": "County",
+                    "region": "State",
+                    "postcode": "Post_Code"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "city",
+                "data": "https://services8.arcgis.com/QHqdbIhWBJLlMbGN/ArcGIS/rest/services/Parcel_DeSoto_public/FeatureServer/0",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "GIS_PARCEL_ID"
+                }
+            }
+        ]
+    }
+}

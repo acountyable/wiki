@@ -1,0 +1,41 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "06009",
+            "name": "Calaveras County",
+            "state": "California"
+        },
+        "country": "us",
+        "state": "ca",
+        "county": "Calaveras"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "data": "https://gisportal.calaverascounty.gov/server/rest/services/Hosted/ADDRESSING_DATA_ADDRESSING_POINTS/FeatureServer/0",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "number": "ADDRESS",
+                    "street": "ST_TYPE",
+                    "unit": "SPACENUM",
+                    "city": "MSAGComm"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "data": "https://gisportal.calaverascounty.gov/server/rest/services/PARCELS/MapServer/0",
+                "website": "https://opendata-calaveras-gis.opendata.arcgis.com/datasets/CALAVERAS-GIS::parcels-1/about",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "APN"
+                }
+            }
+        ]
+    }
+}

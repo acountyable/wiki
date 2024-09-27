@@ -1,0 +1,55 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "32510",
+            "name": "Carson City",
+            "state": "Nevada"
+        },
+        "country": "us",
+        "state": "nv",
+        "county": "Carson City"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "data": "https://portal.carson.org/server/rest/services/CarsonCity/CarsonCityNV_OpenData/MapServer/37",
+                "website": "https://data-carsoncity.opendata.arcgis.com/datasets/CarsonCity::address-points/about",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "number": "StrNumb",
+                    "street": [
+                        "StrDir",
+                        "StrName"
+                    ],
+                    "unit": "Unit"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "data": "https://portal.carson.org/server/rest/services/CarsonCity/CarsonCityNV_OpenData/MapServer/36",
+                "website": "https://data-carsoncity.opendata.arcgis.com/datasets/CarsonCity::parcels/about",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "SDE_GISA.Parcel_Boundary.APN"
+                }
+            }
+        ],
+        "buildings": [
+            {
+                "name": "county",
+                "data": "https://portal.carson.org/server/rest/services/CarsonCity/CarsonCityNV_OpenData/MapServer/41",
+                "website": "https://data-carsoncity.opendata.arcgis.com/datasets/CarsonCity::building-outlines-2019/about",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson"
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,31 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "22045",
+            "name": "Iberia Parish",
+            "state": "Louisiana"
+        },
+        "country": "us",
+        "state": "la",
+        "county": "Iberia"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "data": "https://gis.iberiagov.net/server/rest/services/E911/GPS_by_StructureTypeSmallDots/MapServer/0",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "number": "H_NUM",
+                    "street": "Street",
+                    "unit": "Unit",
+                    "city": "Comm_Posta",
+                    "region": "State",
+                    "postcode": "Zip"
+                }
+            }
+        ]
+    }
+}

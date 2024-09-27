@@ -1,0 +1,55 @@
+{
+    "coverage": {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -97.7611,
+                30.2746
+            ]
+        },
+        "country": "us",
+        "state": "tx"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "state",
+                "year": "2024",
+                "note": "CAPCOG is a consortium serving Bastrop, Blanco, Burnet, Caldwell, Fayette, Hays, Lee, Llano, Travis, and Williamson Counties",
+                "website": "https://regional-open-data-capcog.opendata.arcgis.com/",
+                "data": "https://services5.arcgis.com/8DjE4f6iFLArDhsU/ArcGIS/rest/services/CAPCOG_Address_Points_and_Regional_Roads_Aug_2024a_WFL1/FeatureServer/0",
+                "license": {
+                    "attribution name": "Capital Area Council of Governments"
+                },
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "id": "OBJECTID",
+                    "number":
+                    [
+                        "AddNum_Pre",
+                        "Add_Number",
+                        "AddNum_Suf"
+                    ],
+                    "street":
+                    [
+                        "St_PreMod",
+                        "St_PreDir",
+                        "St_PreTyp",
+                        "St_PreSep",
+                        "St_Name",
+                        "St_PosTyp",
+                        "St_PosDir",
+                        "St_PosMod"
+                    ],
+                    "unit": "Unit",
+                    "city": "Post_Comm",
+                    "district": "County",
+                    "region": "State",
+                    "postcode": "Post_Code"
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "41005",
+            "name": "Clackamas County",
+            "state": "Oregon"
+        },
+        "country": "us",
+        "state": "or",
+        "county": "Clackamas"
+    },
+    "schema": 2,
+    "layers": {
+        "parcels": [
+            {
+                "name": "county",
+                "data": "https://services3.arcgis.com/I2eWXOndpF9m8oKC/ArcGIS/rest/services/Taxlots/FeatureServer/0",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "TLNO"
+                }
+            }
+        ]
+    }
+}

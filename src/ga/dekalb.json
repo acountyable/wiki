@@ -1,0 +1,60 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "13089",
+            "name": "Dekalb County",
+            "state": "Georgia"
+        },
+        "country": "us",
+        "state": "ga",
+        "county": "Dekalb"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "protocol": "ESRI",
+                "data": "https://services2.arcgis.com/IxVN2oUE9EYLSnPE/arcgis/rest/services/Address/FeatureServer/0",
+                "conform": {
+                    "format": "geojson",
+                    "id": "SITEADDID",
+                    "number": [
+                        "PREADDRNUM",
+                        "ADDRNUM",
+                        "ADDRNUMSUF"
+                    ],
+                    "street": "FULLNAME",
+                    "unit": [
+                        "UNITTYPE",
+                        "UNITID"
+                    ],
+                    "city": "POSTAL_CIT",
+                    "postcode": "ZIPCODE",
+                    "region": "STATE"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "protocol": "ESRI",
+                "data": "https://services2.arcgis.com/IxVN2oUE9EYLSnPE/ArcGIS/rest/services/Parcels/FeatureServer/0",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "PARCELID"
+                }
+            }
+        ],
+        "buildings": [
+            {
+                "name": "county",
+                "protocol": "ESRI",
+                "data": "https://gis.dekalbcountyga.gov/arcgis/rest/services/BuildingFootprint/MapServer/0",
+                "conform": {
+                    "format": "geojson"
+                }
+            }
+        ]
+    }
+}

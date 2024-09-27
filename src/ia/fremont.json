@@ -1,0 +1,61 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "19071",
+            "name": "Fremont County",
+            "state": "Iowa"
+        },
+        "country": "us",
+        "state": "ia",
+        "county": "Fremont"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "data": "https://github.com/user-attachments/files/16608515/AddressPoints_03022022.zip",
+                "license": {
+                    "text": "Public Domain",
+                    "attribution": false,
+                    "share-alike": false
+                },
+                "year": "2022",
+                "protocol": "http",
+                "compression": "zip",
+                "conform": {
+                    "number": [
+                        "HNP",
+                        "HNO",
+                        "HNS"
+                    ],
+                    "street": "FULL_STREE",
+                    "unit": "UNIT",
+                    "city": "POST_COMM",
+                    "district": "COUNTY",
+                    "region": "STATE",
+                    "postcode": "ZIP",
+                    "format": "shapefile"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "data": "https://github.com/user-attachments/files/16608516/Parcels_20240801.zip",
+                "license": {
+                    "text": "Public Domain",
+                    "attribution": false,
+                    "share-alike": false
+                },
+                "year": "2024",
+                "protocol": "http",
+                "compression": "zip",
+                "conform": {
+                    "pid": "PIN",
+                    "format": "shapefile"
+                }
+            }
+        ]
+    }
+}

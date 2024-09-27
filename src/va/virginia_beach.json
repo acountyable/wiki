@@ -1,0 +1,52 @@
+{
+    "coverage": {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -76.01637,
+                36.777836
+            ]
+        },
+        "US Census": {
+            "geoid": "5182000",
+            "name": "City of Virginia Beach",
+            "state": "Virginia"
+        },
+        "country": "us",
+        "state": "va",
+        "city": "Virginia Beach"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "city",
+                "data": "https://geo.vbgov.com/mapservices/rest/services/Basemaps/Property_Information/MapServer/3",
+                "protocol": "ESRI",
+                "website": "http://gis.data.vbgov.com/",
+                "conform": {
+                    "format": "geojson",
+                    "number": "STR_NUM",
+                    "street": [
+                        "STR_DIR",
+                        "STR_NAME",
+                        "STR_TYPE"
+                    ],
+                    "unit": "STR_UNIT",
+                    "postcode": "ZIP_CODE"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "data": "https://geo.vbgov.com/mapservices/rest/services/Basemaps/Property_Information/MapServer/12",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "PAR_GPIN"
+                }
+            }
+        ]
+    }
+}

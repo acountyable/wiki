@@ -1,0 +1,44 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "51091",
+            "name": "Highland County",
+            "state": "Virginia"
+        },
+        "country": "us",
+        "state": "va",
+        "county": "Highland"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "data": "https://services7.arcgis.com/nMfXWhdCyTwElIOK/ArcGIS/rest/services/Highland_WL_P/FeatureServer/1",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "number": "ADDR",
+                    "street": [
+                        "PREFIX",
+                        "ROAD_NAME",
+                        "SUFFIX",
+                        "POSTDIR"
+                    ],
+                    "unit": "APARTMENT",
+                    "city": "COMMUNITY"
+                }
+            }
+        ],
+        "buildings": [
+            {
+                "name": "county",
+                "data": "https://services7.arcgis.com/nMfXWhdCyTwElIOK/ArcGIS/rest/services/Highland_WL_P/FeatureServer/11",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson"
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,51 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "19169",
+            "name": "Story County",
+            "state": "Iowa"
+        },
+        "country": "us",
+        "state": "ia",
+        "county": "Story"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "data": "https://gis.cityofames.org/arcgis/rest/services/MasterAddress/Master_Address_Edit/FeatureServer/0",
+                "license": {
+                    "text": "Public Domain",
+                    "attribution": false,
+                    "share-alike": false
+                },
+                "protocol": "ESRI",
+                "conform": {
+                    "number": "CompHseNum",
+                    "street": "CompStName",
+                    "unit": "CompUnit",
+                    "city": "CommunityCode",
+                    "postcode": "ZIPCode",
+                    "format": "geojson"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "data": "https://apps.storycounty.com/arcgis/rest/services/parcels/MapServer/0",
+                "license": {
+                    "text": "Public Domain",
+                    "attribution": false,
+                    "share-alike": false
+                },
+                "protocol": "ESRI",
+                "conform": {
+                    "pid": "PARCELID",
+                    "format": "geojson"
+                }
+            }
+        ]
+    }
+}

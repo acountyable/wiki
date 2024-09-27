@@ -1,0 +1,44 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "13191",
+            "name": "McIntosh County",
+            "state": "Georgia"
+        },
+        "country": "us",
+        "state": "ga",
+        "county": "McIntosh"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "data": "https://portal.segrass.org/crcarcgis/rest/services/McIntosh/Addresses/MapServer/0",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "id": "addr_id",
+                    "number": "complete_addrnum",
+                    "street": "complete_street_name",
+                    "unit": "complete_subaddress",
+                    "city": "usps_city",
+                    "district": "county",
+                    "region": "state",
+                    "postcode": "zipcode"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "data": "https://portal.segrass.org/crcarcgis/rest/services/McIntosh/Addresses/MapServer/1",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "PIN"
+                }
+            }
+        ]
+    }
+}

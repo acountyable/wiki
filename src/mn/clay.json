@@ -1,0 +1,33 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "27027",
+            "name": "Clay County",
+            "state": "Minnesota"
+        },
+        "country": "us",
+        "state": "mn",
+        "county": "Clay"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "data": "https://arcgis.claycountymn.gov/arcgis/rest/services/OpenDataPortal/Open_Data_Portal_Layers/MapServer/3",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "number": "ANUMBER",
+                    "street": {
+                        "function": "postfixed_street",
+                        "field": "LST_ADDRESS"
+                    },
+                    "city": "POSTCOMM",
+                    "region": "STATE_CODE",
+                    "postcode": "ZIP"
+                }
+            }
+        ]
+    }
+}

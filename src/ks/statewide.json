@@ -1,0 +1,41 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "20",
+            "state": "Kansas"
+        },
+        "country": "us",
+        "state": "ks"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "state",
+                "data": "https://services6.arcgis.com/7XhimSpf8B7lHIMy/arcgis/rest/services/AddressPoints_NG911_ALL_GCS/FeatureServer/0",
+                "website": "https://hub.kansasgis.org/datasets/6df0cfed393e4fca8d6c7b500c311728_0/about",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "number": [
+                        "HNO",
+                        "HNS"
+                    ],
+                    "street": [
+                        "PRD",
+                        "STP",
+                        "RD",
+                        "STS",
+                        "POD",
+                        "POM"
+                    ],
+                    "unit": "UNIT",
+                    "city": "POSTCO",
+                    "district": "COUNTY",
+                    "region": "STATE",
+                    "postcode": "ZIP"
+                }
+            }
+        ]
+    }
+}

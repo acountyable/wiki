@@ -1,0 +1,64 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "01101",
+            "name": "Montgomery County",
+            "state": "Alabama"
+        },
+        "country": "us",
+        "state": "al",
+        "county": "Montgomery"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "data": "https://web3.kcsgis.com/kcsgis/rest/services/Montgomery/AL03_GAMAWeb/MapServer/43",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "number": [
+                        "StNum",
+                        "StNumSuf"
+                    ],
+                    "street": [
+                        "StPreDir",
+                        "StPreType",
+                        "StName",
+                        "StPostType",
+                        "StPostDir"
+                    ],
+                    "unit": [
+                        "BldgAptSte",
+                        "UnitID"
+                    ],
+                    "city": "City",
+                    "region": "State",
+                    "postcode": "Zip"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "data": "https://web3.kcsgis.com/kcsgis/rest/services/Montgomery/AL03_GAMAWeb/MapServer/29",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "PID"
+                }
+            }
+        ],
+        "buildings": [
+            {
+                "name": "county",
+                "data": "https://web3.kcsgis.com/kcsgis/rest/services/Montgomery/AL03_GAMAWeb/MapServer/36",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson"
+                }
+            }
+        ]
+    }
+}

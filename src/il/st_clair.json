@@ -1,0 +1,47 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "17163",
+            "name": "St. Clair County",
+            "state": "Illinois"
+        },
+        "country": "us",
+        "state": "il",
+        "county": "St. Clair"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "data": "https://arcgispublicmap.co.st-clair.il.us/server/rest/services/SCC_parcel_map_data/MapServer/29",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "number": "sitenum",
+                    "street": [
+                        "sitepref",
+                        "sitename",
+                        "sitetype",
+                        "sitesuff"
+                    ],
+                    "unit": "siteunit",
+                    "city": "sitecity",
+                    "postcode": "sitezip",
+                    "region": "sitest"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "data": "https://arcgispublicmap.co.st-clair.il.us/server/rest/services/SCC_parcel_map_data/MapServer/29",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "parcel_number"
+                }
+            }
+        ]
+    }
+}

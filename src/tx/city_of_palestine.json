@@ -1,0 +1,40 @@
+{
+    "coverage": {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -95.67,
+                31.759
+            ]
+        },
+        "US Census": {
+            "geoid": "4854708",
+            "name": "City of Palestine",
+            "state": "Texas"
+        },
+        "country": "us",
+        "state": "tx",
+        "county": "Anderson",
+        "city": "Palestine"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "city",
+                "data": "https://maps.etcog.org/arcgis/rest/services/Addresses/PalestineAddresses/FeatureServer/0",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "number": "Number",
+                    "street": [
+                        "LSt_PreDir",
+                        "LSt_Name",
+                        "LSt_Type",
+                        "LSt_PosDir"
+                    ]
+                }
+            }
+        ]
+    }
+}

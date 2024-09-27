@@ -1,0 +1,40 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "4857176",
+            "name": "City of Pflugerville",
+            "state": "Texas"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -83.15,
+                42.66
+            ]
+        },
+        "country": "us",
+        "state": "tx",
+        "city": "Pflugerville"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "city",
+                "protocol": "ESRI",
+                "data": "https://services.arcgis.com/qDOnMQ2aoGtLgVxL/ArcGIS/rest/services/Address_Pnts_OpenForms/FeatureServer/28",
+                "conform": {
+                    "format": "geojson",
+                    "number": [
+                        "ADDNUM_PRE",
+                        "ADDR_NUM",
+                        "ADDNUM_SUF"
+                    ],
+                    "street": "FULL_NAME",
+                    "unit": "UNIT",
+                    "postcode": "ZIP"
+                }
+            }
+        ]
+    }
+}

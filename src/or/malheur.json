@@ -1,0 +1,47 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "41045",
+            "name": "Malheur County",
+            "state": "Oregon"
+        },
+        "country": "us",
+        "state": "or",
+        "county": "Malheur"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "data": "https://services.arcgis.com/uUvqNMGPm7axC2dD/arcgis/rest/services/AddressPoints_12770/FeatureServer/0",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "id": "FID",
+                    "number": "HouseNumbe",
+                    "street": [
+                        "PreDir",
+                        "StreetName",
+                        "StreetType",
+                        "SufDir"
+                    ],
+                    "unit": "UnitNumber",
+                    "city": "CITY",
+                    "postcode": "ZipCode"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "data": "https://services3.arcgis.com/e3KSI9Py4B7m3xu6/ArcGIS/rest/services/Malheur01TL/FeatureServer/0",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "MapTaxlot"
+                }
+            }
+        ]
+    }
+}

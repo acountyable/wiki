@@ -1,0 +1,59 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "51127",
+            "name": "New Kent County",
+            "state": "Virginia"
+        },
+        "country": "us",
+        "state": "va",
+        "county": "New Kent"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "data": "https://parcelviewer.geodecisions.com/arcgis/rest/services/NewKent/Public/MapServer/30",
+                "website": "http://www.co.newkent.state.va.us/297/GIS",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "number": "SAN",
+                    "street": [
+                        "PRD",
+                        "STN",
+                        "STS",
+                        "POD"
+                    ],
+                    "unit": "Apartment",
+                    "city": "MCN",
+                    "postcode": "ZIP"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "data": "https://parcelviewer.geodecisions.com/arcgis/rest/services/NewKent/Public/MapServer/18",
+                "website": "http://www.co.newkent.state.va.us/297/GIS",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "GPIN"
+                }
+            }
+        ],
+        "buildings": [
+            {
+                "name": "county",
+                "data": "https://parcelviewer.geodecisions.com/arcgis/rest/services/NewKent/Public/MapServer/32",
+                "website": "http://www.co.newkent.state.va.us/297/GIS",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson"
+                }
+            }
+        ]
+    }
+}

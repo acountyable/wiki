@@ -1,0 +1,49 @@
+{
+    "coverage": {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -105.517,
+                43.751
+            ]
+        },
+        "US Census": {
+            "geoid": "5685015",
+            "name": "City of Wright",
+            "state": "Wyoming"
+        },
+        "country": "us",
+        "state": "wy",
+        "county": "Campbell",
+        "city": "Wright"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "city",
+                "data": "https://gis.campbellcountywy.gov/arcgis/rest/services/Campbell_Public/AddressesCountywide/MapServer/0",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "number": "ADDRNUM",
+                    "unit": ["UNITTYPE", "UNITNAME"],
+                    "street": "SP_STREET",
+                    "city": "CITY",
+                    "postcode": "ZIP"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "city",
+                "data": "https://gis.campbellcountywy.gov/arcgis/rest/services/Campbell_Public/TaxParcels_ForWebApplications/MapServer/0",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "PIN"
+                }
+            }
+        ]
+    }
+}

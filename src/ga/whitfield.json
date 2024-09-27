@@ -1,0 +1,39 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "13313",
+            "name": "Whitfield County",
+            "state": "Georgia"
+        },
+        "country": "us",
+        "state": "ga",
+        "county": "Whitfield"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "data": "https://gis.whitfieldcountyga.com/server/rest/services/Addressing/MapServer/0",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "number": "HNUM",
+                    "street": "STREET",
+                    "unit": "LOCATION"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "data": "https://gis.whitfieldcountyga.com/server/rest/services/Addressing/MapServer/12",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "PARCEL_FUL"
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,46 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "01015",
+            "name": "Calhoun County",
+            "state": "Alabama"
+        },
+        "country": "us",
+        "state": "al",
+        "county": "Calhoun"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "data": "https://gis.calhouncounty.org/ArcGIS5/rest/services/ParcelViewerPro/MapServer/67",
+                "protocol": "ESRI",
+                "attribution": "Calhoun County",
+                "conform": {
+                    "format": "geojson",
+                    "number": {
+                        "function": "prefixed_number",
+                        "field": "STREET_ADDRESS"
+                    },
+                    "street": {
+                        "function": "postfixed_street",
+                        "field": "STREET_ADDRESS"
+                    }
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "data": "https://gis.calhouncounty.org/ArcGIS5/rest/services/ParcelViewerPro/MapServer/67",
+                "protocol": "ESRI",
+                "attribution": "Calhoun County",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "PARCEL_NUMBER"
+                }
+            }
+        ]
+    }
+}

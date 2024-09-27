@@ -1,0 +1,65 @@
+{
+    "coverage": {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -96.968,
+                46.854
+            ]
+        },
+        "US Census": {
+            "geoid": "3825700",
+            "name": "Fargo",
+            "state": "North Dakota"
+        },
+        "country": "us",
+        "state": "nd",
+        "city": "Fargo"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "city",
+                "data": "https://gis.cityoffargo.com/arcgis/rest/services/Basemap/AddressNumbers/MapServer/0",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "unit": [
+                        "UNITTYPE",
+                        "UNITID"
+                    ],
+                    "number": [
+                        "PREADDRNUM",
+                        "ADDRNUM",
+                        "ADDRNUMSUF"
+                    ],
+                    "street": "FULLNAME",
+                    "city": "MUNICIPALITY",
+                    "postcode": "ZIP_CODE"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "city",
+                "data": "https://gis.cityoffargo.com/arcgis/rest/services/Basemap/FargoParcels/FeatureServer/0",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "ParcelNo"
+                }
+            }
+        ],
+        "buildings": [
+            {
+                "name": "city",
+                "data": "https://gis.cityoffargo.com/arcgis/rest/services/Basemap/BuildingFootprints/MapServer/0",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson"
+                }
+            }
+        ]
+    }
+}

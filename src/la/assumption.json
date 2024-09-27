@@ -1,0 +1,28 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "22007",
+            "name": "Assumption Parish",
+            "state": "Louisiana"
+        },
+        "country": "us",
+        "state": "la",
+        "county": "Assumption"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "data": "https://services5.arcgis.com/NaE1rjvJf3JdTAkI/ArcGIS/rest/services/Assumption_Address_Points/FeatureServer/0",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "number": "ADNUMCOMP",
+                    "street": "STCOMP",
+                    "city": "PLACENAME"
+                }
+            }
+        ]
+    }
+}

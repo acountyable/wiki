@@ -1,0 +1,60 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "19197",
+            "name": "Wright County",
+            "state": "Iowa"
+        },
+        "country": "us",
+        "state": "ia",
+        "county": "Wright"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "data": "https://wfs.schneidercorp.com/arcgis/rest/services/WrightCountyIA_WFS/MapServer/2",
+                "license": {
+                    "text": "Public Domain",
+                    "attribution": false,
+                    "share-alike": false
+                },
+                "protocol": "ESRI",
+                "conform": {
+                    "number": {
+                        "function": "prefixed_number",
+                        "field": "PropertyAddress"
+                    },
+                    "street": {
+                        "function": "postfixed_street",
+                        "field": "PropertyAddress",
+                        "may_contain_units": true
+                    },
+                    "unit": {
+                        "function": "postfixed_unit",
+                        "field": "PropertyAddress"
+                    },
+                    "city": "PROPERTYCITY",
+                    "format": "geojson"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "data": "https://wfs.schneidercorp.com/arcgis/rest/services/WrightCountyIA_WFS/MapServer/2",
+                "license": {
+                    "text": "Public Domain",
+                    "attribution": false,
+                    "share-alike": false
+                },
+                "protocol": "ESRI",
+                "conform": {
+                    "pid": "PIN",
+                    "format": "geojson"
+                }
+            }
+        ]
+    }
+}

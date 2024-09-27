@@ -1,0 +1,71 @@
+{
+    "coverage": {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -123.16,
+                44.627
+            ]
+        },
+        "US Census": {
+            "geoid": "4101000",
+            "name": "City of Albany",
+            "state": "Oregon"
+        },
+        "country": "us",
+        "state": "or",
+        "city": "Albany"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "city",
+                "data": "https://hubcitygis.cityofalbany.net/server/rest/services/Address_Location/MapServer/6",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "id": "UNIQ",
+                    "number": [
+                        "NUMBER",
+                        "SUBNUMBER"
+                    ],
+                    "street": [
+                        "STREET_NAME",
+                        "STREET_TYPE",
+                        "SUFFIX"
+                    ],
+                    "unit": [
+                        "UNIT_TYPE",
+                        "UNIT_NUMBE"
+                    ],
+                    "city": "CITY",
+                    "region": "ST",
+                    "postcode": "ZIP",
+                    "accuracy": 2
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "city",
+                "data": "https://hubcitygis.cityofalbany.net/server/rest/services/Taxlots/MapServer/0",
+                "protocol": "ESRI",
+                "conform": {
+                    "pid": "Maptaxlot",
+                    "format": "geojson"
+                }
+            }
+        ],
+        "buildings": [
+            {
+                "name": "city",
+                "data": "https://hubcitygis.cityofalbany.net/server/rest/services/Address_Location/MapServer/2",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson"
+                }
+            }
+        ]
+    }
+}

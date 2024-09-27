@@ -1,0 +1,47 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "12089",
+            "name": "Nassau County",
+            "state": "Florida"
+        },
+        "country": "us",
+        "state": "fl",
+        "county": "Nassau"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "data": "https://maps.nassauflpa.com/ncflpa_arcgis/rest/services/nassau/TaxMap4_CitrixV2/MapServer/231",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "number": "ADDRESS",
+                    "street": [
+                        "PD",
+                        "PT",
+                        "SN",
+                        "ST",
+                        "SD"
+                    ],
+                    "unit": "UNIT",
+                    "city": "COMMUNITY",
+                    "postcode": "ZIP"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "data": "https://maps.nassauflpa.com/ncflpa_arcgis/rest/services/nassau/TaxMap4_CitrixV2/MapServer/144",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "PIN"
+                }
+            }
+        ]
+    }
+}

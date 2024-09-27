@@ -1,0 +1,40 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "06079",
+            "name": "San Luis Obispo County",
+            "state": "California"
+        },
+        "country": "us",
+        "state": "ca",
+        "county": "San Luis Obispo"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "attribution": "San Luis Obispo County",
+                "data": "https://gis.slocounty.ca.gov/arcgis/rest/services/Public/opendata/MapServer/0",
+                "website": "https://opendata.slocounty.ca.gov/datasets/SLOCounty::address-points/about",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "postcode": "Zip",
+                    "city": "City",
+                    "number": "StNumber",
+                    "street": [
+                        "StPreDir",
+                        "StName",
+                        "StType",
+                        "StPostDir"
+                    ],
+                    "unit": [
+                        "UnitType",
+                        "UnitID"
+                    ]
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,48 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "53071",
+            "name": "Walla Walla County",
+            "state": "Washington"
+        },
+        "country": "us",
+        "state": "wa",
+        "county": "Walla Walla"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "protocol": "ESRI",
+                "data": "https://services8.arcgis.com/COL6rRPkF9w28VGX/ArcGIS/rest/services/Addresses/FeatureServer/0",
+                "website": "https://wallawallacountygis-wwcgis.hub.arcgis.com/datasets/4c7aa5e77d904a07bd1c73833e568d97_0/about",
+                "conform": {
+                    "format": "geojson",
+                    "unit": "type_unit",
+                    "number": [
+                        "houseint",
+                        "housesuffi"
+                    ],
+                    "street": "primarynam",
+                    "city": "zn",
+                    "district": "county",
+                    "region": "state",
+                    "postcode": "zip"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "protocol": "ESRI",
+                "data": "https://services8.arcgis.com/COL6rRPkF9w28VGX/ArcGIS/rest/services/Tax_Parcels/FeatureServer/0",
+                "website": "https://wallawallacountygis-wwcgis.hub.arcgis.com/datasets/efcbd07440fa40c4a7ad25dc88c2b7ed_0/about",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "prop_id"
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,58 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "56005",
+            "name": "Campbell County",
+            "state": "Wyoming"
+        },
+        "country": "us",
+        "state": "wy",
+        "county": "Campbell"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "data": "https://gis.campbellcountywy.gov/arcgis/rest/services/Campbell_Public/AddressesCountywide/MapServer/0",
+                "website": "https://ccgiscoop.maps.arcgis.com/apps/webappviewer/index.html?id=560eced8fd2a48a8880bf9774305b275",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "number": "ADDRNUM",
+                    "unit": [
+                        "UNITTYPE",
+                        "UNITNAME"
+                    ],
+                    "street": "SP_STREET",
+                    "postcode": "ZIP",
+                    "city": "CITY"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "data": "https://gis.campbellcountywy.gov/arcgis/rest/services/Campbell_Public/TaxParcels_ForWebApplications/MapServer/0",
+                "website": "https://ccgiscoop.maps.arcgis.com/apps/webappviewer/index.html?id=560eced8fd2a48a8880bf9774305b275",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "PIN"
+                }
+            }
+        ],
+        "buildings": [
+            {
+                "name": "county",
+                "data": "https://www.arcgis.com/sharing/rest/content/items/6fd265c530974a7baeab03d2d1eed15f/data",
+                "website": "https://data-portal-ccgiscoop.hub.arcgis.com/datasets/6fd265c530974a7baeab03d2d1eed15f/about",
+                "protocol": "http",
+                "compression": "zip",
+                "conform": {
+                    "format": "shapefile"
+                }
+            }
+        ]
+    }
+}

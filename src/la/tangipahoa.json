@@ -1,0 +1,42 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "22105",
+            "name": "Tangipahoa Parish",
+            "state": "Louisiana"
+        },
+        "country": "us",
+        "state": "la",
+        "county": "Tangipahoa"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "protocol": "ESRI",
+                "data": "https://services9.arcgis.com/GFjf8leC8Mas9DyE/ArcGIS/rest/services/Address_Points/FeatureServer/0",
+                "conform": {
+                    "format": "geojson",
+                    "number": "ADDRESS_NO",
+                    "street": "STREET",
+                    "unit": "UNIT",
+                    "city": "COMMUNITY",
+                    "district": "PARISH",
+                    "postcode": "ZIP"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "protocol": "ESRI",
+                "data": "https://services9.arcgis.com/GFjf8leC8Mas9DyE/ArcGIS/rest/services/Parcels/FeatureServer/0",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "PIN"
+                }
+            }
+        ]
+    }
+}

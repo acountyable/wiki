@@ -1,0 +1,60 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "55027",
+            "name": "Dodge County",
+            "state": "Wisconsin"
+        },
+        "country": "us",
+        "state": "wi",
+        "county": "Dodge"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "data": "https://geo2.co.dodge.wi.us/arcgis/rest/services/Layers/Open_Data/MapServer/1",
+                "website": "https://gis-dodgecounty.opendata.arcgis.com/datasets/address-points/about",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "number": "ADDFULL",
+                    "street": [
+                        "PREDIR",
+                        "PRETYPE",
+                        "STREETNAME",
+                        "SUFTYPE",
+                        "SUFDIR"
+                    ],
+                    "unit": "ADDUNIT",
+                    "city": "MUNINAME",
+                    "postcode": "ZIPCODE"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "data": "https://geo2.co.dodge.wi.us/arcgis/rest/services/Layers/Open_Data/MapServer/2",
+                "website": "https://gis-dodgecounty.opendata.arcgis.com/datasets/dodgecounty::tax-parcels-current/about",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "GISPIN"
+                }
+            }
+        ],
+        "buildings": [
+            {
+                "name": "county",
+                "data": "https://geo2.co.dodge.wi.us/arcgis/rest/services/Layers/Open_Data/MapServer/4",
+                "website": "https://gis-dodgecounty.opendata.arcgis.com/datasets/dodgecounty::building-footprints/about",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson"
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,55 @@
+{
+    "schema": 2,
+    "coverage": {
+        "US Census": {
+            "geoid": "08047",
+            "name": "Gilpin County",
+            "state": "Colorado"
+        },
+        "country": "us",
+        "state": "co",
+        "county": "Gilpin"
+    },
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "attribution": "Gilpin County",
+                "data": "https://gis.gilpincounty.org/server/rest/services/Hosted/Address_Points_of_Gilpin_County_Colorado/FeatureServer/10",
+                "website": "https://gilpincounty.colorado.gov/elected-officials/assessor/gis-maps",
+                "protocol": "ESRI",
+                "conform": {
+                    "number": "faddrnum",
+                    "street": "lstfullname",
+                    "unit": "unit",
+                    "city": "post_comm",
+                    "postcode": "post_code",
+                    "format": "geojson"
+                }
+            }
+        ],
+        "buildings": [
+            {
+                "name": "county",
+                "attribution": "Gilpin County",
+                "data": "https://gis.gilpincounty.org/server/rest/services/Hosted/Building_Footprints_of_Gilpin_County_Colorado/FeatureServer/12",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "attribution": "Gilpin County",
+                "data": "https://gis.gilpincounty.org/arcgis/rest/services/WebMapServices/PropertyInfo/MapServer/3",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "parcelid"
+                }
+            }
+        ]
+    }
+}

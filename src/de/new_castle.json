@@ -1,0 +1,64 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "10003",
+            "name": "New Castle County",
+            "state": "Delaware"
+        },
+        "country": "us",
+        "state": "de",
+        "county": "New Castle"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "data": "https://gis.nccde.org/agsserver/rest/directories/arcgisoutput/downloads/zipped/AddrPnts_SHP.zip",
+                "website": "https://apps-nccde.hub.arcgis.com/",
+                "protocol": "http",
+                "compression": "zip",
+                "conform": {
+                    "format": "shapefile",
+                    "number": "ADDR_NUM",
+                    "street": [
+                        "ADDR_PD",
+                        "ADDR_PT",
+                        "ADDR_SN",
+                        "ADDR_ST",
+                        "ADDR_SD"
+                    ],
+                    "unit": "STSUB2",
+                    "postcode": "ZIPCODE",
+                    "city": "CITY",
+                    "region": "STATE"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "data": "https://gis.nccde.org/agsserver/rest/directories/arcgisoutput/downloads/zipped/Bldg_Outlines_SHP.zip",
+                "website": "https://apps-nccde.hub.arcgis.com/",
+                "protocol": "http",
+                "compression": "zip",
+                "conform": {
+                    "format": "shapefile",
+                    "pid": "PRCLID"
+                }
+            }
+        ],
+        "buildings": [
+            {
+                "name": "county",
+                "data": "https://gis.nccde.org/agsserver/rest/directories/arcgisoutput/downloads/zipped/Bldg_Outlines_SHP.zip",
+                "website": "https://apps-nccde.hub.arcgis.com/",
+                "protocol": "http",
+                "compression": "zip",
+                "conform": {
+                    "format": "shapefile"
+                }
+            }
+        ]
+    }
+}

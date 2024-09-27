@@ -1,0 +1,43 @@
+{
+    "coverage": {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -84.422,
+                33.943
+            ]
+        },
+        "US Census": {
+            "geoid": "1368516",
+            "name": "City of Sandy Springs",
+            "state": "ga"
+        },
+        "country": "us",
+        "state": "ga",
+        "city": "Sandy Springs"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "city",
+                "data": "https://gis2.sandyspringsga.gov/arcgis/rest/services/OpenData/General_Reference/MapServer/100",
+                "website": "https://data-coss.opendata.arcgis.com/datasets/956267ab13b145a9a3a8a893ab620d48_100/explore",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "id": "OBJECTID",
+                    "number": "Street_Num",
+                    "street": [
+                        "Street_Dir",
+                        "Street_Nam",
+                        "Street_Suf",
+                        "Post_Stree"
+                    ],
+                    "unit": "Street_Apa",
+                    "postcode": "Zip_Codes"
+                }
+            }
+        ]
+    }
+}

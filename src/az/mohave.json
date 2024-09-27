@@ -1,0 +1,49 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "04015",
+            "name": "Mohave County",
+            "state": "Arizona"
+        },
+        "country": "us",
+        "state": "az",
+        "county": "Mohave"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "website": "https://az-mohave.opendata.arcgis.com/datasets/mohave-county-ng-911-site-address-points/explore",
+                "data": "https://mcgisent.mohave.gov/server/rest/services/Hosted/Mohave_County_NG_911_Site_Address_Points/FeatureServer/0",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "number": [
+                        "addnum_pre",
+                        "add_number",
+                        "addnum_suf"
+                    ],
+                    "street": [
+                        "st_premod",
+                        "st_predir",
+                        "st_pretyp",
+                        "st_presep",
+                        "st_name",
+                        "st_postyp",
+                        "st_posdir",
+                        "st_posmod"
+                    ],
+                    "unit": [
+                        "unit_type",
+                        "unit"
+                    ],
+                    "postcode": "post_code",
+                    "city": "inc_muni",
+                    "district": "county",
+                    "region": "state"
+                }
+            }
+        ]
+    }
+}

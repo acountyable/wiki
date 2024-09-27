@@ -1,0 +1,58 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "53031",
+            "name": "Jefferson County",
+            "state": "Washington"
+        },
+        "country": "us",
+        "state": "wa",
+        "county": "Jefferson"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "protocol": "ESRI",
+                "data": "https://gisweb.jeffcowa.us/server/rest/services/OpenData/OpenData/MapServer/19",
+                "website": "https://gisdata-jeffcowa.opendata.arcgis.com/datasets/JeffCoWA::site-address-points/about",
+                "license": {
+                    "url": "https://creativecommons.org/licenses/by/4.0/",
+                    "text": "CC BY 4.0",
+                    "attribution": true,
+                    "attribution name": "Jefferson County GIS"
+                },
+                "conform": {
+                    "format": "geojson",
+                    "number": "Add_Number",
+                    "street": [
+                        "St_PreDir",
+                        "StreetName",
+                        "St_PosType"
+                    ],
+                    "city": "Post_Comm",
+                    "postcode": "Post_Code"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "protocol": "ESRI",
+                "data": "https://gisweb.jeffcowa.us/server/rest/services/OpenData/OpenData/MapServer/4",
+                "website": "https://gisdata-jeffcowa.opendata.arcgis.com/datasets/JeffCoWA::public-parcels/about",
+                "license": {
+                    "url": "https://creativecommons.org/licenses/by/4.0/",
+                    "text": "CC BY 4.0",
+                    "attribution": true,
+                    "attribution name": "Jefferson County GIS"
+                },
+                "conform": {
+                    "format": "geojson",
+                    "pid": "PIN"
+                }
+            }
+        ]
+    }
+}

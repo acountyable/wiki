@@ -1,0 +1,55 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "12091",
+            "name": "Okaloosa County",
+            "state": "Florida"
+        },
+        "country": "us",
+        "state": "fl",
+        "county": "Okaloosa"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "data": "https://gis.myokaloosa.com/gisdata/Shape%20Files/Transportation/Transportation.zip",
+                "website": "https://myokaloosa.com/gis_data",
+                "protocol": "http",
+                "compression": "zip",
+                "conform": {
+                    "format": "shapefile",
+                    "file": "rdspt.shp",
+                    "number": "PAN",
+                    "street": [
+                        "PREDIR",
+                        "NAME",
+                        "TYPE",
+                        "SUFDIR"
+                    ],
+                    "unit": [
+                        "SAD",
+                        "SAN"
+                    ],
+                    "city": "ZIP_CITY",
+                    "postcode": "ZIP"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "data": "https://gis.myokaloosa.com/gisdata/Property_Appraiser/Shapefiles/parcel.zip",
+                "website": "https://myokaloosa.com/gis_data",
+                "protocol": "http",
+                "compression": "zip",
+                "conform": {
+                    "format": "shapefile",
+                    "file": "Public_Data/public.shp",
+                    "pid": "PIN"
+                }
+            }
+        ]
+    }
+}

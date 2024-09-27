@@ -1,0 +1,44 @@
+{
+    "coverage": {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -104.944949,
+                39.919321
+            ]
+        },
+        "US Census": {
+            "geoid": "0877290",
+            "name": "City of Thornton",
+            "state": "Colorado"
+        },
+        "country": "us",
+        "state": "co",
+        "city": "Thornton"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "city",
+                "data": "https://maps.thorntonco.gov/citydevweb/rest/services/Addresses/MapServer/0",
+                "website": "https://data-cityofthornton.opendata.arcgis.com/datasets/020277030abf4c93a410b38288ba5f94_0/explore",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "number": "STNO",
+                    "street": [
+                        "PREDIR",
+                        "STNAME",
+                        "SUFFIX",
+                        "POSTDIR"
+                    ],
+                    "unit": "UNT",
+                    "city": "City",
+                    "region": "State",
+                    "postcode": "Zip"
+                }
+            }
+        ]
+    }
+}

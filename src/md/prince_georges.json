@@ -1,0 +1,58 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "24033",
+            "name": "Prince George's",
+            "state": "Maryland"
+        },
+        "country": "us",
+        "state": "md",
+        "county": "Prince George's"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "website": "https://gisdata.pgplanning.org/opendata/",
+                "data": "https://gisdata.pgplanning.org/opendata/downloadzip.asp?FileName=/data/ShapeFile/Address_Pt.zip",
+                "protocol": "http",
+                "compression": "zip",
+                "conform": {
+                    "format": "shapefile",
+                    "number": "ADDRESS__1",
+                    "street": "COMPLETE_S",
+                    "unit": "ADDRESS__2",
+                    "city": "PLACE_NAME",
+                    "region": "STATE_NAME",
+                    "postcode": "ZIP_CODE"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "website": "https://gisdata.pgplanning.org/opendata/",
+                "data": "https://gisdata.pgplanning.org/opendata/downloadzip.asp?FileName=/data/ShapeFile/Property_Py.zip",
+                "protocol": "http",
+                "compression": "zip",
+                "conform": {
+                    "format": "shapefile",
+                    "pid": "PROP_ID"
+                }
+            }
+        ],
+        "buildings": [
+            {
+                "name": "county",
+                "website": "https://gisdata.pgplanning.org/opendata/",
+                "data": "https://gisdata.pgplanning.org/opendata/downloadzip.asp?FileName=/data/ShapeFile/Building_2020_Py.zip",
+                "protocol": "http",
+                "compression": "zip",
+                "conform": {
+                    "format": "shapefile"
+                }
+            }
+        ]
+    }
+}

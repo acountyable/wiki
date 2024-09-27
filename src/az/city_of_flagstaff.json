@@ -1,0 +1,64 @@
+{
+    "coverage": {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -111.67,
+                35.18
+            ]
+        },
+        "US Census": {
+            "geoid": "0423620",
+            "name": "City of Flagstaff",
+            "state": "Arizona"
+        },
+        "country": "us",
+        "state": "az",
+        "city": "Flagstaff"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "city",
+                "data": "https://gis.flagstaffaz.gov/arcgisserver/rest/services/Addresses/FeatureServer/0",
+                "website": "https://gis.flagstaffaz.gov/portal/apps/sites/#/opendata/datasets/54fa279b97294558b71e23869d60c487/about",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "id": "AddressID",
+                    "number": [
+                        "Add_Number",
+                        "AddNum_Suf"
+                    ],
+                    "unit": [
+                        "UnitType",
+                        "Unit"
+                    ],
+                    "street": [
+                        "St_PreDir",
+                        "St_PreTyp",
+                        "St_Name",
+                        "St_PosTyp",
+                        "St_PosDir"
+                    ],
+                    "city": "Post_Comm",
+                    "region": "State",
+                    "postcode": "Post_Code"
+                }
+            }
+        ],
+        "buildings": [
+            {
+                "name": "city",
+                "data": "https://gis.flagstaffaz.gov/OpenData/BuildingFootprints.zip",
+                "website": "https://gis.flagstaffaz.gov/portal/apps/sites/#/opendata/datasets/001392ec4b604c2b878b70bd22efa9e1/about",
+                "protocol": "http",
+                "compression": "zip",
+                "conform": {
+                    "format": "shapefile"
+                }
+            }
+        ]
+    }
+}

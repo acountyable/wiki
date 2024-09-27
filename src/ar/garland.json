@@ -1,0 +1,41 @@
+{
+    "coverage": {
+        "US Census": {"geoid": "05051", "name": "Garland County", "state": "Arkansas"},
+        "country": "us",
+        "state": "ar",
+        "county": "Garland"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "data": "https://services1.arcgis.com/lCwVhIwyitVebu0v/ArcGIS/rest/services/Addressing_Points/FeatureServer/19",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "number": "ADR_NUM",
+                    "street": "PSTR_FULNAM",
+                    "unit": [
+                        "ADR_UNIT_TYP",
+                        "ADR_UNIT_ID"
+                    ],
+                    "city": "ADR_CITY",
+                    "region": "ADR_STATE",
+                    "postcode": "ADR_ZIP5"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "data": "https://services1.arcgis.com/lCwVhIwyitVebu0v/ArcGIS/rest/services/GCParcels/FeatureServer/15",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "PROPERTY_ID"
+                }
+            }
+        ]
+    }
+}

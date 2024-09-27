@@ -1,0 +1,76 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "06059",
+            "name": "Orange County",
+            "state": "California"
+        },
+        "country": "us",
+        "state": "ca",
+        "county": "Orange"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "data": "https://www.ocgis.com/arcpub/rest/services/Map_Layers/Address_Point_Final_Planning_Addressing/FeatureServer/0",
+                "license": {
+                    "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+                    "text": "CC0 1.0"
+                },
+                "protocol": "ESRI",
+                "conform": {
+                    "id": "AddressPtID",
+                    "format": "geojson",
+                    "number": [
+                        "AddressNumber",
+                        "Fractional"
+                    ],
+                    "street": [
+                        "StreetName"
+                    ],
+                    "unit": [
+                        "SubAddressFlag",
+                        "Unit"
+                    ],
+                    "city": "City",
+                    "district": "County",
+                    "region": "StateAbbr",
+                    "postcode": "ZipCode"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "data": "https://www.ocgis.com/arcpub/rest/services/Map_Layers/Parcels/FeatureServer/0",
+                "website": "https://data-ocpw.opendata.arcgis.com/documents/OCPW::parcel-polygons/about",
+                "license": {
+                    "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+                    "text": "CC0 1.0"
+                },
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "ASSESSMENT_NO"
+                }
+            }
+        ],
+        "buildings": [
+            {
+                "name": "county",
+                "data": "https://www.ocgis.com/arcpub/rest/services/Map_Layers/Building_Footprints/FeatureServer/0",
+                "website": "https://data-ocpw.opendata.arcgis.com/datasets/OCPW::building-footprints-1/about",
+                "license": {
+                    "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+                    "text": "CC0 1.0"
+                },
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson"
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,41 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "08093",
+            "name": "Park County",
+            "state": "Colorado"
+        },
+        "country": "us",
+        "state": "co",
+        "county": "Park"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "conform": {
+                    "format": "geojson",
+                    "number": "SAN",
+                    "street": "GeocodeStName",
+                    "unit": "UNIT",
+                    "postcode": "ZIPCODE",
+                    "city": "MCN"
+                },
+                "data": "https://maps.parkco.us/arcgis/rest/services/Parcels/ParkParcelPublic/MapServer/1",
+                "protocol": "ESRI"
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "ScheduleNu"
+                },
+                "data": "https://maps.parkco.us/arcgis/rest/services/Parcels/ParkParcelPublic/MapServer/0",
+                "protocol": "ESRI"
+            }
+        ]
+    }
+}

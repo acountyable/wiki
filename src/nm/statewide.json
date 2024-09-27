@@ -1,0 +1,39 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "35",
+            "state": "New Mexico"
+        },
+        "country": "us",
+        "state": "nm"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "state",
+                "data": "https://gstore.unm.edu/apps/rgis/datasets/0b5453fe-b7de-4ce7-9203-68a49f9a2a34/NM911_Address_202406.original.zip",
+                "protocol": "http",
+                "year": "2024",
+                "website": "http://rgis.unm.edu/rgis6/",
+                "compression": "zip",
+                "conform": {
+                    "format": "shapefile",
+                    "number": [
+                        "ADD_NUMBER",
+                        "ADD_SUFFIX"
+                    ],
+                    "street": [
+                        "STR_DIR",
+                        "STR_PRETYP",
+                        "STR_NAME",
+                        "STR_SUFFIX",
+                        "POST_DIR"
+                    ],
+                    "city": "MSAG_COM",
+                    "postcode": "ZIPCODE"
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,79 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "41029",
+            "name": "Jackson County",
+            "state": "Oregon"
+        },
+        "country": "us",
+        "state": "or",
+        "county": "Jackson"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "data": "https://spatial.jacksoncountyor.gov/arcgis/rest/services/OpenData/ReferenceData/MapServer/1",
+                "website": "https://gis.jacksoncountyor.gov/datasets/JCGIS::address-point/about",
+                "license": {
+                    "url": "https://creativecommons.org/licenses/by/4.0/",
+                    "text": "CC BY 4.0",
+                    "attribution": true,
+                    "attribution name": "Jackson County, Oregon GIS"
+                },
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "number": [
+                        "PREADDRNUM",
+                        "ADDRNUM",
+                        "ADDRNUMSUF"
+                    ],
+                    "unit": [
+                        "UNITTYPE",
+                        "UNITID"
+                    ],
+                    "street": "FULLNAME",
+                    "city": "MUNICIPALITY",
+                    "accuracy": 2
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "data": "https://spatial.jacksoncountyor.gov/arcgis/rest/services/OpenData/ReferenceData/MapServer/3",
+                "website": "https://gis.jacksoncountyor.gov/datasets/JCGIS::tax-lots/about",
+                "license": {
+                    "url": "https://creativecommons.org/licenses/by/4.0/",
+                    "text": "CC BY 4.0",
+                    "attribution": true,
+                    "attribution name": "Jackson County, Oregon GIS"
+                },
+                "protocol": "ESRI",
+                "conform": {
+                    "pid": "MAPLOT",
+                    "format": "geojson"
+                }
+            }
+        ],
+        "buildings": [
+            {
+                "name": "county",
+                "data": "https://spatial.jacksoncountyor.gov/arcgis/rest/services/OpenData/ReferenceData/MapServer/2",
+                "website": "https://gis.jacksoncountyor.gov/datasets/JCGIS::building-footprints/about",
+                "license": {
+                    "url": "https://creativecommons.org/licenses/by/4.0/",
+                    "text": "CC BY 4.0",
+                    "attribution": true,
+                    "attribution name": "Jackson County, Oregon GIS"
+                },
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson"
+                }
+            }
+        ]
+    }
+}

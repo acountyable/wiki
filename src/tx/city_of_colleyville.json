@@ -1,0 +1,52 @@
+{
+    "coverage": {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -97.148,
+                32.891
+            ]
+        },
+        "US Census": {
+            "geoid": "4815988",
+            "name": "City of Colleyville",
+            "state": "Texas"
+        },
+        "country": "us",
+        "state": "tx",
+        "city": "Colleyville"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "city",
+                "data": "https://services3.arcgis.com/sBPeNRqI2rE8sfwz/ArcGIS/rest/services/Address/FeatureServer/0",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "id": "OBJECTID",
+                    "number": "Street_Num",
+                    "street": [
+                        "Pre_Dir",
+                        "Street_Name",
+                        "Street_Type",
+                        "Post_dir"
+                    ],
+                    "unit": "Suite"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "city",
+                "data": "https://services3.arcgis.com/sBPeNRqI2rE8sfwz/ArcGIS/rest/services/Parcel/FeatureServer/0",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "Parcel_ID"
+                }
+            }
+        ]
+    }
+}

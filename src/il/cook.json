@@ -1,0 +1,31 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "17031",
+            "name": "Cook County",
+            "state": "Illinois"
+        },
+        "country": "us",
+        "state": "il",
+        "county": "Cook"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "data": "https://gis.cookcountyil.gov/traditional/rest/services/addressZipCode/MapServer/0/",
+                "note": "All Cook County addresses including the city of Chicago",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "number": "ADDRNOCOM",
+                    "street": "STNAMECOM",
+                    "city": "PLACENAME",
+                    "district": "County",
+                    "postcode": "Post_Code"
+                }
+            }
+        ]
+    }
+}

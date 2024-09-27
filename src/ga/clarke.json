@@ -1,0 +1,79 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "13059",
+            "name": "Clarke County",
+            "state": "Georgia"
+        },
+        "country": "us",
+        "state": "ga",
+        "county": "Clarke"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "data": "https://enigma.accgov.com/server/rest/services/ACC_Address_Point/FeatureServer/0",
+                "website": "https://data-athensclarke.opendata.arcgis.com/datasets/AthensClarke::acc-address-point/about",
+                "license": {
+                    "url": "https://creativecommons.org/licenses/by/4.0",
+                    "text": "CC BY 4.0",
+                    "attribution": true,
+                    "attribution name": "Athens-Clarke County GIS",
+                    "share-alike": false
+                },
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "number": "FullHouseNum",
+                    "street": "FullStreetName",
+                    "unit": [
+                        "UnitType",
+                        "Unit"
+                    ],
+                    "city": "POSTALCITY",
+                    "region": "State",
+                    "postcode": "Zipcode"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "data": "https://enigma.accgov.com/server/rest/services/ACC_Parcels/FeatureServer/0",
+                "website": "https://data-athensclarke.opendata.arcgis.com/datasets/AthensClarke::acc-parcels/about",
+                "license": {
+                    "url": "https://creativecommons.org/licenses/by/4.0",
+                    "text": "CC BY 4.0",
+                    "attribution": true,
+                    "attribution name": "Athens-Clarke County GIS",
+                    "share-alike": false
+                },
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "PARCEL_NO"
+                }
+            }
+        ],
+        "buildings": [
+            {
+                "name": "county",
+                "data": "https://enigma.accgov.com/server/rest/services/ACC_Buildings/FeatureServer/0",
+                "website": "https://data-athensclarke.opendata.arcgis.com/datasets/AthensClarke::acc-buildings/about",
+                "license": {
+                    "url": "https://creativecommons.org/licenses/by/4.0",
+                    "text": "CC BY 4.0",
+                    "attribution": true,
+                    "attribution name": "Athens-Clarke County GIS",
+                    "share-alike": false
+                },
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson"
+                }
+            }
+        ]
+    }
+}

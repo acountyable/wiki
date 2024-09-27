@@ -1,0 +1,32 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "34003",
+            "name": "Bergen County",
+            "state": "New Jersey"
+        },
+        "country": "us",
+        "state": "nj",
+        "county": "Bergen"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "data": "https://bchapeweb.co.bergen.nj.us/arcgis/rest/services/Parcel_idtLookup/FeatureServer/0",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "number": "STNUM",
+                    "street": [
+                        "STNAME",
+                        "STDIR"
+                    ],
+                    "unit": "APT",
+                    "city": "TOWN"
+                }
+            }
+        ]
+    }
+}

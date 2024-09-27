@@ -1,0 +1,72 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "53007",
+            "name": "Chelan County",
+            "state": "Washington"
+        },
+        "country": "us",
+        "state": "wa",
+        "county": "Chelan"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "license": {
+                    "text": "Public Domain",
+                    "attribution": false,
+                    "share-alike": false
+                },
+                "protocol": "ESRI",
+                "data": "https://atlas.co.chelan.wa.us/arcgis/rest/services/PW/Address_Data_Layers/MapServer/10",
+                "conform": {
+                    "format": "geojson",
+                    "id": "siteaddid",
+                    "number": "addrnum",
+                    "street": "fullname",
+                    "unit": [
+                        "unittype",
+                        "unitid"
+                    ],
+                    "city": "post_comm",
+                    "district": "county",
+                    "addrtype": "address_subtype",
+                    "postcode": "post_code"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "license": {
+                    "text": "Public Domain",
+                    "attribution": false,
+                    "share-alike": false
+                },
+                "protocol": "ESRI",
+                "data": "https://atlas.co.chelan.wa.us/arcgis/rest/services/GIS/ParcelsOwners/MapServer/0",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "sde_CHELAN_Property_Polygons_PA"
+                }
+            }
+        ],
+        "buildings": [
+            {
+                "name": "county",
+                "license": {
+                    "text": "Public Domain",
+                    "attribution": false,
+                    "share-alike": false
+                },
+                "protocol": "ESRI",
+                "data": "https://atlas.co.chelan.wa.us/arcgis/rest/services/PW/Address_Data_Layers/MapServer/14",
+                "conform": {
+                    "format": "geojson"
+                }
+            }
+        ]
+    }
+}

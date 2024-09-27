@@ -1,0 +1,62 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "17029",
+            "name": "Coles County",
+            "state": "Illinois"
+        },
+        "country": "us",
+        "state": "il",
+        "county": "Coles"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "data": "https://www.colesco.illinois.gov/arcgis/rest/services/ColesCounty/WebTaxMap2023/MapServer/98",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "number": {
+                        "function": "prefixed_number",
+                        "field": "gis_data.site_address"
+                    },
+                    "street": {
+                        "function": "postfixed_street",
+                        "field": "gis_data.site_address"
+                    },
+                    "city": {
+                        "function": "regexp",
+                        "field": "gis_data.site_csz",
+                        "pattern": "^(.*)(?:\\sIL\\s\\d{5})$",
+                        "replace": "$1"
+                    },
+                    "region": {
+                        "function": "regexp",
+                        "field": "gis_data.site_csz",
+                        "pattern": "(IL)",
+                        "replace": "$1"
+                    },
+                    "postcode": {
+                        "function": "regexp",
+                        "field": "gis_data.site_csz",
+                        "pattern": "(\\d{5})",
+                        "replace": "$1"
+                    }
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "data": "https://www.colesco.illinois.gov/arcgis/rest/services/ColesCounty/WebTaxMap2023/MapServer/98",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "gis_data.parcel_number"
+                }
+            }
+        ]
+    }
+}

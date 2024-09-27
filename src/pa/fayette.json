@@ -1,0 +1,45 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "42051",
+            "name": "Fayette County",
+            "state": "Pennsylvania"
+        },
+        "country": "us",
+        "state": "pa",
+        "county": "Fayette"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "data": "http://fayettemaps.rba.com:8080/geoserver/fayette/ows?service=WFS&version=1.1.1&request=GetFeature&typename=fayette:ParcelsPolygon&outputFormat=shape-zip",
+                "protocol": "http",
+                "compression": "zip",
+                "conform": {
+                    "format": "shapefile",
+                    "accuracy": 2,
+                    "number": "ADDR_PHYSI",
+                    "street": [
+                        "ADDR_PHY_1",
+                        "ADDR_PHY_2"
+                    ],
+                    "postcode": "ZIP1"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "data": "http://fayettemaps.rba.com:8080/geoserver/fayette/ows?service=WFS&version=1.1.1&request=GetFeature&typename=fayette:ParcelsPolygon&outputFormat=shape-zip",
+                "protocol": "http",
+                "compression": "zip",
+                "conform": {
+                    "format": "shapefile",
+                    "pid": "taxidnum"
+                }
+            }
+        ]
+    }
+}

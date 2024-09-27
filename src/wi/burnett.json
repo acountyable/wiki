@@ -1,0 +1,46 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "55013",
+            "name": "Burnett County",
+            "state": "Wisconsin"
+        },
+        "country": "us",
+        "state": "wi",
+        "county": "Burnett"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "data": "https://gisdata.wisc.edu/public/BURNETT_ADDRESSES_2023.zip",
+                "website": "https://geodata.wisc.edu/catalog/789222A0-718D-4FA9-93C2-2A9BD0374BCF",
+                "protocol": "http",
+                "compression": "zip",
+                "year": "2023",
+                "conform": {
+                    "format": "gdb",
+                    "number": "HSNUM",
+                    "street": "STREET",
+                    "city": "NEWCITST",
+                    "postcode": "NEWZIP"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "data": "https://gisdata.wisc.edu/public/Burnett_Parcels_2023_SHP.zip",
+                "website": "https://geodata.wisc.edu/catalog/D0D67B7A-EB46-4A47-9B64-0165C00CC38D",
+                "protocol": "http",
+                "compression": "zip",
+                "year": "2023",
+                "conform": {
+                    "format": "shapefile",
+                    "pid": "PARCELID"
+                }
+            }
+        ]
+    }
+}

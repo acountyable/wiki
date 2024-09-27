@@ -1,0 +1,61 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "41071",
+            "state": "Oregon",
+            "name": "Yamhill County"
+        },
+        "country": "us",
+        "state": "or",
+        "county": "Yamhill"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "website": "http://www.yamhillcountymaps.com/",
+                "data": "https://www.yamhillcountygis.com/server/rest/services/2023_Planning/Private_2023/MapServer/29",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "number": "addhouse",
+                    "street": [
+                        "Streetdir",
+                        "StreetName",
+                        "StreetType"
+                    ],
+                    "unit": [
+                        "unittype",
+                        "unitnum"
+                    ],
+                    "city": "city",
+                    "id": "TXACCOUN_1"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "website": "http://www.yamhillcountymaps.com/",
+                "data": "https://www.yamhillcountygis.com/server/rest/services/2023_Planning/Private_2023/MapServer/61",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "MapTaxlot"
+                }
+            }
+        ],
+        "buildings": [
+            {
+                "name": "county",
+                "website": "http://www.yamhillcountymaps.com/",
+                "data": "https://www.yamhillcountygis.com/server/rest/services/2023_Planning/Private_2023/MapServer/30",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson"
+                }
+            }
+        ]
+    }
+}

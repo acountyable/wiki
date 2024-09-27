@@ -1,0 +1,46 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "24",
+            "state": "Maryland"
+        },
+        "country": "us",
+        "state": "md"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "state",
+                "data": "https://geodata.md.gov/imap/rest/services/PlanningCadastre/MD_PropertyData/MapServer/0",
+                "website": "https://data.imap.maryland.gov/datasets/maryland::maryland-property-data-parcel-points/about",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "number": "STRTNUM",
+                    "street": [
+                        "STRTDIR",
+                        "STRTNAM",
+                        "STRTTYP",
+                        "STRTSFX"
+                    ],
+                    "unit": "STRTUNT",
+                    "city": "CITY",
+                    "postcode": "ZIPCODE",
+                    "accuracy": 2
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "state",
+                "data": "https://geodata.md.gov/imap/rest/services/PlanningCadastre/MD_ParcelBoundaries/MapServer/0",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "ACCTID"
+                }
+            }
+        ]
+    }
+}

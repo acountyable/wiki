@@ -1,0 +1,54 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "08059",
+            "name": "Jefferson County",
+            "state": "Colorado"
+        },
+        "country": "us",
+        "state": "co",
+        "county": "Jefferson"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "attribution": "Jefferson County",
+                "data": "https://gisportal.jeffco.us/server/rest/services/MasterAddress_Public/FeatureServer/1",
+                "website": "https://data-jeffersoncounty.opendata.arcgis.com/datasets/address/explore",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "id": "ADNO",
+                    "number": [
+                        "ADRHSNO",
+                        "ADRHSNOSFX"
+                    ],
+                    "street": [
+                        "STREET_DIRECTION_PREFIX",
+                        "STREET_NAME",
+                        "STREET_TYPE",
+                        "STREET_DIRECTION_SUFFIX"
+                    ],
+                    "unit": "SUBADRUNIT",
+                    "city": "CITY_POSTAL",
+                    "postcode": "ZIP"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "attribution": "Jefferson County",
+                "data": "https://gisportal.jeffco.us/server/rest/services/Parcel/MapServer/20",
+                "website": "https://data-jeffersoncounty.opendata.arcgis.com/datasets/parcel/explore",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "PIN"
+                }
+            }
+        ]
+    }
+}

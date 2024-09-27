@@ -1,0 +1,36 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "48215",
+            "name": "Hidalgo County",
+            "state": "Texas"
+        },
+        "country": "us",
+        "state": "tx",
+        "county": "Hidalgo"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "data": "https://services9.arcgis.com/dwMDP55HTfoj4n1c/ArcGIS/rest/services/911_Address_Points_View/FeatureServer/0",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "number": "HNO",
+                    "street": [
+                        "PRD",
+                        "STP",
+                        "RD",
+                        "STS",
+                        "POD"
+                    ],
+                    "unit": "UNIT",
+                    "city": "PCN",
+                    "region": "STATE"
+                }
+            }
+        ]
+    }
+}

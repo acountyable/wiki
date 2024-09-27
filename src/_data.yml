@@ -1,1 +1,26 @@
-menu_links: []
+menu_links: [
+  {
+    title: "Home",
+    url: "/",
+  },
+  {
+    title: "Nevada",
+    url: "/nevada",
+  },
+  {
+    title: "California",
+    url: "/california",
+  },
+  {
+    title: "Arizona",
+    url: "/arizona",
+  },
+  {
+    title: "Utah",
+    url: "/utah",
+  },
+  {
+    title: "Services",
+    url: "/services",
+  },
+]

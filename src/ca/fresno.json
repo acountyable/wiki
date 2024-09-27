@@ -1,0 +1,54 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "06019",
+            "name": "Fresno County",
+            "state": "California"
+        },
+        "country": "us",
+        "state": "ca",
+        "county": "fresno"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "attribution": "Fresno County",
+                "data": "https://www.fresnocountyca.gov/files/sharedassets/county/v/4/public-works-and-planning/cds/addresses.zip",
+                "license": "https://www.fresnocountyca.gov/Departments/Public-Works-and-Planning/divisions-of-public-works-and-planning/cds/gis-shapefiles",
+                "protocol": "http",
+                "compression": "zip",
+                "conform": {
+                    "number": [
+                        "ADDRESS_NU",
+                        "ADDRESS_FR"
+                    ],
+                    "street": [
+                        "STREET_DIR",
+                        "STREET_NAM",
+                        "STREET_TYP",
+                        "STREET_POS"
+                    ],
+                    "city": "ADDRESS_2",
+                    "postcode": "ADDRESS_ZI",
+                    "format": "shapefile"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "attribution": "Fresno County",
+                "data": "https://www.fresnocountyca.gov/files/sharedassets/county/v/4/public-works-and-planning/cds/parcels.zip",
+                "license": "https://www.fresnocountyca.gov/Departments/Public-Works-and-Planning/divisions-of-public-works-and-planning/cds/gis-shapefiles",
+                "protocol": "http",
+                "compression": "zip",
+                "conform": {
+                    "pid": "APN",
+                    "format": "shapefile"
+                }
+            }
+        ]
+    }
+}

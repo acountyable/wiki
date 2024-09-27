@@ -1,0 +1,75 @@
+{
+    "coverage": {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -83.239,
+                42.352
+            ]
+        },
+        "US Census": {
+            "geoid": "2622000",
+            "name": "City of Detroit",
+            "state": "Michigan"
+        },
+        "country": "us",
+        "state": "mi",
+        "city": "detroit"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "city",
+                "data": "https://services2.arcgis.com/qvkbeam7Wirps6zC/arcgis/rest/services/Base_Unit_Address_Points/FeatureServer/4",
+                "website": "https://data.detroitmi.gov/datasets/4f1fa1fc005e4c89a6b1f7e2cd8c6932_4/explore",
+                "license": {
+                    "text": "public domain",
+                    "attribution": false,
+                    "share-alike": false
+                },
+                "attribution": "City of Detroit Assessment Division",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "id": "addr_id",
+                    "number": "street_number",
+                    "street": [
+                        "street_prefix",
+                        "street_name",
+                        "street_type"
+                    ],
+                    "unit": [
+                        "unit_type",
+                        "unit_number"
+                    ],
+                    "postcode": "zip_code"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "city",
+                "data": "https://services2.arcgis.com/qvkbeam7Wirps6zC/arcgis/rest/services/Parcels_Current/FeatureServer/0",
+                "website": "https://data.detroitmi.gov/datasets/9ca25373d4f747be85850344186dda3c_0/explore",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "parcel_number"
+                }
+            }
+        ],
+        "buildings": [
+            {
+                "name": "city",
+                "data": "https://services2.arcgis.com/qvkbeam7Wirps6zC/ArcGIS/rest/services/Base_Units_Buildings/FeatureServer/3",
+                "website": "https://data.detroitmi.gov/datasets/d2d4e0ec6a7a4ea6848a917e2745002a_3/explore",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "id": "bldg_id"
+                }
+            }
+        ]
+    }
+}

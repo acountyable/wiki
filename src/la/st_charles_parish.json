@@ -1,0 +1,47 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "22089",
+            "name": "St. Charles Parish",
+            "state": "Louisiana"
+        },
+        "country": "us",
+        "state": "la",
+        "county": "St. Charles"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "data": "https://services7.arcgis.com/Nj65ZtNghtksKPeG/ArcGIS/rest/services/Addresses/FeatureServer/0",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "id": "SITEADDID",
+                    "number": "fulladnum",
+                    "street": "streetname",
+                    "unit": [
+                        "unittype",
+                        "unitid1",
+                        "unitid2"
+                    ],
+                    "city": "municipali",
+                    "region": "state",
+                    "postcode": "zip"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "data": "https://services7.arcgis.com/Nj65ZtNghtksKPeG/ArcGIS/rest/services/Parcel/FeatureServer/0",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "pi_code"
+                }
+            }
+        ]
+    }
+}

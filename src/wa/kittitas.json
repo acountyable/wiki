@@ -1,0 +1,46 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "53037",
+            "name": "Kittitas County",
+            "state": "Washington"
+        },
+        "country": "us",
+        "state": "wa",
+        "county": "Kittitas"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "data": "https://services.arcgis.com/eSnyVpqwqWBADfzp/ArcGIS/rest/services/Address_Points_for_Hazus/FeatureServer/0",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "id": "SITEADDID",
+                    "number": {
+                        "function": "prefixed_number",
+                        "field": "FULLADDR"
+                    },
+                    "street": "FULLNAME",
+                    "unit": "UNITDSGNTR",
+                    "city": "t2_SitusCity",
+                    "postcode": "t2_SitusZip"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "data": "https://services.arcgis.com/eSnyVpqwqWBADfzp/arcgis/rest/services/Tax_Parcel/FeatureServer/0",
+                "website": "https://data-kitcogis.opendata.arcgis.com/datasets/kitcogis::tax-parcel/about",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "PARCELID"
+                }
+            }
+        ]
+    }
+}

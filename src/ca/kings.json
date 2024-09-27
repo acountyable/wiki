@@ -1,0 +1,60 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "06031",
+            "name": "Kings County",
+            "state": "California"
+        },
+        "country": "us",
+        "state": "ca",
+        "county": "Kings"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "attribution": "Kings County",
+                "data": "https://services3.arcgis.com/24gLq1DBBzDfd0cZ/ArcGIS/rest/services/Address_Kings_County/FeatureServer/4",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "number": "STREET_NBR",
+                    "street": [
+                        "STREET_DIR",
+                        "STREET_NAM",
+                        "STREET_TYP"
+                    ],
+                    "unit": {
+                        "function": "regexp",
+                        "field": "ADDRESS",
+                        "pattern": "; ((?:UNIT|BLDG) .+)$"
+                    },
+                    "city": {
+                        "function": "regexp",
+                        "field": "CITYST",
+                        "pattern": "^(.+?), "
+                    },
+                    "region": {
+                        "function": "regexp",
+                        "field": "CITYST",
+                        "pattern": ", (CA)$"
+                    },
+                    "postcode": "ZIPCODE"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "attribution": "Kings County",
+                "data": "https://services3.arcgis.com/24gLq1DBBzDfd0cZ/ArcGIS/rest/services/Parcel_view/FeatureServer/143",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "APN"
+                }
+            }
+        ]
+    }
+}

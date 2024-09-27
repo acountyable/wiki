@@ -1,0 +1,61 @@
+{
+    "coverage": {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -96.982927,
+                33.045199
+            ]
+        },
+        "US Census": {
+            "geoid": "4842508",
+            "name": "City of Lewisville",
+            "state": "Texas"
+        },
+        "country": "us",
+        "state": "tx",
+        "city": "Lewisville"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "city",
+                "data": "https://services2.arcgis.com/kXGqZY4GIOcEYxoF/ArcGIS/rest/services/CS_Enterprise_Addresses_Apartments/FeatureServer/2",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "number": "Address",
+                    "street": "StreetName",
+                    "unit": [
+                        "Building",
+                        "Apartment"
+                    ],
+                    "region": "State",
+                    "postcode": "ZipCode"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "city",
+                "data": "https://services2.arcgis.com/kXGqZY4GIOcEYxoF/ArcGIS/rest/services/Parcels_Hosted/FeatureServer/0",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "prop_id"
+                }
+            }
+        ],
+        "buildings": [
+            {
+                "name": "city",
+                "data": "https://services2.arcgis.com/kXGqZY4GIOcEYxoF/ArcGIS/rest/services/3D_Buildings_082020/FeatureServer/0",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson"
+                }
+            }
+        ]
+    }
+}

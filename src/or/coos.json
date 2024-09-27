@@ -1,0 +1,56 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "41011",
+            "name": "Coos County",
+            "state": "Oregon"
+        },
+        "country": "us",
+        "state": "or",
+        "county": "Coos"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "data": "https://services.arcgis.com/or6I5QjRIBzpPc8G/ArcGIS/rest/services/GIS_Online_August_2024/FeatureServer/4",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "number": {
+                        "function": "prefixed_number",
+                        "field": "SITUSSTR"
+                    },
+                    "street": {
+                        "function": "postfixed_street",
+                        "field": "SITUSSTR"
+                    },
+                    "city": "SITUSCITY",
+                    "postcode": "SITUSZIP"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "data": "https://services.arcgis.com/or6I5QjRIBzpPc8G/ArcGIS/rest/services/GIS_Online_August_2024/FeatureServer/4",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "TLID"
+                }
+            }
+        ],
+        "buildings": [
+            {
+                "name": "county",
+                "data": "https://services.arcgis.com/or6I5QjRIBzpPc8G/ArcGIS/rest/services/GIS_Online_August_2024/FeatureServer/5",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson"
+                }
+            }
+        ]
+    }
+}

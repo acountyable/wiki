@@ -1,0 +1,50 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "08043",
+            "name": "Fremont County",
+            "state": "Colorado"
+        },
+        "country": "us",
+        "state": "co",
+        "county": "Fremont"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "data": "https://fremontgis.com/server/rest/services/FC_ADDRESSES/MapServer/1",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "number": "GL_HSE_NUM",
+                    "street": [
+                        "GL_DIR_PFX",
+                        "GL_STR_NAM",
+                        "GL_TYP_SFX",
+                        "GL_PSL_SFX"
+                    ],
+                    "unit": [
+                        "GL_UNIT_TYP",
+                        "GL_UNIT_ID"
+                    ],
+                    "city": "PO_NAME",
+                    "postcode": "PO_ZIP",
+                    "region": "PO_STATE"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "data": "https://fremontgis.com/server/rest/services/Hosted/Mail_List/FeatureServer/0",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "parcelnumber"
+                }
+            }
+        ]
+    }
+}

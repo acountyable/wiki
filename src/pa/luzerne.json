@@ -1,0 +1,65 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "42079",
+            "name": "Luzerne County",
+            "state": "Pennsylvania"
+        },
+        "country": "US",
+        "state": "PA",
+        "county": "Luzerne"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "data": "https://gis.luzernecounty.org/server/rest/services/PublicStreetsStructures/MapServer/0",
+                "website": "https://www.luzernecounty.org/234/GISMapping",
+                "contact": {
+                    "name": "Dan Reese",
+                    "title": "GIS Director",
+                    "phone": "570-825-1550",
+                    "address": "200 N River St, Wilkes-Barre, PA 18711"
+                },
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "number": [
+                        "SAN",
+                        "SAN_SUF"
+                    ],
+                    "street": [
+                        "PRD",
+                        "STN",
+                        "STS",
+                        "POD"
+                    ],
+                    "unit": [
+                        "UNITTYPE",
+                        "UNITNO"
+                    ],
+                    "city": "MCN"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "data": "https://services7.arcgis.com/hzCSL69lejmynMEC/arcgis/rest/services/Parcels_032223_PUBLIC/FeatureServer/0",
+                "website": "https://www.luzernecounty.org/234/GISMapping",
+                "contact": {
+                    "name": "Dan Reese",
+                    "title": "GIS Director",
+                    "phone": "570-825-1550",
+                    "address": "200 N River St, Wilkes-Barre, PA 18711"
+                },
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "LONG_PIN"
+                }
+            }
+        ]
+    }
+}

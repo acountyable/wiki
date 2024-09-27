@@ -1,0 +1,53 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "42133",
+            "name": "York County",
+            "state": "Pennsylvania"
+        },
+        "country": "us",
+        "state": "pa",
+        "county": "York"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "website": "https://york-county-pa-gis-portal-yorkcountypa.hub.arcgis.com/datasets/265146c5b73d4637b2ac02c70282e198_0/explore",
+                "contact": {
+                    "name": "Tanya Wall",
+                    "title": "Chief of Information Systems",
+                    "phone": "717-771-9870, ext. 1723",
+                    "email": "twall@ycpc.org",
+                    "address": "28 E Market Street, 3rd Floor, York, PA 17401"
+                },
+                "data": "https://arcweb1.ycpc.org/server/rest/services/OPEN_DATA/AddressPts/FeatureServer/0",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "number": [
+                        "AddNum_Pre",
+                        "Add_Number",
+                        "AddNum_Suf"
+                    ],
+                    "street": [
+                        "St_PreMod",
+                        "St_PreDir",
+                        "St_PreTyp",
+                        "St_PreSep",
+                        "StreetName",
+                        "St_PosTyp",
+                        "St_PosDir",
+                        "St_PosMod"
+                    ],
+                    "unit": "Unit",
+                    "city": "MSAGComm",
+                    "district": "County",
+                    "region": "State",
+                    "postcode": "Post_Code"
+                }
+            }
+        ]
+    }
+}

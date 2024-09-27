@@ -1,0 +1,50 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "06071",
+            "name": "San Bernardino County",
+            "state": "California"
+        },
+        "country": "us",
+        "state": "ca",
+        "county": "San Bernardino"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "conform": {
+                    "id": "APN",
+                    "format": "shapefile",
+                    "number": "NUMBER",
+                    "street": [
+                        "PREDIR",
+                        "STREETNAME",
+                        "STREETTYPE"
+                    ],
+                    "postcode": "ZIP",
+                    "city": "CITY",
+                    "region": "STATE"
+                },
+                "data": "https://www.arcgis.com/sharing/rest/content/items/49323ddf29ef475db75e141f675fac47/data",
+                "website": "https://open.sbcounty.gov/datasets/sbcounty::countywide-parcels/about",
+                "protocol": "http",
+                "compression": "zip"
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "conform": {
+                    "pid": "APN",
+                    "format": "shapefile"
+                },
+                "data": "https://www.arcgis.com/sharing/rest/content/items/49323ddf29ef475db75e141f675fac47/data",
+                "website": "https://open.sbcounty.gov/datasets/sbcounty::countywide-parcels/about",
+                "protocol": "http",
+                "compression": "zip"
+            }
+        ]
+    }
+}

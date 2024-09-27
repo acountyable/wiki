@@ -1,0 +1,43 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "26005",
+            "name": "Allegan County",
+            "state": "Michigan"
+        },
+        "country": "us",
+        "state": "mi",
+        "county": "Allegan"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "data": "https://gis.allegancounty.org/server/rest/services/Hosted/addresses_20240708/FeatureServer/44",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "number": "NUMBER",
+                    "street": "ROADNAME",
+                    "unit": "NUMBERSUP",
+                    "city": "CITY",
+                    "district": "COUNTY",
+                    "postcode": "ZIP"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "data": "https://gis.allegancounty.org/server/rest/services/Hosted/Current_Parcels_Sept/FeatureServer/0",
+                "website": "https://gis.allegancounty.org/portal/apps/sites/#/allegan-county-gis-services/datasets/5d8a97f7274944aab7a5bc6e8548a02f/about?layer=0",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "mapping_id"
+                }
+            }
+        ]
+    }
+}

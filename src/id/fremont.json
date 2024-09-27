@@ -1,0 +1,50 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "16043",
+            "name": "Fremont County",
+            "state": "Idaho"
+        },
+        "country": "us",
+        "state": "id",
+        "county": "Fremont"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "compression": "zip",
+                "data": "https://gwmap.s3.amazonaws.com/fremontid/download/ownership.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "shapefile",
+                    "number": {
+                        "function": "regexp",
+                        "field": "st_address",
+                        "pattern": "^([0-9]+)"
+                    },
+                    "street": {
+                        "function": "regexp",
+                        "field": "st_address",
+                        "pattern": "^(?:[0-9]+ )(.*)",
+                        "replace": "$1"
+                    },
+                    "id": "pidn"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "compression": "zip",
+                "data": "https://gwmap.s3.amazonaws.com/fremontid/download/ownership.zip",
+                "protocol": "http",
+                "conform": {
+                    "format": "shapefile",
+                    "pid": "pidn"
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,53 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "06029",
+            "name": "Kern County",
+            "state": "California"
+        },
+        "country": "us",
+        "state": "ca",
+        "county": "Kern"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "attribution": "Kern County",
+                "data": "https://maps.co.kern.ca.us/arcgis/rest/services/Accela_Base/MapServer/5",
+                "note": "https://maps.co.kern.ca.us/arcgis/rest/services/Assessor/ASSR_Addresses_PRV/MapServer/1?token=TGXeDkbDnda6Cd8MuJS6fGk0hpmzyWcy-BZZocW5MiA.",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "unit": [
+                        "UNTYP_SITE",
+                        "UNIT_SITE"
+                    ],
+                    "number": [
+                        "STNUM_SITE",
+                        "STFRA_SITE"
+                    ],
+                    "street": [
+                        "STDIR_SITE",
+                        "STNAM_SITE",
+                        "STSUF_SITE"
+                    ],
+                    "city": "CITY_SITE"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "attribution": "Kern County",
+                "data": "https://maps.co.kern.ca.us/arcgis/rest/services/Accela_Base/MapServer/5",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "APN"
+                }
+            }
+        ]
+    }
+}

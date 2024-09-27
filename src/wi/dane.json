@@ -1,0 +1,70 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "55025",
+            "name": "Dane County",
+            "state": "Wisconsin"
+        },
+        "country": "us",
+        "state": "wi",
+        "county": "Dane"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "data": "https://dcimapapps.countyofdane.com/arcgissrv/rest/services/Addressing/Addresses/MapServer/0",
+                "website": "https://gis-countyofdane.opendata.arcgis.com/pages/property-land",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "number": [
+                        "HouseNumPrefix",
+                        "HouseNum",
+                        "HouseNumSuffix"
+                    ],
+                    "unit": [
+                        "UnitType",
+                        "Unit"
+                    ],
+                    "street": [
+                        "PreModifier",
+                        "PreDirectional",
+                        "PreType",
+                        "BaseName",
+                        "PostType",
+                        "PostDirectional",
+                        "PostModifier"
+                    ],
+                    "city": "FIPsMunicipality",
+                    "postcode": "ZIPCode",
+                    "accuracy": 1
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "data": "https://dcimapapps.countyofdane.com/arcgissrv/rest/services/Parcels/Parcels/MapServer/3",
+                "website": "https://gis-countyofdane.opendata.arcgis.com/pages/property-land",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "PARCELNO"
+                }
+            }
+        ],
+        "buildings": [
+            {
+                "name": "county",
+                "data": "https://dcimapapps.countyofdane.com/arcgissrv/rest/services/Infrastructure/BuildingFootprint/MapServer/0",
+                "website": "https://gis-countyofdane.opendata.arcgis.com/pages/infrastructure",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson"
+                }
+            }
+        ]
+    }
+}

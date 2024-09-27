@@ -1,0 +1,54 @@
+{
+    "coverage": {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -94.268,
+                30.081
+            ]
+        },
+        "US Census": {
+            "geoid": "4807000",
+            "name": "City of Beaumont",
+            "state": "Texas"
+        },
+        "country": "us",
+        "state": "tx",
+        "city": "Beaumont"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "city",
+                "data": "https://gis.beaumonttexas.gov/arcgis/rest/services/CWAMS/MapServer/1",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "id": "OBJECTID",
+                    "number": "HOUSE_NUM",
+                    "street": [
+                        "PREFIX_DIR",
+                        "PREFIX_TYPE",
+                        "STREET_NAME",
+                        "SUFFIX_TYPE",
+                        "SUFFIX_DIR"
+                    ],
+                    "unit": "APT",
+                    "postcode": "ZIP"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "city",
+                "data": "https://gis.beaumonttexas.gov/arcgis/rest/services/CWAMS/MapServer/7",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "geo_id"
+                }
+            }
+        ]
+    }
+}

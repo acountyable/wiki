@@ -1,0 +1,49 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "06025",
+            "name": "Imperial County",
+            "state": "California"
+        },
+        "country": "us",
+        "state": "ca",
+        "county": "Imperial"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "attribution": "Imperial County",
+                "data": "https://services7.arcgis.com/RomaVqqozKczDNgd/arcgis/rest/services/Parcels_07272022/FeatureServer/6",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "id": "APN",
+                    "number": "GCHouNum",
+                    "street": [
+                        "GCPreDir",
+                        "GCPreTyp",
+                        "GCStName",
+                        "GCStType",
+                        "GCSufDir"
+                    ],
+                    "unit": "SitusApt",
+                    "postcode": "Sit_Zip"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "attribution": "Imperial County",
+                "data": "https://services7.arcgis.com/RomaVqqozKczDNgd/arcgis/rest/services/Parcels_07272022/FeatureServer/6",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "APN"
+                }
+            }
+        ]
+    }
+}

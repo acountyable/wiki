@@ -1,0 +1,45 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "22103",
+            "name": "St. Tammany Parish",
+            "state": "Louisiana"
+        },
+        "country": "us",
+        "state": "la",
+        "county": "St. Tammany"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "data": "https://services2.arcgis.com/GjsLOwYbSm9HRagZ/arcgis/rest/services/STPCD911/FeatureServer/0",
+                "website": "https://stpcd911-stpcd911.hub.arcgis.com/datasets/stpcd911::address-points/about",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "number": "HN",
+                    "street": "FULLNAME",
+                    "unit": [
+                        "UNIT_TYPE",
+                        "UNIT_NUM"
+                    ],
+                    "city": "CITY_L",
+                    "postcode": "ZIP_CODE"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "data": "https://atlas.stpgov.org/server/rest/services/STPAO_Parcels/MapServer/1",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "REID"
+                }
+            }
+        ]
+    }
+}

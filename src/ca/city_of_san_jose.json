@@ -1,0 +1,70 @@
+{
+    "coverage": {
+        "country": "us",
+        "state": "ca",
+        "county": "Santa Clara",
+        "city": "San Jose",
+        "US Census": {
+            "geoid": "0668000",
+            "name": "City of San Jose",
+            "state": "California"
+        },
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -121.74,
+                37.35
+            ]
+        }
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "city",
+                "protocol": "ESRI",
+                "data": "https://geo.sanjoseca.gov/server/rest/services/OPN/OPN_OpenDataService/MapServer/36",
+                "website": "https://gisdata-csj.opendata.arcgis.com/datasets/CSJ::address/about",
+                "conform": {
+                    "format": "geojson",
+                    "id": "APN",
+                    "number": [
+                        "AddNum_Pre",
+                        "Add_Number",
+                        "AddNum_Suf"
+                    ],
+                    "street": [
+                        "St_PreMod",
+                        "St_PreDir",
+                        "St_PreDirAbbbr",
+                        "St_PreTyp",
+                        "St_PreSep",
+                        "StreetName",
+                        "St_PosTyp",
+                        "St_PosDir",
+                        "St_PosMod"
+                    ],
+                    "unit": [
+                        "Unit_Type",
+                        "Unit"
+                    ],
+                    "district": "County",
+                    "region": "State",
+                    "postcode": "Post_Code"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "city",
+                "protocol": "ESRI",
+                "data": "https://geo.sanjoseca.gov/server/rest/services/OPN/OPN_OpenDataService/MapServer/270",
+                "website": "https://gisdata-csj.opendata.arcgis.com/datasets/CSJ::parcels/about",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "APN"
+                }
+            }
+        ]
+    }
+}

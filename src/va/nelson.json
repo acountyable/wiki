@@ -1,0 +1,45 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "51125",
+            "name": "Nelson County",
+            "state": "Virginia"
+        },
+        "country": "us",
+        "state": "va",
+        "county": "Nelson"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "data": "https://services8.arcgis.com/aDqamcYPVZqbdXn7/ArcGIS/rest/services/Nelson_WL_P/FeatureServer/1",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "street": [
+                        "PREFIX",
+                        "ROAD_NAME",
+                        "SUFFIX",
+                        "POSTDIR"
+                    ],
+                    "number": "ADDR",
+                    "unit": "UNIT",
+                    "city": "COMMUNITY",
+                    "postcode": "ZIP"
+                }
+            }
+        ],
+        "buildings": [
+            {
+                "name": "county",
+                "data": "https://services8.arcgis.com/aDqamcYPVZqbdXn7/ArcGIS/rest/services/Nelson_WL_P/FeatureServer/2",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson"
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,58 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "45085",
+            "name": "Sumter County",
+            "state": "South Carolina"
+        },
+        "country": "us",
+        "state": "sc",
+        "county": "Sumter"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "data": "https://gis.sumter-sc.com/server/rest/services/BaseMaps/Sumter_City_County/FeatureServer/0",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "number": "add_number",
+                    "street": {
+                        "function": "postfixed_street",
+                        "field": "complete_add"
+                    },
+                    "unit": "unit_num",
+                    "city": {
+                        "function": "regexp",
+                        "field": "FULLADDRESS",
+                        "pattern": "^(?:.+,\\s)(.+)(?:,\\sSC,\\s\\d{5})$",
+                        "replace": "$1"
+                    },
+                    "region": {
+                        "function": "regexp",
+                        "field": "FULLADDRESS",
+                        "pattern": ", ([A-Z]{2}), [0-9]{5}$"
+                    },
+                    "postcode": {
+                        "function": "regexp",
+                        "field": "FULLADDRESS",
+                        "pattern": ", ([0-9]{5})$"
+                    }
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "data": "https://gis.sumter-sc.com/server/rest/services/BaseMaps/Sumter_City_County/FeatureServer/1",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "PARID"
+                }
+            }
+        ]
+    }
+}

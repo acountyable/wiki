@@ -1,0 +1,45 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "17179",
+            "name": "Tazewell County",
+            "state": "Illinois"
+        },
+        "country": "us",
+        "state": "il",
+        "county": "Tazewell"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "data": "https://gis.tazewell.com/arcgis/rest/services/ETSB/ETSBData/MapServer/0",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "number": "House",
+                    "street": [
+                        "Dir",
+                        "Street",
+                        "Suffix",
+                        "Post_Dir"
+                    ],
+                    "unit": "AptNum",
+                    "city": "Community"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "data": "https://gis.tazewell.com/arcgis/rest/services/AGS_tazewell_co_il_taxmap_view_noowner2/MapServer/1",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "PIN"
+                }
+            }
+        ]
+    }
+}

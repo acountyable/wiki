@@ -1,0 +1,51 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "04013",
+            "name": "Maricopa County",
+            "state": "Arizona"
+        },
+        "country": "us",
+        "state": "az",
+        "county": "Maricopa"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "data": "https://services.arcgis.com/ykpntM6e3tHvzKRJ/arcgis/rest/services/Maricopa_County_Address_Points/FeatureServer/0",
+                "website": "https://data-maricopa.opendata.arcgis.com/datasets/Maricopa::maricopa-county-address-points-all/about",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "number": [
+                        "HSENO",
+                        "HseNoSufx"
+                    ],
+                    "street": [
+                        "STDIR",
+                        "STNAME",
+                        "STTYPE",
+                        "STSUFX"
+                    ],
+                    "unit": "UnitNo",
+                    "postcode": "ZIP",
+                    "city": "USPSCityAlias"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "data": "https://services.arcgis.com/ykpntM6e3tHvzKRJ/ArcGIS/rest/services/Parcels_view/FeatureServer/0",
+                "website": "https://data-maricopa.opendata.arcgis.com/datasets/c937f17330f64e64abd41976fc8bb17f/about",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "APN"
+                }
+            }
+        ]
+    }
+}

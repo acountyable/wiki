@@ -1,0 +1,45 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "17201",
+            "name": "Winnebago County",
+            "state": "Illinois"
+        },
+        "country": "us",
+        "state": "il",
+        "county": "Winnebago"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "data": "https://maps.wingis.org/public/rest/services/NG911/MapServer/9",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "number": "STNO",
+                    "street": "STNAME",
+                    "unit": [
+                        "UNITTYPE",
+                        "SUITE"
+                    ],
+                    "city": "MSAGComm",
+                    "region": "STATE",
+                    "postcode": "ZIP"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "data": "https://maps.wingis.org/public/rest/services/NG911/MapServer/1",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "PIN"
+                }
+            }
+        ]
+    }
+}

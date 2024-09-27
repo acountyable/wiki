@@ -1,0 +1,32 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "32027",
+            "name": "Pershing County",
+            "state": "Nevada"
+        },
+        "country": "us",
+        "state": "nv",
+        "county": "Pershing"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "data": "https://services9.arcgis.com/qOD0sKAJC4zVpWPR/ArcGIS/rest/services/Parcel_Boundaries/FeatureServer/5",
+                "website": "https://webgis-pershing-co.hub.arcgis.com/datasets/de2540509b9f4a52abb9c0b89e36ec9f_5/about",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "unit": "unit",
+                    "number": "Loc1",
+                    "street": [
+                        "Dir",
+                        "street_name"
+                    ]
+                }
+            }
+        ]
+    }
+}

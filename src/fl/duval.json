@@ -1,0 +1,46 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "12031",
+            "name": "Duval County",
+            "state": "Florida"
+        },
+        "country": "us",
+        "state": "fl",
+        "county": "Duval"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "data": "https://maps.coj.net/coj/rest/services/ERAT/EratDashboard_3000/MapServer/41",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "id": "ADDRESS_ID",
+                    "number": "HOUSE_NUMBER",
+                    "street": "FULL_NAME",
+                    "unit": [
+                        "UNIT_TYPE",
+                        "UNIT"
+                    ],
+                    "city": "CITY",
+                    "region": "STATE",
+                    "postcode": "ZIPCODE"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "data": "https://maps.coj.net/coj/rest/services/ERAT/EratDashboard_3000/MapServer/42",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "RE"
+                }
+            }
+        ]
+    }
+}

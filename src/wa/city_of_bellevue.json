@@ -1,0 +1,64 @@
+{
+    "coverage": {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -122.225,
+                47.597
+            ]
+        },
+        "US Census": {
+            "geoid": "5305210",
+            "name": "City of Bellevue",
+            "state": "Washington"
+        },
+        "country": "us",
+        "state": "wa",
+        "city": "Bellevue"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "city",
+                "protocol": "ESRI",
+                "data": "https://gis-web.bellevuewa.gov/gisext/rest/services/Enterprise/PropertyAndAddress/MapServer/6",
+                "conform": {
+                    "format": "geojson",
+                    "number": "HouseNumber",
+                    "street": {
+                        "function": "remove_prefix",
+                        "field": "HouseNumberStreetNameFull",
+                        "field_to_remove": "HouseNumber"
+                    },
+                    "unit": "UnitDetailFull"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "city",
+                "protocol": "http",
+                "compression": "zip",
+                "data": "https://apps.bellevuewa.gov/gisdownload/Data/Property/SHP/PARCELS.zip",
+                "website": "https://bellevuewa.gov/city-government/departments/ITD/services/maps/g-i-s-data-portal",
+                "conform": {
+                    "format": "shapefile",
+                    "pid": "ParcelAFN"
+                }
+            }
+        ],
+        "buildings": [
+            {
+                "name": "city",
+                "protocol": "http",
+                "compression": "zip",
+                "data": "https://apps.bellevuewa.gov/gisdownload/Data/Planning/SHP/Building.zip",
+                "website": "https://bellevuewa.gov/city-government/departments/ITD/services/maps/g-i-s-data-portal",
+                "conform": {
+                    "format": "shapefile"
+                }
+            }
+        ]
+    }
+}

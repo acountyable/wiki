@@ -1,0 +1,58 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "06047",
+            "name": "Merced County",
+            "state": "California"
+        },
+        "country": "us",
+        "state": "ca",
+        "county": "Merced"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "attribution": "Merced County",
+                "website": "https://geostack-mercedcounty.opendata.arcgis.com/datasets/MercedCounty::merced-county-site-address-points/about",
+                "data": "https://maps.countyofmerced.com/server/rest/services/Merced_County_Site_Address_Points/FeatureServer/1",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "id": "site_nguid",
+                    "number": [
+                        "addnum_pre",
+                        "add_number",
+                        "addnum_suf"
+                    ],
+                    "unit": "unit",
+                    "street": [
+                        "st_premod",
+                        "st_predir",
+                        "st_pretyp",
+                        "st_presep",
+                        "st_name",
+                        "st_postyp",
+                        "st_posdir",
+                        "st_posmod"
+                    ],
+                    "postcode": "post_code"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "attribution": "Merced County",
+                "website": "https://geostack-mercedcounty.opendata.arcgis.com/datasets/MercedCounty::assessment-parcels-1/about",
+                "data": "https://maps.countyofmerced.com/server/rest/services/assessment_parcels/FeatureServer/0",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "APN"
+                }
+            }
+        ]
+    }
+}

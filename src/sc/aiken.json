@@ -1,0 +1,47 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "45003",
+            "name": "Aiken County",
+            "state": "South Carolina"
+        },
+        "country": "us",
+        "state": "sc",
+        "county": "Aiken"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "data": "https://smpesri.scdot.org/arcgis/rest/services/GISMapping/SC_Parcels/MapServer/1",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "number": {
+                        "function": "prefixed_number",
+                        "field": "LocationAddress"
+                    },
+                    "street": {
+                        "function": "postfixed_street",
+                        "field": "LocationAddress"
+                    },
+                    "city": "LocationCity",
+                    "region": "LocationState",
+                    "postcode": "LocationZip"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "data": "https://smpesri.scdot.org/arcgis/rest/services/GISMapping/SC_Parcels/MapServer/1",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "PARCEL_NO"
+                }
+            }
+        ]
+    }
+}

@@ -1,0 +1,54 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "17041",
+            "name": "Douglas County",
+            "state": "Illinois"
+        },
+        "country": "us",
+        "state": "il",
+        "county": "Douglas"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "data": "https://services3.arcgis.com/HXjsHxkFFcZquC8P/ArcGIS/rest/services/Parcels/FeatureServer/0",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "number": {
+                        "function": "regexp",
+                        "field": "site_addre",
+                        "pattern": "^([0-9]+[A-Z]?)"
+                    },
+                    "street": {
+                        "function": "regexp",
+                        "field": "site_addre",
+                        "pattern": "^(?:[0-9]+[A-Z]? +)(.*)",
+                        "replace": "$1"
+                    },
+                    "city": {
+                        "function": "regexp",
+                        "field": "site_csz",
+                        "pattern": "^(.*)(?:\\sIL\\s\\d{5})$",
+                        "replace": "$1"
+                    },
+                    "region": {
+                        "function": "regexp",
+                        "field": "site_csz",
+                        "pattern": "(IL)",
+                        "replace": "$1"
+                    },
+                    "postcode": {
+                        "function": "regexp",
+                        "field": "ite_csz",
+                        "pattern": "(\\d{5})",
+                        "replace": "$1"
+                    }
+                }
+            }
+        ]
+    }
+}

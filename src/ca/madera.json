@@ -1,0 +1,50 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "06039",
+            "name": "Madera County",
+            "state": "California"
+        },
+        "country": "us",
+        "state": "ca",
+        "county": "Madera"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "conform": {
+                    "format": "geojson",
+                    "number": "ST_NO",
+                    "street": [
+                        "ST_DR",
+                        "ST_NAME",
+                        "ST_TYPE"
+                    ],
+                    "unit": "SPACE_APT",
+                    "city": "CITY",
+                    "region": "STATE",
+                    "postcode": "ZIP"
+                },
+                "data": "https://gis.maderacounty.com/server/rest/services/STANDARD/MasterAddressPointFile/MapServer/0",
+                "attribution": "Madera County",
+                "website": "https://www.maderacounty.com/government/geographic-information-system-gis",
+                "protocol": "ESRI"
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "Parcel"
+                },
+                "data": "https://gis.maderacounty.com/server/rest/services/ParcelsNoOwnership/MapServer/0",
+                "attribution": "Madera County",
+                "website": "https://www.maderacounty.com/government/geographic-information-system-gis",
+                "protocol": "ESRI"
+            }
+        ]
+    }
+}

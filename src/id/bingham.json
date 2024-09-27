@@ -1,0 +1,43 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "16011",
+            "name": "Bingham County",
+            "state": "Idaho"
+        },
+        "country": "us",
+        "state": "id",
+        "county": "Bingham"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "data": "https://web.binghamid.gov/arcgis/rest/services/Basemaps/Address_Points/MapServer/0",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "number": "HOUSE_NUM",
+                    "street": [
+                        "HOUSE_DIR",
+                        "ROAD_NAME"
+                    ],
+                    "city": "MAIL_CITY",
+                    "postcode": "ZIP"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "data": "https://web.binghamid.gov/arcgis/rest/services/Public/Bingham_County_Parcel_Map_Public/MapServer/2",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "RP_Num"
+                }
+            }
+        ]
+    }
+}

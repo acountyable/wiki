@@ -1,0 +1,64 @@
+{
+    "coverage": {
+        "geometry": {
+            "type": "Point",
+            "coordinates": [
+                -106.36,
+                39.638
+            ]
+        },
+        "US Census": {
+            "geoid": "0880040",
+            "name": "City of Vail",
+            "state": "Colorado"
+        },
+        "country": "us",
+        "state": "co",
+        "city": "Vail"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "city",
+                "data": "https://gis.vailgov.com/arcgis/rest/services/DataLayers/AddressPoints/MapServer/0",
+                "website": "https://www.vail.gov/government/departments/public-works/gis/interactive-maps/interactive-maps",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "number": "StreetNo",
+                    "street": [
+                        "StreetDir",
+                        "StreetName",
+                        "StreetSuf"
+                    ]
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "city",
+                "data": "https://gis.vailgov.com/arcgis/rest/services/DataLayers/Parcels/MapServer/0",
+                "website": "https://www.vail.gov/government/departments/public-works/gis/interactive-maps/interactive-maps",
+                "protocol": "ESRI",
+                "attribution": "City of Vail",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "PARCEL_NUM"
+                }
+            }
+        ],
+        "buildings": [
+            {
+                "name": "city",
+                "data": "https://gis.vailgov.com/arcgis/rest/services/DataLayers/BuildingFootprints/MapServer/0",
+                "website": "https://www.vail.gov/government/departments/public-works/gis/interactive-maps/interactive-maps",
+                "protocol": "ESRI",
+                "attribution": "City of Vail",
+                "conform": {
+                    "format": "geojson"
+                }
+            }
+        ]
+    }
+}

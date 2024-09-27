@@ -1,0 +1,54 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "51005",
+            "name": "Alleghany County",
+            "state": "Virginia"
+        },
+        "country": "us",
+        "state": "va",
+        "county": "Alleghany"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "data": "https://www.webgis.net/arcgis/rest/services/VA/AlleghanyCo_WebGIS/MapServer/4",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "number": "Add_Number",
+                    "street": [
+                        "AddNum_Suf",
+                        "StFullNameNG"
+                    ],
+                    "city": "MSAGComm",
+                    "postcode": "Post_Code",
+                    "unit": "Unit"
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "data": "https://parcelviewer.geodecisions.com/arcgis/rest/services/Alleghany/Public/MapServer/1",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "MAP_PIN"
+                }
+            }
+        ],
+        "buildings": [
+            {
+                "name": "county",
+                "data": "https://www.webgis.net/arcgis/rest/services/VA/AlleghanyCo_WebGIS/MapServer/17",
+                "protocol": "ESRI",
+                "conform": {
+                    "format": "geojson"
+                }
+            }
+        ]
+    }
+}

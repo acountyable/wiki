@@ -1,0 +1,48 @@
+{
+    "coverage": {
+        "US Census": {
+            "geoid": "06057",
+            "name": "Nevada County",
+            "state": "California"
+        },
+        "country": "us",
+        "state": "ca",
+        "county": "Nevada"
+    },
+    "schema": 2,
+    "layers": {
+        "addresses": [
+            {
+                "name": "county",
+                "attribution": "County of Nevada, California",
+                "data": "https://maps.nevadacountyca.gov/arcgis/rest/services/web_public/Open_Data_Layers_Nevada_County/MapServer/100",
+                "protocol": "ESRI",
+                "website": "https://maps-nevcounty.opendata.arcgis.com/",
+                "conform": {
+                    "number": "HouseNumber",
+                    "street": "FullStreetName",
+                    "unit": "SitusStreetName2",
+                    "city": "PostOffice",
+                    "region": "State",
+                    "postcode": "ZipCode",
+                    "id": "APN",
+                    "format": "geojson",
+                    "accuracy": 2
+                }
+            }
+        ],
+        "parcels": [
+            {
+                "name": "county",
+                "attribution": "County of Nevada, California",
+                "data": "https://maps.nevadacountyca.gov/arcgis/rest/services/web_public/Open_Data_Layers_Nevada_County_1/FeatureServer/200",
+                "protocol": "ESRI",
+                "website": "https://data-nevcounty.opendata.arcgis.com/",
+                "conform": {
+                    "format": "geojson",
+                    "pid": "APN"
+                }
+            }
+        ]
+    }
+}
