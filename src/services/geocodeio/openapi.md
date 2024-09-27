@@ -1,3 +1,10 @@
+---
+id: geocodeio
+title: OpenAPI Spec
+description: This document provides the OpenAPI specification for Geocodio's RESTful API.
+---
+
+```yaml
 openapi: 3.0.1
 info:
   title: Geocodio
@@ -624,3 +631,4 @@ components:
       type: apiKey
       name: api_key
       in: query
+```
